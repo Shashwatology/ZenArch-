@@ -6,8 +6,8 @@ import { motion, useScroll, useTransform, useInView, useReducedMotion } from "fr
 // -----------------------------------------------------------------------------
 // Consistent Cinematic Easing Curves
 // -----------------------------------------------------------------------------
-export const CINEMATIC_EASE = [0.16, 1, 0.3, 1]; // Custom cubic-bezier for smooth architectural entrances
-export const SLOW_EASE = [0.25, 0.1, 0.25, 1.0];
+export const CINEMATIC_EASE: [number, number, number, number] = [0.16, 1, 0.3, 1]; // Custom cubic-bezier for smooth architectural entrances
+export const SLOW_EASE: [number, number, number, number] = [0.25, 0.1, 0.25, 1.0];
 
 // -----------------------------------------------------------------------------
 // Primitives
