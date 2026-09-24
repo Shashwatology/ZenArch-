@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "pid": 24980,
+  "startedUtc": "2026-09-24T17:27:16.985Z",
+  "capturedUtc": "2026-09-24T17:27:16.986Z",
+  "extensionVersion": "0.3.8",
+  "workspaceFolders": [
+    "d:\\ZenArch Solution"
+  ],
+  "generation": 0,
+  "environments": [],
+  "totals": {
+    "sessions": 0,
+    "consumers": 0
+  },
+  "truncated": false
+}
