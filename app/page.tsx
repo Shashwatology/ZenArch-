@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT SIDE: Contained 3D Showroom Frame */}
-          <div className="lg:col-span-5 w-full pointer-events-auto">
+          <div className="hidden lg:block lg:col-span-5 w-full pointer-events-auto">
             <Reveal delay={1.2} direction="up">
               <div className="relative aspect-square md:aspect-[4/3] lg:aspect-[4/5] bg-zen-black/20 backdrop-blur-md border border-white/10 overflow-hidden shadow-2xl flex flex-col group">
                 
@@ -250,12 +250,17 @@ export default function Home() {
                     {/* View Product CTA */}
                     <div className="ml-auto pl-2">
                       <Link 
-                        href={`/furniture/${[
-                          { id: "vegas-sofa", slug: "vegas" },
-                          { id: "flame-sofa", slug: "flame" },
-                          { id: "arcus-sofa", slug: "arcus" },
-                          { id: "gold-ottoman", slug: "gold" }
-                        ].find(x => x.id === activeModel)?.slug}`}
+                        href={`/furniture${
+                          (() => {
+                            const slug = [
+                              { id: "vegas-sofa", slug: "vegas-sofas" },
+                              { id: "flame-sofa", slug: "lopez-sofas" },
+                              { id: "arcus-sofa", slug: "arcus-sofas" },
+                              { id: "gold-ottoman", slug: "" }
+                            ].find(x => x.id === activeModel)?.slug;
+                            return slug ? `/${slug}` : "";
+                          })()
+                        }`}
                         className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-mono text-zen-ivory hover:text-zen-accent transition-colors whitespace-nowrap"
                       >
                         <span>View Product</span>
