@@ -33,10 +33,9 @@ export async function POST(req: Request) {
       system: systemPrompt,
       messages,
       tools: catalogTools,
-      maxSteps: 5, // Allow the model to call search, read results, and then call showProductCard
     });
 
-    return result.toDataStreamResponse();
+    return result.toTextStreamResponse();
   } catch (error) {
     console.error("[AI CHAT ERROR]", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });

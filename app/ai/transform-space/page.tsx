@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { BRAND, getWhatsAppUrl, getProductWhatsAppUrl } from "@/lib/config/brand";
-import { FURNITURE_CATALOGUE } from "@/lib/data/furniture";
+import { getProductBySlug, FurnitureProduct } from "@/lib/data/furniture";
 import { Button } from "@/components/ui/Button";
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import {
   Sparkles,
   Upload,
@@ -19,30 +22,28 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-export default function TransformSpacePage() {
+function TransformSpaceContent() {
+  const searchParams = useSearchParams();
+  const productSlug = searchParams?.get("product");
+  
+  const [selectedProduct, setSelectedProduct] = useState<FurnitureProduct | null>(null);
   const [activeStep, setActiveStep] = useState<number>(1);
   const [selectedStyle, setSelectedStyle] = useState<string>("Zen Minimalist");
-  const [selectedBudget, setSelectedBudget] = useState<string>("₹30L - ₹60L");
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [conceptGenerated, setConceptGenerated] = useState<boolean>(false);
+  const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (productSlug) {
+      const p = getProductBySlug(productSlug);
+      if (p) setSelectedProduct(p);
+    }
+  }, [productSlug]);
 
   const presets = [
-    {
-      id: "salon",
-      name: "Empty Travertine Living Area",
-      thumb: "Living Room Preset",
-    },
-    {
-      id: "penthouse",
-      name: "Double-Height High Ceiling Penthouse",
-      thumb: "Penthouse Preset",
-    },
-    {
-      id: "workspace",
-      name: "Executive Creative Office",
-      thumb: "Workspace Preset",
-    },
+    { id: "salon", name: "Empty Travertine Living Area", thumb: "/images/cinematic_hero.jpg" },
+    { id: "penthouse", name: "Double-Height High Ceiling Penthouse", thumb: "/images/project-juhu.jpg" },
+    { id: "workspace", name: "Executive Creative Office", thumb: "/images/project-monolith.jpg" },
   ];
 
   const styles = [
@@ -66,26 +67,19 @@ export default function TransformSpacePage() {
     },
   ];
 
-  const budgets = [
-    { tier: "₹15L - ₹30L", desc: "Signature Seating & Curated Architectural Lighting" },
-    { tier: "₹30L - ₹60L", desc: "Comprehensive Spatial Overhaul & Custom Joinery" },
-    { tier: "₹60L+", desc: "Flagship Architectural Estate & Turnkey Execution" },
-  ];
-
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     setIsGenerating(true);
+    
+    // In V1.4, we mock the network call to the vision API we built in V1.3.1
+    // to preserve product identity and show the flow without actually spending real API credits 
+    // unless the user specifically uploads an image (which we can't do easily via standard browser file upload yet in QA)
+    
     setTimeout(() => {
       setIsGenerating(false);
-      setConceptGenerated(true);
+      setGeneratedImageUrl(selectedProduct?.images[0] || "/images/project-juhu.jpg");
       setActiveStep(4);
-    }, 1500);
+    }, 2000);
   };
-
-  const curatedPieces = [
-    FURNITURE_CATALOGUE[0], // Vegas
-    FURNITURE_CATALOGUE[4], // Arcus
-    FURNITURE_CATALOGUE[15], // Albert Puffy
-  ];
 
   return (
     <div className="min-h-screen bg-zen-ivory text-zen-black pt-32 pb-24 px-6 md:px-12 selection:bg-zen-accent selection:text-white">
@@ -102,26 +96,47 @@ export default function TransformSpacePage() {
             Transform Your Space.
           </h1>
           <p className="text-xs md:text-sm text-zen-charcoal/80 font-light leading-relaxed max-w-xl">
-            Upload your living room photograph or architectural plan. Select an aesthetic and investment tier to visualize an bespoke Zen Arc transformation.
+            Upload your living room photograph or architectural plan. Visualize authentic Zen Arch pieces directly in your environment.
           </p>
         </div>
 
+        {/* Selected Product Context (if arrived from PDP) */}
+        {selectedProduct && activeStep < 4 && (
+          <div className="bg-zen-stone/20 border border-zen-border p-4 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-white border border-zen-border relative overflow-hidden flex-shrink-0">
+                {selectedProduct.images[0] && (
+                  <Image src={selectedProduct.images[0]} alt={selectedProduct.name} fill className="object-cover mix-blend-multiply" />
+                )}
+              </div>
+              <div>
+                <span className="text-[10px] uppercase tracking-widest text-zen-accent font-mono block">Selected Product</span>
+                <h3 className="font-serif text-lg">{selectedProduct.name}</h3>
+                <span className="text-xs font-mono text-zen-taupe">{selectedProduct.dimensions || "Dimensions Available on Request"}</span>
+              </div>
+            </div>
+            <Link href={`/furniture/${selectedProduct.slug}`} className="text-xs uppercase tracking-widest font-medium border border-zen-charcoal px-4 py-2 hover:bg-zen-charcoal hover:text-white transition-colors">
+              Change Product
+            </Link>
+          </div>
+        )}
+
         {/* Progress Bar */}
-        <div className="flex items-center justify-between text-xs font-mono uppercase tracking-widest text-zen-muted border-b border-zen-border pb-4">
-          <span className={activeStep === 1 ? "text-zen-black font-semibold" : ""}>
+        <div className="flex items-center justify-between text-[10px] sm:text-xs font-mono uppercase tracking-widest text-zen-muted border-b border-zen-border pb-4 overflow-x-auto">
+          <span className={activeStep === 1 ? "text-zen-black font-semibold whitespace-nowrap" : "whitespace-nowrap"}>
             01. Space Photo
           </span>
-          <span>&rarr;</span>
-          <span className={activeStep === 2 ? "text-zen-black font-semibold" : ""}>
+          <span className="px-2">&rarr;</span>
+          <span className={activeStep === 2 ? "text-zen-black font-semibold whitespace-nowrap" : "whitespace-nowrap"}>
             02. Aesthetic
           </span>
-          <span>&rarr;</span>
-          <span className={activeStep === 3 ? "text-zen-black font-semibold" : ""}>
-            03. Investment
+          <span className="px-2">&rarr;</span>
+          <span className={activeStep === 3 ? "text-zen-black font-semibold whitespace-nowrap" : "whitespace-nowrap"}>
+            03. Confirmation
           </span>
-          <span>&rarr;</span>
-          <span className={activeStep === 4 ? "text-zen-black font-semibold" : ""}>
-            04. AI Architectural Concept
+          <span className="px-2">&rarr;</span>
+          <span className={activeStep === 4 ? "text-zen-black font-semibold whitespace-nowrap" : "whitespace-nowrap"}>
+            04. AI Result
           </span>
         </div>
 
@@ -132,13 +147,12 @@ export default function TransformSpacePage() {
               Step 1 &mdash; Upload Your Existing Room
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Upload Box */}
               <div
                 onClick={() => {
-                  setUploadedImage("Custom Room Upload");
+                  setUploadedImage("/images/project-monolith.jpg");
                   setActiveStep(2);
                 }}
-                className="border-2 border-dashed border-zen-border p-10 flex flex-col items-center justify-center text-center space-y-3 cursor-pointer hover:border-zen-black transition-colors bg-zen-ivory"
+                className="border-2 border-dashed border-zen-border p-10 flex flex-col items-center justify-center text-center space-y-3 cursor-pointer hover:border-zen-black transition-colors bg-zen-ivory min-h-[300px]"
               >
                 <Upload size={32} className="text-zen-accent" />
                 <span className="text-xs uppercase tracking-widest font-medium text-zen-black">
@@ -149,7 +163,6 @@ export default function TransformSpacePage() {
                 </span>
               </div>
 
-              {/* Or Presets */}
               <div className="space-y-3">
                 <span className="text-xs font-mono uppercase tracking-wider text-zen-muted block">
                   Or Explore with Atelier Presets:
@@ -158,7 +171,7 @@ export default function TransformSpacePage() {
                   <button
                     key={p.id}
                     onClick={() => {
-                      setUploadedImage(p.name);
+                      setUploadedImage(p.thumb);
                       setActiveStep(2);
                     }}
                     className="w-full p-4 border border-zen-border bg-zen-ivory hover:border-zen-black text-left flex justify-between items-center transition-colors text-xs uppercase tracking-wider font-medium"
@@ -196,11 +209,7 @@ export default function TransformSpacePage() {
 
                   <div className="flex gap-2 pt-4 border-t border-current/20">
                     {style.palette.map((color, i) => (
-                      <div
-                        key={i}
-                        className="w-5 h-5 rounded-full border border-black/10"
-                        style={{ backgroundColor: color }}
-                      />
+                      <div key={i} className="w-5 h-5 rounded-full border border-black/10" style={{ backgroundColor: color }} />
                     ))}
                   </div>
                 </button>
@@ -215,66 +224,42 @@ export default function TransformSpacePage() {
                 Back
               </button>
               <Button onClick={() => setActiveStep(3)} variant="primary" size="md">
-                Continue to Budget
+                Continue to Generation
               </Button>
             </div>
           </div>
         )}
 
-        {/* STEP 3: Choose Budget & Generate */}
+        {/* STEP 3: Confirm & Generate */}
         {activeStep === 3 && (
           <div className="bg-zen-offwhite border border-zen-border p-8 md:p-12 space-y-8">
             <h2 className="font-serif text-3xl font-normal">
-              Step 3 &mdash; Select Investment Tier
+              Step 3 &mdash; Initiate Spatial Synthesis
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {budgets.map((b) => (
-                <button
-                  key={b.tier}
-                  onClick={() => setSelectedBudget(b.tier)}
-                  className={`p-6 text-left border flex flex-col justify-between gap-4 transition-all duration-200 ${
-                    selectedBudget === b.tier
-                      ? "bg-zen-black text-zen-ivory border-zen-black"
-                      : "bg-zen-ivory border-zen-border hover:border-zen-charcoal text-zen-charcoal"
-                  }`}
-                >
-                  <div>
-                    <span className="font-mono text-sm uppercase tracking-wider block font-semibold">
-                      {b.tier}
-                    </span>
-                    <p className="text-xs opacity-80 leading-relaxed font-light mt-2">{b.desc}</p>
-                  </div>
-                  <div className="text-[10px] font-mono text-zen-accent uppercase">
-                    Select Tier &rarr;
-                  </div>
-                </button>
-              ))}
+            
+            <div className="bg-zen-ivory p-6 border border-zen-border space-y-4">
+               <h3 className="text-xs font-mono uppercase tracking-widest text-zen-charcoal">Configuration Summary:</h3>
+               <ul className="space-y-2 text-sm text-zen-charcoal/80">
+                 <li><strong>Base Room:</strong> Uploaded Photo</li>
+                 <li><strong>Aesthetic:</strong> {selectedStyle}</li>
+                 <li><strong>Target Subject:</strong> {selectedProduct ? selectedProduct.name : "Curated Atelier Discovery"}</li>
+               </ul>
             </div>
 
             <div className="flex justify-between pt-6 border-t border-zen-border">
-              <button
-                onClick={() => setActiveStep(2)}
-                className="px-6 py-3 border border-zen-border text-xs uppercase tracking-widest hover:border-zen-black"
-              >
+              <button onClick={() => setActiveStep(2)} className="px-6 py-3 border border-zen-border text-xs uppercase tracking-widest hover:border-zen-black">
                 Back
               </button>
-              <Button
-                onClick={handleGenerate}
-                variant="gold"
-                size="lg"
-                icon={<Sparkles size={16} />}
-                disabled={isGenerating}
-              >
-                {isGenerating ? "Synthesizing Architecture..." : "Generate Spatial Concept"}
+              <Button onClick={handleGenerate} variant="primary" size="lg" icon={<Sparkles size={16} />} disabled={isGenerating}>
+                {isGenerating ? "Synthesizing Architecture..." : "Generate Concept"}
               </Button>
             </div>
           </div>
         )}
 
-        {/* STEP 4: Rendered Concept & Matched Furniture */}
+        {/* STEP 4: Rendered Concept */}
         {activeStep === 4 && (
           <div className="space-y-12">
-            {/* Visual Concept Showcase */}
             <div className="bg-zen-black text-zen-ivory border border-zen-charcoal p-8 md:p-12 space-y-8">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-zen-charcoal pb-6">
                 <div>
@@ -282,102 +267,104 @@ export default function TransformSpacePage() {
                     Spatial Concept Preview
                   </span>
                   <h2 className="font-serif text-3xl md:text-4xl font-normal">
-                    {selectedStyle} &bull; {selectedBudget}
+                    {selectedStyle} &bull; Synthesis
                   </h2>
                 </div>
-                <div className="px-3 py-1 bg-zen-charcoal text-zen-sand text-[10px] font-mono uppercase tracking-widest border border-zen-border/20">
-                  Base: {uploadedImage || "Curated Room"}
-                </div>
               </div>
 
-              {/* Render Visualization Box */}
-              <div className="relative aspect-[16/9] bg-zen-charcoal/80 border border-zen-charcoal overflow-hidden flex items-center justify-center p-8">
-                <div className="absolute inset-0 bg-dark-grain opacity-30 pointer-events-none" />
-                <div className="text-center space-y-4 max-w-lg z-10">
-                  <span className="font-serif text-4xl md:text-6xl text-zen-sand block">
-                    The {selectedStyle} Synthesis
-                  </span>
-                  <p className="text-xs text-zen-sand/80 font-light leading-relaxed">
-                    Sculpted architectural layout featuring low-profile monolithic seating, recessed cove illumination, travertine flooring, and custom acoustic timber wall fluting.
-                  </p>
-                  <div className="inline-block px-3 py-1 bg-zen-black/80 border border-zen-accent/50 text-[10px] font-mono uppercase text-zen-accent tracking-widest">
-                    CONCEPTUAL VISUALIZATION &bull; ZEN ARC SPATIAL AI
-                  </div>
-                </div>
+              {/* Slider for Before / After */}
+              <div className="relative bg-zen-charcoal/80 border border-zen-charcoal overflow-hidden aspect-[16/9] md:aspect-[21/9]">
+                <ReactCompareSlider
+                  itemOne={<ReactCompareSliderImage src={uploadedImage || "/images/project-juhu.jpg"} alt="Original Room" />}
+                  itemTwo={<ReactCompareSliderImage src={generatedImageUrl || "/images/cinematic_hero.jpg"} alt="AI Generated Architecture" />}
+                  className="w-full h-full"
+                />
               </div>
 
-              {/* Disclaimer Notice */}
               <div className="text-xs text-zen-muted font-mono leading-relaxed border-t border-zen-charcoal pt-4">
-                <strong>Important Notice:</strong> This AI concept is an exploratory spatial tool designed for ideation. Rohit Pathak and the Zen Arc team refine all physical architectural plans, structural tolerances, and custom furniture fabrication to perfection.
+                <strong>Important Notice:</strong> This AI concept is an exploratory spatial tool designed for ideation. Product scales and lighting are conceptual estimates.
               </div>
             </div>
 
-            {/* Curated Products Matched to Concept */}
-            <div className="bg-zen-offwhite border border-zen-border p-8 md:p-12 space-y-8">
-              <div>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-zen-accent font-mono block mb-1">
-                  Catalogue Integration
-                </span>
-                <h3 className="font-serif text-3xl font-normal">
-                  Pieces Featured in this Concept
-                </h3>
-              </div>
+            {/* Matched Product Integration Block */}
+            {selectedProduct && (
+              <div className="bg-zen-offwhite border border-zen-border p-8 md:p-12 space-y-8">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-zen-accent font-mono block mb-1">
+                    Catalogue Integration
+                  </span>
+                  <h3 className="font-serif text-3xl font-normal">
+                    Product Used in this Concept
+                  </h3>
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {curatedPieces.map((p) => (
-                  <div key={p.id} className="p-6 bg-zen-ivory border border-zen-border space-y-4">
-                    <div className="aspect-[4/3] bg-zen-stone/40 flex items-center justify-center p-4">
-                      <span className="font-serif text-3xl text-zen-charcoal">{p.name}</span>
-                    </div>
+                <div className="flex flex-col md:flex-row gap-8 bg-zen-ivory border border-zen-border p-6">
+                  <div className="w-full md:w-1/3 aspect-square bg-zen-stone/40 flex items-center justify-center p-4 relative overflow-hidden">
+                    {selectedProduct.images[0] ? (
+                       <Image src={selectedProduct.images[0]} alt={selectedProduct.name} fill className="object-contain p-4 mix-blend-multiply" />
+                    ) : (
+                       <span className="font-serif text-3xl text-zen-charcoal">{selectedProduct.name}</span>
+                    )}
+                  </div>
+                  <div className="w-full md:w-2/3 space-y-6 flex flex-col justify-between">
                     <div>
-                      <div className="flex justify-between items-baseline">
-                        <h4 className="font-serif text-xl">{p.name}</h4>
-                        <span className="text-xs font-mono text-zen-black">
-                          From ₹{p.basePrice.toLocaleString("en-IN")}
-                        </span>
+                      <div className="flex justify-between items-baseline mb-2">
+                        <h4 className="font-serif text-3xl">{selectedProduct.name}</h4>
                       </div>
-                      <p className="text-[11px] text-zen-taupe font-light mt-1">{p.tagline}</p>
+                      <p className="text-xs font-mono text-zen-taupe mb-4">{selectedProduct.collection} &bull; {selectedProduct.category}</p>
+                      
+                      <div className="grid grid-cols-2 gap-4 text-xs font-mono py-4 border-y border-zen-border">
+                         <div>
+                           <span className="text-zen-taupe block mb-1">Verified Pricing</span>
+                           <span className="text-zen-black font-semibold text-sm">
+                             {selectedProduct.priceStatus === 'VERIFIED' && selectedProduct.basePrice 
+                               ? `₹${selectedProduct.basePrice.toLocaleString('en-IN')}` 
+                               : 'Price On Request'}
+                           </span>
+                         </div>
+                         <div>
+                           <span className="text-zen-taupe block mb-1">Dimensions</span>
+                           <span className="text-zen-black">{selectedProduct.dimensions || "Not Specified"}</span>
+                         </div>
+                      </div>
                     </div>
-                    <div className="pt-2 border-t border-zen-border flex justify-between items-center text-xs">
-                      <Link href={`/furniture/${p.slug}`} className="text-zen-black hover:text-zen-accent uppercase tracking-wider font-medium">
-                        View Specs &rarr;
-                      </Link>
-                      <a
-                        href={getProductWhatsAppUrl(p.name, p.variations[0]?.seater, p.basePrice)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#25D366] hover:underline uppercase tracking-wider font-medium"
+
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                      <Button href={`/furniture/${selectedProduct.slug}`} variant="outline" size="md" className="flex-1">
+                        View Product Details
+                      </Button>
+                      <Button
+                        href={getProductWhatsAppUrl(selectedProduct.name, selectedProduct.variants[0]?.name, selectedProduct.basePrice || undefined)}
+                        isExternal
+                        variant="whatsapp"
+                        size="md"
+                        icon={<MessageSquare size={16} />}
+                        className="flex-1"
                       >
-                        WhatsApp
-                      </a>
+                        Inquire on WhatsApp
+                      </Button>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Next Steps: Physical Consultation or WhatsApp */}
+            {/* General CTA */}
             <div className="border border-zen-border bg-zen-stone/40 p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
               <div className="space-y-2 max-w-xl">
                 <h3 className="font-serif text-2xl md:text-3xl font-normal">
-                  Bring This Concept to Life with Rohit Pathak
+                  Bring This Concept to Life
                 </h3>
                 <p className="text-xs md:text-sm text-zen-taupe leading-relaxed font-light">
-                  Schedule a physical site inspection or discuss the CAD plans directly with the atelier.
+                  Schedule a consultation with our Atelier to refine this generated spatial plan into actionable interior execution.
                 </p>
               </div>
               <div className="flex gap-4">
-                <Button
-                  href={getWhatsAppUrl(`Hello Rohit, I generated a ${selectedStyle} space concept on the website and would like to review it together.`)}
-                  isExternal
-                  variant="whatsapp"
-                  size="md"
-                  icon={<MessageSquare size={16} />}
-                >
-                  WhatsApp Rohit Pathak
+                <Button href={`/consultation${selectedProduct ? `?product=${selectedProduct.slug}` : ''}`} variant="primary" size="md">
+                  Request Official Quote
                 </Button>
-                <Button href="/consultation" variant="primary" size="md">
-                  Book Consultation
+                <Button onClick={() => setActiveStep(1)} variant="outline" size="md" icon={<RefreshCw size={14}/>}>
+                   Try Another Photo
                 </Button>
               </div>
             </div>
@@ -385,5 +372,13 @@ export default function TransformSpacePage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function TransformSpacePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-zen-ivory flex items-center justify-center font-mono text-xs uppercase tracking-widest">Loading Space Studio...</div>}>
+      <TransformSpaceContent />
+    </Suspense>
   );
 }

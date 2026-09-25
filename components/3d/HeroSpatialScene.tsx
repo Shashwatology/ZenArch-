@@ -14,13 +14,13 @@ interface HeroSpatialSceneProps {
 
 const MATERIAL_CONFIGS = {
   "champagne-boucle": {
-    upholsteryColor: "#FAF7F2",
-    upholsteryRoughness: 0.85,
+    upholsteryColor: "#C6BAAF", // Warm taupe/beige instead of pure white
+    upholsteryRoughness: 0.95,
     upholsteryMetalness: 0.05,
-    metalColor: "#C5A880", // Brushed Champagne Gold
-    metalRoughness: 0.25,
+    metalColor: "#A38B70", // Deeper Brushed Gold
+    metalRoughness: 0.35,
     metalness: 0.9,
-    baseColor: "#ECE6DC",
+    baseColor: "#1E1C1A", // Dark architectural base instead of bright white
   },
   "charcoal-velvet": {
     upholsteryColor: "#22211F",
@@ -50,11 +50,11 @@ export function ZenArcArchitecturalChair({
   const groupRef = useRef<THREE.Group>(null);
   const config = MATERIAL_CONFIGS[preset] || MATERIAL_CONFIGS["champagne-boucle"];
 
-  // Gentle subtle idle breathe motion
+  // Extremely subtle idle float motion
   useFrame((state) => {
     if (!groupRef.current) return;
     const t = state.clock.getElapsedTime();
-    groupRef.current.position.y = -0.15 + Math.sin(t * 0.8) * 0.015;
+    groupRef.current.position.y = -0.15 + Math.sin(t * 0.4) * 0.005;
   });
 
   return (
@@ -76,9 +76,9 @@ export function ZenArcArchitecturalChair({
       <mesh position={[0, -0.62, 0]} receiveShadow>
         <cylinderGeometry args={[1.75, 1.75, 0.06, 64]} />
         <meshStandardMaterial
-          color="#F5F1E9"
-          roughness={0.7}
-          metalness={0.08}
+          color="#3A3835" // Darker stone platform
+          roughness={0.9}
+          metalness={0.05}
         />
       </mesh>
 
@@ -243,25 +243,25 @@ export function HeroSpatialScene({
 }: HeroSpatialSceneProps) {
   const { viewport } = useThree();
   
-  // Responsive camera scaling based on viewport width
-  const responsiveScale = viewport.width < 3 ? 0.75 : 1;
-  const responsiveY = viewport.width < 3 ? -0.4 : -0.2;
+  // Responsive camera scaling based on viewport width (Significantly reduced overall scale)
+  const responsiveScale = viewport.width < 3 ? 0.45 : 0.65;
+  const responsiveY = viewport.width < 3 ? -0.8 : -0.6;
 
   return (
-    <group scale={responsiveScale} position={[0, responsiveY, 0]}>
-      {/* Studio Architectural Golden-Hour Lighting */}
-      <ambientLight intensity={0.4} color="#FAF7F2" />
+    <group scale={responsiveScale} position={[0.5, responsiveY, 0]}>
+      {/* Studio Architectural Moody Lighting matching existing dark cinematic background */}
+      <ambientLight intensity={0.15} color="#FAF7F2" />
       <directionalLight
-        position={[5, 8, 5]}
-        intensity={1.5}
+        position={[3, 6, 4]}
+        intensity={0.8}
         castShadow
         shadow-mapSize={[2048, 2048]}
-        color="#FFF5E6"
+        color="#FDE8CD"
       />
       <directionalLight
         position={[-4, 4, -4]}
-        intensity={0.6}
-        color="#D9CCBA"
+        intensity={0.3}
+        color="#8B9BB4"
       />
       
       {/* High-fidelity PBR Environment Reflections */}
@@ -270,14 +270,14 @@ export function HeroSpatialScene({
       {/* Product Model */}
       <ZenArcArchitecturalChair preset={materialPreset} />
 
-      {/* Intuitive 360-degree Orbit Inspection */}
+      {/* Intuitive Orbit Inspection with constrained rotation */}
       {interactive && (
         <OrbitControls
           enableZoom={false}
           enablePan={false}
           autoRotate={true}
-          autoRotateSpeed={0.5}
-          minPolarAngle={Math.PI / 4}
+          autoRotateSpeed={0.2}
+          minPolarAngle={Math.PI / 2.5}
           maxPolarAngle={Math.PI / 2}
           dampingFactor={0.05}
           makeDefault

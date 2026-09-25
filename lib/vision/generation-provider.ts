@@ -132,8 +132,6 @@ export class GeminiImageGenerationProvider implements IImageGenerationProvider {
         imageUrl: `data:image/jpeg;base64,${generatedBase64}`,
         appliedPreset: request.presetStyle || 'KEEP_ROOM',
         scaleNote,
-        productId: request.productId,
-        productName: request.productName
       };
 
     } catch (error: any) {
@@ -143,8 +141,6 @@ export class GeminiImageGenerationProvider implements IImageGenerationProvider {
         imageUrl: "",
         errorMessage: error.message || "Failed to generate visualization.",
         scaleNote: "",
-        productId: request.productId,
-        productName: request.productName
       };
     }
   }

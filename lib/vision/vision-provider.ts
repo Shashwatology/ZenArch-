@@ -36,7 +36,6 @@ Return ONLY raw JSON, with exactly this structure:
               {
                 type: "image",
                 image: imageBase64,
-                mimeType,
               },
             ],
           },

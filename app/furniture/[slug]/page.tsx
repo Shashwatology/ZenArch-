@@ -7,7 +7,7 @@ import { notFound, useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { getProductBySlug, getProductsByCategory, FURNITURE_CATALOGUE, ProductVariant, CATEGORIES } from "@/lib/data/furniture";
-import { getWhatsAppUrl } from "@/lib/config/brand";
+import { getWhatsAppUrl, getProductWhatsAppUrl } from "@/lib/config/brand";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import {
@@ -125,8 +125,11 @@ export default function FurnitureDynamicRoute() {
     (p) => p.category === product.category && p.slug !== product.slug
   ).slice(0, 4);
 
-  const whatsappMessage = `Hi Zen Arch, I'm interested in the ${product.name} from the ${product.collection} collection. Please share the current price and available configurations for the ${currentVariant.name} variant.`;
-  const whatsappLink = getWhatsAppUrl(whatsappMessage);
+  const whatsappLink = getProductWhatsAppUrl(
+    product.name,
+    currentVariant?.name,
+    currentVariant?.priceInr || undefined
+  );
 
   return (
     <div className="min-h-screen bg-[#0F0F0F] text-zen-ivory pt-32 pb-24 selection:bg-zen-accent selection:text-white">
@@ -279,7 +282,7 @@ export default function FurnitureDynamicRoute() {
                         Upload a photo of your space to generate a conceptual placement.
                         <br/><span className="text-[10px] text-zen-accent mt-2 block">ESTIMATED VISUAL PLACEMENT ONLY</span>
                       </p>
-                      <Button variant="outline" size="sm" onClick={() => {}}>Upload Room Photo</Button>
+                      <Button href={`/ai/transform-space?product=${product.slug}`} variant="outline" size="sm">Try in My Space</Button>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -425,6 +428,15 @@ export default function FurnitureDynamicRoute() {
             <Reveal delay={0.5}>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
+                  href={`/ai/transform-space?product=${product.slug}`}
+                  variant="primary"
+                  size="lg"
+                  className="flex-1 rounded-sm"
+                  icon={<ImageIcon size={16} />}
+                >
+                  Try in My Space
+                </Button>
+                <Button
                   href={whatsappLink}
                   isExternal
                   variant="whatsapp"
@@ -432,15 +444,15 @@ export default function FurnitureDynamicRoute() {
                   className="flex-1 rounded-sm"
                   icon={<MessageSquare size={16} />}
                 >
-                  Inquire on WhatsApp
+                  WhatsApp
                 </Button>
                 <Button
-                  href="/consultation"
+                  href={`/consultation?product=${product.slug}`}
                   variant="outline"
                   size="lg"
                   className="flex-1 rounded-sm"
                 >
-                  Request Quote
+                  Quote
                 </Button>
               </div>
             </Reveal>

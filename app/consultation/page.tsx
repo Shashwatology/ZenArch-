@@ -23,8 +23,14 @@ import {
   Phone,
   Sparkles,
 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useEffect } from "react";
+import { getProductBySlug } from "@/lib/data/furniture";
 
-export default function ConsultationPage() {
+function ConsultationForm() {
+  const searchParams = useSearchParams();
+  const productSlug = searchParams?.get("product");
+
   const [currentStep, setCurrentStep] = useState<number>(1);
   const totalSteps = 8;
 
@@ -44,6 +50,21 @@ export default function ConsultationPage() {
   });
 
   const [submitted, setSubmitted] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (productSlug) {
+      const p = getProductBySlug(productSlug);
+      if (p) {
+        setFormData((prev) => ({
+          ...prev,
+          requirements: [
+            ...prev.requirements.filter((r) => r !== "Custom Furniture Selection"),
+            `Quote for: ${p.name}`,
+          ],
+        }));
+      }
+    }
+  }, [productSlug]);
 
   const toggleRequirement = (req: string) => {
     if (formData.requirements.includes(req)) {
@@ -479,5 +500,13 @@ export default function ConsultationPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ConsultationPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-zen-ivory flex items-center justify-center font-mono text-xs uppercase tracking-widest">Loading...</div>}>
+      <ConsultationForm />
+    </Suspense>
   );
 }

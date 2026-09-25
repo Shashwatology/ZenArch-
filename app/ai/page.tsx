@@ -204,11 +204,11 @@ export default function AIChatPage() {
                                   {p.name}
                                 </strong>
                                 <span className="text-[10px] font-mono text-zen-accent">
-                                  From ₹{p.basePrice.toLocaleString("en-IN")}
+                                  {p.basePrice ? `From ₹${p.basePrice.toLocaleString("en-IN")}` : 'Price on request'}
                                 </span>
                               </div>
                               <p className="text-[11px] text-zen-taupe font-light line-clamp-1">
-                                {p.tagline}
+                                {p.category}
                               </p>
                             </div>
                             <div className="flex justify-between items-center pt-1 border-t border-zen-border/50">
@@ -224,7 +224,7 @@ export default function AIChatPage() {
                                   <ArrowUpRight size={12} />
                                 </Link>
                                 <a
-                                  href={getProductWhatsAppUrl(p.name, p.variants[0]?.name, p.basePrice)}
+                                  href={getProductWhatsAppUrl(p.name, p.variants[0]?.name, p.basePrice || undefined)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-[10px] uppercase tracking-wider text-[#25D366] hover:underline"
