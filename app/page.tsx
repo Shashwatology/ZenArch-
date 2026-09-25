@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { BRAND, getWhatsAppUrl, getProductWhatsAppUrl } from "@/lib/config/brand";
 import { Button } from "@/components/ui/Button";
 import { Reveal, MaskReveal, Parallax, ScrollTransform, ImageReveal, TextReveal } from "@/components/ui/MotionPrimitives";
-import type { MaterialPreset } from "@/components/3d/HeroSpatialScene";
+import type { MaterialPreset, ModelType } from "@/components/3d/HeroSpatialScene";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -112,7 +112,8 @@ const CLIENT_TESTIMONIALS = [
 ];
 
 export default function Home() {
-  const [activeMaterial, setActiveMaterial] = useState<MaterialPreset>("champagne-boucle");
+  const [activeMaterial, setActiveMaterial] = useState<MaterialPreset>("emerald-velvet");
+  const [activeModel, setActiveModel] = useState<ModelType>("vegas-sofa");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const filteredProducts =
@@ -152,27 +153,15 @@ export default function Home() {
               className="object-cover object-center opacity-70"
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-r from-zen-black/90 via-zen-black/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-zen-black via-transparent to-zen-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-zen-black/90 via-zen-black/80 lg:via-zen-black/60 to-transparent" />
           <div className="absolute inset-0 bg-dark-grain opacity-30" />
         </div>
 
-        {/* Integrated Spatial 3D Environment */}
-        <div className="absolute inset-0 z-10 hidden md:block pointer-events-none">
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full">
-            <SpatialCanvas
-              camera={{ position: [0.5, 1.2, 4.0], fov: 40 }}
-              className="w-full h-full pointer-events-auto cursor-grab active:cursor-grabbing"
-              fallback={null}
-            >
-              <HeroSpatialScene materialPreset={activeMaterial} interactive={true} />
-            </SpatialCanvas>
-          </div>
-        </div>
-
-        {/* Main Typographic Layout */}
-        <div className="relative z-20 max-w-7xl mx-auto w-full flex items-center h-full pointer-events-none">
-          <div className="w-full lg:w-1/2 space-y-10 pointer-events-auto">
+        {/* Main Layout */}
+        <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pointer-events-none mt-10 lg:mt-0">
+          
+          {/* LEFT SIDE: Typography */}
+          <div className="lg:col-span-7 space-y-10 pointer-events-auto">
             <Reveal delay={0.2} direction="left">
               <div className="flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-zen-accent" />
@@ -196,6 +185,109 @@ export default function Home() {
               <p className="text-zen-sand/90 text-sm md:text-lg font-light max-w-md leading-relaxed tracking-wide">
                 Founded by <strong>{BRAND.founder}</strong> in Mumbai, Zen Arch harmonizes pure architectural spatial discipline with artisanal, custom-fabricated furniture.
               </p>
+            </Reveal>
+
+            <Reveal delay={1.2}>
+              <div className="flex flex-wrap items-center gap-4 mt-8">
+                <Button href="/consultation" variant="primary" size="md">
+                  Start Project
+                </Button>
+                <Button href="/furniture" variant="outline" size="md">
+                  Explore Furniture
+                </Button>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* RIGHT SIDE: Contained 3D Showroom Frame */}
+          <div className="lg:col-span-5 w-full pointer-events-auto">
+            <Reveal delay={1.2} direction="up">
+              <div className="relative aspect-square md:aspect-[4/3] lg:aspect-[4/5] bg-zen-black/20 backdrop-blur-md border border-white/10 overflow-hidden shadow-2xl flex flex-col group">
+                
+                {/* 3D Viewport Header */}
+                <div className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-20 pointer-events-none">
+                  <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-zen-sand/60">3D Spatial Preview</span>
+                  <div className="flex items-center gap-2 text-zen-sand/60">
+                    <RotateCw size={12} className="animate-spin-slow" />
+                    <span className="text-[9px] uppercase tracking-widest font-mono">360&deg; Orbit</span>
+                  </div>
+                </div>
+
+                {/* 3D Canvas */}
+                <div className="flex-1 relative cursor-grab active:cursor-grabbing bg-transparent">
+                  <SpatialCanvas
+                    camera={{ position: [0, 1.5, 4.5], fov: 40 }}
+                    className="w-full h-full"
+                    fallback={null}
+                  >
+                    <HeroSpatialScene materialPreset={activeMaterial} modelType={activeModel} interactive={true} />
+                  </SpatialCanvas>
+                </div>
+
+                {/* Viewport UI Controls */}
+                <div className="absolute bottom-0 left-0 w-full p-4 z-20 bg-gradient-to-t from-zen-black/60 via-zen-black/30 to-transparent flex flex-col gap-4">
+                  {/* Model Selector */}
+                  <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
+                    {[
+                      { id: "vegas-sofa", label: "Model 01", product: "vegas" },
+                      { id: "flame-sofa", label: "Model 02", product: "flame" },
+                      { id: "arcus-sofa", label: "Model 03", product: "arcus" },
+                      { id: "gold-ottoman", label: "Model 04", product: "gold" }
+                    ].map((m) => (
+                      <button
+                        key={m.id}
+                        onClick={() => setActiveModel(m.id as ModelType)}
+                        className={`px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono border transition-all whitespace-nowrap ${
+                          activeModel === m.id
+                            ? "border-zen-accent text-zen-accent bg-zen-accent/10"
+                            : "border-zen-charcoal text-zen-sand/50 hover:text-zen-sand hover:border-zen-sand/30"
+                        }`}
+                      >
+                        {m.label}
+                      </button>
+                    ))}
+                    
+                    {/* View Product CTA */}
+                    <div className="ml-auto pl-2">
+                      <Link 
+                        href={`/furniture/${[
+                          { id: "vegas-sofa", slug: "vegas" },
+                          { id: "flame-sofa", slug: "flame" },
+                          { id: "arcus-sofa", slug: "arcus" },
+                          { id: "gold-ottoman", slug: "gold" }
+                        ].find(x => x.id === activeModel)?.slug}`}
+                        className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-mono text-zen-ivory hover:text-zen-accent transition-colors whitespace-nowrap"
+                      >
+                        <span>View Product</span>
+                        <ArrowUpRight size={10} />
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Material Selector */}
+                  <div className="flex gap-1 overflow-x-auto no-scrollbar">
+                    {[
+                      { id: "emerald-velvet", label: "Emerald" },
+                      { id: "terracotta", label: "Terracotta" },
+                      { id: "royal-blue", label: "Royal Blue" },
+                      { id: "mustard-gold", label: "Mustard Gold" }
+                    ].map((mat) => (
+                      <button
+                        key={mat.id}
+                        onClick={() => setActiveMaterial(mat.id as MaterialPreset)}
+                        className={`flex-1 py-1.5 text-[9px] uppercase tracking-widest font-mono border transition-colors whitespace-nowrap px-2 ${
+                          activeMaterial === mat.id
+                            ? "border-zen-sand/40 text-zen-ivory"
+                            : "border-transparent text-zen-sand/40 hover:text-zen-sand"
+                        }`}
+                      >
+                        {mat.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
             </Reveal>
           </div>
         </div>

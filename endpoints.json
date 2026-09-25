@@ -5,11 +5,11 @@
       "workspaceFolders": [
         "d:\\ZenArch Solution"
       ],
-      "url": "http://127.0.0.1:49153/mcp",
-      "port": 49153,
-      "token": "5c11f23f-61ff-4995-a149-e266cc46a45c",
-      "pid": 24980,
-      "startedUtc": "2026-09-24T17:27:17.164Z",
+      "url": "http://127.0.0.1:49152/mcp",
+      "port": 49152,
+      "token": "a912f5d1-462b-47b7-8206-e4e9eed342d0",
+      "pid": 5020,
+      "startedUtc": "2026-09-25T07:16:42.040Z",
       "extensionVersion": "0.3.8"
     }
   ]
