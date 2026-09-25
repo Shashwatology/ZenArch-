@@ -1,7 +1,8 @@
 // @ts-nocheck
 import { z } from "zod";
 import { tool } from "ai";
-import { searchProducts, getProductBySlug, getProductsByCategory, CATEGORIES } from "@/lib/data/furniture";
+import { searchProducts, getProductBySlug, getProductsByCategory } from "@/lib/catalog/products";
+import { CATEGORIES } from "@/lib/data/furniture";
 
 // --- Tool Definitions ---
 
@@ -16,7 +17,7 @@ export const catalogTools = {
     }),
     execute: async ({ query, maxResults = 5 }: { query: string; maxResults?: number }) => {
       console.log(`[AI TOOL] Executing searchProducts: ${query}`);
-      const results = searchProducts(query);
+      const results = await searchProducts(query);
       return {
         count: results.length,
         query,
@@ -24,8 +25,8 @@ export const catalogTools = {
           id: p.id,
           slug: p.slug,
           name: p.name,
-          collection: p.collection,
-          category: p.category,
+          collection: p.collection?.name || '',
+          category: p.category?.slug || '',
           basePrice: p.basePrice,
           priceStatus: p.priceStatus,
           variantsCount: p.variants.length,
@@ -43,7 +44,7 @@ export const catalogTools = {
     }),
     execute: async ({ slug }: { slug: string }) => {
       console.log(`[AI TOOL] Executing getProductDetails: ${slug}`);
-      const product = getProductBySlug(slug);
+      const product = await getProductBySlug(slug);
       if (!product) {
         return { error: `Product with slug '${slug}' not found in the verified catalogue.` };
       }
@@ -51,8 +52,8 @@ export const catalogTools = {
         product: {
           slug: product.slug,
           name: product.name,
-          collection: product.collection,
-          category: product.category,
+          collection: product.collection?.name || '',
+          category: product.category?.slug || '',
           basePrice: product.basePrice,
           priceStatus: product.priceStatus,
           dimensions: product.dimensions,
@@ -74,7 +75,7 @@ export const catalogTools = {
     }),
     execute: async ({ category = "all", maxBudgetInr, minBudgetInr }: { category?: string; maxBudgetInr?: number; minBudgetInr?: number }) => {
       console.log(`[AI TOOL] Executing filterProducts: cat=${category} max=${maxBudgetInr} min=${minBudgetInr}`);
-      let results = getProductsByCategory(category);
+      let results = await getProductsByCategory(category);
       
       if (maxBudgetInr !== undefined) {
         results = results.filter(p => p.basePrice !== null && p.basePrice <= maxBudgetInr);
@@ -89,7 +90,7 @@ export const catalogTools = {
         products: results.slice(0, 8).map(p => ({
           slug: p.slug,
           name: p.name,
-          collection: p.collection,
+          collection: p.collection?.name || '',
           basePrice: p.basePrice,
           priceStatus: p.priceStatus
         }))
@@ -105,10 +106,11 @@ export const catalogTools = {
     }),
     execute: async ({ slugs }: { slugs: string[] }) => {
       console.log(`[AI TOOL] Executing compareProducts: ${slugs.join(", ")}`);
-      const products = slugs.map((s: string) => getProductBySlug(s)).filter(Boolean);
+      const products = await Promise.all(slugs.map((s: string) => getProductBySlug(s)));
+      const validProducts = products.filter(Boolean);
       
       return {
-        comparison: products.map((p: any) => ({
+        comparison: validProducts.map((p: any) => ({
           slug: p!.slug,
           name: p!.name,
           basePrice: p!.basePrice,
@@ -146,7 +148,7 @@ export const catalogTools = {
     }),
     execute: async ({ slug }: { slug: string }) => {
       console.log(`[AI TOOL] Executing showProductCard: ${slug}`);
-      const product = getProductBySlug(slug);
+      const product = await getProductBySlug(slug);
       if (!product) return { error: `Product ${slug} not found` };
       
       // We return the full product so the UI can render it
@@ -155,12 +157,12 @@ export const catalogTools = {
           id: product.id,
           slug: product.slug,
           name: product.name,
-          collection: product.collection,
-          category: product.category,
+          collection: product.collection?.name || '',
+          category: product.category?.slug || '',
           basePrice: product.basePrice,
           priceStatus: product.priceStatus,
           dimensions: product.dimensions,
-          images: product.images,
+          images: product.images.map(img => img.url),
           has3dModel: product.has3dModel
         }
       };

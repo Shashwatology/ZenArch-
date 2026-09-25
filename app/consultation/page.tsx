@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect } from "react";
-import { getProductBySlug } from "@/lib/data/furniture";
+import { getPublicProductBySlug } from "@/lib/actions/publicProducts";
 
 function ConsultationForm() {
   const searchParams = useSearchParams();
@@ -53,16 +53,17 @@ function ConsultationForm() {
 
   useEffect(() => {
     if (productSlug) {
-      const p = getProductBySlug(productSlug);
-      if (p) {
-        setFormData((prev) => ({
-          ...prev,
-          requirements: [
-            ...prev.requirements.filter((r) => r !== "Custom Furniture Selection"),
-            `Quote for: ${p.name}`,
-          ],
-        }));
-      }
+      getPublicProductBySlug(productSlug).then(p => {
+        if (p) {
+          setFormData((prev) => ({
+            ...prev,
+            requirements: [
+              ...prev.requirements.filter((r) => r !== "Custom Furniture Selection"),
+              `Quote for: ${p.name}`,
+            ],
+          }));
+        }
+      });
     }
   }, [productSlug]);
 

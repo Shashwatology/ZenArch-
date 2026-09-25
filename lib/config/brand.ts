@@ -85,3 +85,10 @@ export function getProductWhatsAppUrl(productName: string, variation?: string, p
   );
   return `https://wa.me/${BRAND.whatsapp}?text=${text}`;
 }
+
+export function getQuoteWhatsAppUrl(quoteRef: string, productNames: string): string {
+  const text = encodeURIComponent(
+    `Hello Zen Arch, I am following up on my quote request (Ref: ${quoteRef.toUpperCase()}) regarding: ${productNames}.`
+  );
+  return `https://wa.me/${BRAND.whatsapp}?text=${text}`;
+}

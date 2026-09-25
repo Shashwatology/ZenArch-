@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { BRAND, getWhatsAppUrl, getProductWhatsAppUrl } from "@/lib/config/brand";
-import { getProductBySlug, FurnitureProduct } from "@/lib/data/furniture";
+import { getPublicProductBySlug } from "@/lib/actions/publicProducts";
 import { Button } from "@/components/ui/Button";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import {
@@ -26,7 +26,7 @@ function TransformSpaceContent() {
   const searchParams = useSearchParams();
   const productSlug = searchParams?.get("product");
   
-  const [selectedProduct, setSelectedProduct] = useState<FurnitureProduct | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
   const [activeStep, setActiveStep] = useState<number>(1);
   const [selectedStyle, setSelectedStyle] = useState<string>("Zen Minimalist");
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -35,8 +35,9 @@ function TransformSpaceContent() {
 
   useEffect(() => {
     if (productSlug) {
-      const p = getProductBySlug(productSlug);
-      if (p) setSelectedProduct(p);
+      getPublicProductBySlug(productSlug).then(p => {
+        if (p) setSelectedProduct(p);
+      });
     }
   }, [productSlug]);
 
@@ -67,18 +68,105 @@ function TransformSpaceContent() {
     },
   ];
 
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 25 * 1024 * 1024) {
+        alert("File size exceeds 25MB.");
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setUploadedImage(event.target?.result as string);
+        setActiveStep(2);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleGenerate = async () => {
     setIsGenerating(true);
-    
-    // In V1.4, we mock the network call to the vision API we built in V1.3.1
-    // to preserve product identity and show the flow without actually spending real API credits 
-    // unless the user specifically uploads an image (which we can't do easily via standard browser file upload yet in QA)
-    
-    setTimeout(() => {
-      setIsGenerating(false);
-      setGeneratedImageUrl(selectedProduct?.images[0] || "/images/project-juhu.jpg");
+    setGeneratedImageUrl(null);
+
+    try {
+      // Base64 without data URI prefix for the API
+      let base64Image = uploadedImage || "";
+      let mimeType = "image/jpeg";
+      
+      if (base64Image.startsWith("data:")) {
+        const matches = base64Image.match(/^data:([a-zA-Z0-9]+\/[a-zA-Z0-9-.+]+);base64,(.+)$/);
+        if (matches) {
+          mimeType = matches[1];
+          base64Image = matches[2];
+        }
+      } else if (base64Image.startsWith("/")) {
+        // If it's a local preset URL, fetch it and convert to base64
+        const res = await fetch(base64Image);
+        const blob = await res.blob();
+        base64Image = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const dataUrl = reader.result as string;
+            resolve(dataUrl.split(",")[1]);
+          };
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      // Step 1: Analyze room
+      const analyzeRes = await fetch("/api/vision/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ imageBase64: base64Image, mimeType })
+      });
+
+      if (!analyzeRes.ok) throw new Error("Failed to analyze room.");
+      const analysis = await analyzeRes.json();
+
+      if (!analysis.isSuitableForPlacement) {
+        throw new Error(analysis.reasonIfNotSuitable || "Room photo is not suitable for furniture placement.");
+      }
+
+      // Step 2: Generate Visualization
+      // If no product selected, use a fallback from catalogue, or just throw error (prompt says must resolve product).
+      if (!selectedProduct) {
+        throw new Error("Please select a specific Zen Arch product to visualize.");
+      }
+
+      const generateRes = await fetch("/api/vision/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          request: {
+            roomImageBase64: base64Image,
+            productId: selectedProduct.id,
+            productName: selectedProduct.name,
+            productDimensions: selectedProduct.dimensions,
+            presetStyle: selectedStyle
+          },
+          analysis,
+          productReferenceUrl: selectedProduct.images?.[0]
+        })
+      });
+
+      if (!generateRes.ok) {
+        const errorData = await generateRes.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to generate visualization.");
+      }
+      
+      const genResult = await generateRes.json();
+      
+      if (!genResult.success) {
+        throw new Error(genResult.errorMessage || "Generation failed.");
+      }
+
+      setGeneratedImageUrl(genResult.imageUrl);
       setActiveStep(4);
-    }, 2000);
+    } catch (e: any) {
+      alert(e.message);
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   return (
@@ -147,13 +235,15 @@ function TransformSpaceContent() {
               Step 1 &mdash; Upload Your Existing Room
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div
-                onClick={() => {
-                  setUploadedImage("/images/project-monolith.jpg");
-                  setActiveStep(2);
-                }}
+              <label
                 className="border-2 border-dashed border-zen-border p-10 flex flex-col items-center justify-center text-center space-y-3 cursor-pointer hover:border-zen-black transition-colors bg-zen-ivory min-h-[300px]"
               >
+                <input 
+                  type="file" 
+                  accept="image/jpeg, image/png, image/webp" 
+                  className="hidden" 
+                  onChange={handleFileUpload}
+                />
                 <Upload size={32} className="text-zen-accent" />
                 <span className="text-xs uppercase tracking-widest font-medium text-zen-black">
                   Upload Room Photo / Blueprint
@@ -161,7 +251,7 @@ function TransformSpaceContent() {
                 <span className="text-[11px] text-zen-taupe font-light">
                   PNG, JPG, or PDF up to 25MB
                 </span>
-              </div>
+              </label>
 
               <div className="space-y-3">
                 <span className="text-xs font-mono uppercase tracking-wider text-zen-muted block">
@@ -360,7 +450,7 @@ function TransformSpaceContent() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <Button href={`/consultation${selectedProduct ? `?product=${selectedProduct.slug}` : ''}`} variant="primary" size="md">
+                <Button href={`/furniture/${selectedProduct?.slug || ''}?quote=true`} variant="primary" size="md">
                   Request Official Quote
                 </Button>
                 <Button onClick={() => setActiveStep(1)} variant="outline" size="md" icon={<RefreshCw size={14}/>}>

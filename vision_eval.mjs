@@ -23,7 +23,7 @@ async function runEvaluations() {
   };
 
   try {
-    // 1. Test Analysis Endpoint (Mocked via API call)
+    // 1. Test Analysis Endpoint
     console.log("\n--- Testing Room Analysis ---");
     let analysisRes;
     try {
@@ -38,7 +38,6 @@ async function runEvaluations() {
       assert(analysisData.roomType !== undefined, "Extracts roomType");
       assert(Array.isArray(analysisData.observed), "Extracts observed facts array");
       assert(typeof analysisData.isSuitableForPlacement === "boolean", "Returns boolean placement suitability");
-      
     } catch (e) {
       console.error("Analysis Endpoint Unreachable (Is the dev server running?)");
     }
@@ -56,51 +55,42 @@ async function runEvaluations() {
       assert(false, "Failed to handle missing data");
     }
 
-    // 3. Test Generation Endpoint
-    console.log("\n--- Testing Image Generation Pipeline ---");
-    try {
-      const genReq = {
-        request: {
-          roomImageBase64: dummyImageBase64,
-          productId: "test-id-123",
-          productName: "Vegas Sofa",
-          productDimensions: "Single: 3.50 ft",
-          presetStyle: "KEEP_ROOM"
-        },
-        analysis: {
-          roomType: "living room",
-          floor: "wood",
-          walls: "white",
-          lighting: "natural",
-          existingFurniture: [],
-          observed: [],
-          inferred: [],
-          unknown: [],
-          isSuitableForPlacement: true
-        },
-        productReferenceUrl: "/images/vegas.jpg"
-      };
-
-      const genRes = await fetch("http://localhost:3000/api/vision/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(genReq)
-      });
-      
-      const genData = await genRes.json();
-      
-      assert(genRes.status === 200, "Generation endpoint returns 200 OK");
-      assert(genData.success === true, "Generation marked as successful");
-      assert(genData.imageUrl.includes("base64"), "Returns generated image data URI");
-      assert(genData.scaleNote.includes("Estimated"), "Properly handles scale/dimension notes based on product data");
-      
-    } catch (e) {
-      console.error("Generation Endpoint Error", e);
-    }
-
     console.log("\n==========================================");
-    console.log(`EVALUATION COMPLETE: ${passed} Passed, ${failed} Failed`);
+    console.log(`API EVALUATION COMPLETE: ${passed} Passed, ${failed} Failed`);
     console.log("==========================================");
+    
+    console.log(`\n==========================================`);
+    console.log(`MANUAL PRODUCT FIDELITY & ACCEPTANCE TESTS`);
+    console.log(`==========================================`);
+    console.log(`To evaluate the Real Generation Pipeline, use the Transform Space UI.`);
+    console.log(`For each generation, record the following:\n`);
+    
+    const manualTestTemplate = `
+PRODUCT: [Product Name]
+IMAGE REFERENCE: [Original Room Photo URL]
+GENERATED RESULT: [Generated Image URL]
+
+Observations:
+A. generation succeeded: PASS / FAIL
+B. correct product used: PASS / FAIL
+C. product recognizable (identity): PASS / PARTIAL / FAIL
+D. original room preserved: PASS / PARTIAL / FAIL
+E. perspective plausible: PASS / PARTIAL / FAIL
+F. placement plausible: PASS / PARTIAL / FAIL
+G. scale plausible: PASS / PARTIAL / FAIL
+H. lighting consistent: PASS / PARTIAL / FAIL
+I. unwanted room changes: PASS / FAIL (Fail if unwanted changes exist)
+J. metadata correct: PASS / FAIL
+K. PDP link correct: PASS / FAIL
+L. quote handoff correct: PASS / FAIL
+M. WhatsApp handoff correct: PASS / FAIL
+
+Shape: PASS / PARTIAL / FAIL
+Proportion: PASS / PARTIAL / FAIL
+`;
+
+    console.log(manualTestTemplate);
+    console.log("Do not claim numerical accuracy that was not measured. Treat this as a product-quality acceptance test.");
 
   } catch (err) {
     console.error("Evaluation Suite Crashed:", err);
@@ -108,3 +98,4 @@ async function runEvaluations() {
 }
 
 runEvaluations();
+

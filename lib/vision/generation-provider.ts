@@ -22,6 +22,44 @@ export class GeminiImageGenerationProvider implements IImageGenerationProvider {
     }
   }
 
+  private buildRoomPreservationPrompt(): string {
+    return `ROOM PRESERVATION:
+Preserve walls, floor, ceiling, windows, doors, architecture, camera perspective, lighting direction, and overall room identity exactly as they are. Do not redesign the room.`;
+  }
+
+  private buildProductReferencePrompt(productName: string): string {
+    return `PRODUCT IDENTITY:
+Add the requested ZEN ARCH furniture piece: ${productName}.
+Prioritize the exact silhouette, shape, upholstery appearance, and structural details (armrests, legs, backrest) of the provided reference product image. Do not generate a generic similar sofa.`;
+  }
+
+  private buildPlacementPrompt(analysis: RoomAnalysisResult): string {
+    return `PLACEMENT INSTRUCTIONS:
+Place the selected furniture naturally on the visible floor plane based on the following context:
+- Room Type: ${analysis.roomType}
+- Floor: ${analysis.floor}
+- Placement Clues: ${analysis.inferred.join(", ")}
+Ensure correct perspective matching the existing camera viewpoint and maintain correct occlusion with any existing foreground objects.`;
+  }
+
+  private buildScalePrompt(dimensions?: string): string {
+    if (dimensions) {
+      return `SCALE INSTRUCTIONS:\nUse the dimensions (${dimensions}) as approximate proportional guidance relative to the room scale.`;
+    }
+    return `SCALE INSTRUCTIONS:\nCatalogue dimensions unavailable. Estimate plausible visual scale without inventing exact measurements.`;
+  }
+
+  private buildLightingPrompt(analysis: RoomAnalysisResult): string {
+    return `LIGHTING INSTRUCTIONS:
+Create realistic contact shadows and preserve lighting consistency.
+Existing lighting context: ${analysis.lighting}. Match this lighting direction and intensity on the new furniture.`;
+  }
+
+  private buildNegativeConstraints(): string {
+    return `NEGATIVE CONSTRAINTS:
+DO NOT add extra unrequested furniture or decorative objects. DO NOT repaint walls, replace flooring, change windows, or alter the architectural style unless explicitly instructed.`;
+  }
+
   async generateVisualization(
     request: VisualizationRequest,
     analysis: RoomAnalysisResult,
@@ -56,28 +94,15 @@ export class GeminiImageGenerationProvider implements IImageGenerationProvider {
       scaleNote = "Scale is approximate because catalogue dimensions are unavailable.";
     }
 
-    const prompt = `
-      EDIT THE USER'S EXISTING ROOM PHOTO.
-      Preserve walls, floor, ceiling, windows, doors, architecture, camera perspective, lighting direction, and overall room identity exactly as they are.
-      
-      TASK: Add the requested ZEN ARCH furniture piece into the room.
-      Product: ${request.productName}
-      Dimensions: ${request.productDimensions || 'Standard proportions'}
-      
-      ROOM CONTEXT:
-      - Type: ${analysis.roomType}
-      - Floor: ${analysis.floor}
-      - Lighting: ${analysis.lighting}
-      - Placement clues: ${analysis.inferred.join(", ")}
-      
-      INSTRUCTIONS:
-      - Preserve the original room architecture and perspective.
-      - Place the selected furniture naturally on the floor plane.
-      - Create realistic contact shadows and preserve lighting consistency.
-      - Maintain correct occlusion.
-      - Prioritize the exact silhouette, shape, and upholstery appearance of the reference product image provided.
-      - DO NOT add extra furniture. DO NOT redesign the room.
-    `.trim();
+    const prompt = [
+      "EDIT THE USER'S EXISTING ROOM PHOTO.",
+      this.buildRoomPreservationPrompt(),
+      this.buildProductReferencePrompt(request.productName),
+      this.buildPlacementPrompt(analysis),
+      this.buildScalePrompt(request.productDimensions),
+      this.buildLightingPrompt(analysis),
+      this.buildNegativeConstraints()
+    ].join("\n\n");
 
     // 4. API Request to Google Generative Language API
     try {

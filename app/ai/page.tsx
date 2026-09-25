@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { BRAND, getWhatsAppUrl, getProductWhatsAppUrl } from "@/lib/config/brand";
-import { FURNITURE_CATALOGUE, FurnitureProduct } from "@/lib/data/furniture";
+import { getInitialAiRecommendations, processAiMessage } from "@/lib/actions/ai-chat";
 import { Button } from "@/components/ui/Button";
 import {
   Sparkles,
@@ -22,22 +22,22 @@ interface ChatMessage {
   id: string;
   sender: "user" | "assistant";
   text: string;
-  recommendedProducts?: FurnitureProduct[];
+  recommendedProducts?: any[];
 }
 
 export default function AIChatPage() {
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      id: "welcome",
-      sender: "assistant",
-      text: "Welcome to the Zen Arch Spatial Studio. I am your architectural design assistant. I can guide you through our 2026 furniture collections, dimensional specifications, fabric requirements, and spatial styling for your home or project. How may I assist your space today?",
-      recommendedProducts: [
-        FURNITURE_CATALOGUE[0], // Vegas
-        FURNITURE_CATALOGUE[4], // Arcus
-        FURNITURE_CATALOGUE[15], // Albert Puffy
-      ],
-    },
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+
+  useEffect(() => {
+    getInitialAiRecommendations().then(products => {
+      setMessages([{
+        id: "welcome",
+        sender: "assistant",
+        text: "Welcome to the Zen Arch Spatial Studio. I am your architectural design assistant. I can guide you through our 2026 furniture collections, dimensional specifications, fabric requirements, and spatial styling for your home or project. How may I assist your space today?",
+        recommendedProducts: products,
+      }]);
+    });
+  }, []);
 
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -66,46 +66,7 @@ export default function AIChatPage() {
     setIsTyping(true);
 
     // Context-aware assistant logic grounded in verified catalogue data
-    setTimeout(() => {
-      let replyText = "";
-      let matchedProducts: FurnitureProduct[] = [];
-
-      const query = text.toLowerCase();
-
-      if (query.includes("vegas")) {
-        const prod = FURNITURE_CATALOGUE.find((p) => p.slug === "vegas");
-        if (prod) matchedProducts.push(prod);
-        replyText =
-          "The Vegas Sofa is an architectural centerpiece in our 2026 catalogue (Page 2). Available in Single Seater (3.50ft, ₹56,000), Two Seater (5.25ft, ₹74,000), and Three Seater (7.25ft, ₹92,000). Fabric allowance is included at ₹500/meter.";
-      } else if (query.includes("arcus") || query.includes("curve") || query.includes("curved")) {
-        const arcus = FURNITURE_CATALOGUE.find((p) => p.slug === "arcus");
-        const curve = FURNITURE_CATALOGUE.find((p) => p.slug === "curve");
-        if (arcus) matchedProducts.push(arcus);
-        if (curve) matchedProducts.push(curve);
-        replyText =
-          "For organic curved profiles, we recommend the Arcus and the Curve sofas. Arcus begins at ₹33,500 (3.25ft) with enveloping cocoon arms and bolster pillows. The Curve sofa (5.50ft to 7.00ft) creates a dramatic sweeping arc ideal for central salons.";
-      } else if (query.includes("puffy") || query.includes("pouf") || query.includes("ottoman") || query.includes("10,000") || query.includes("under")) {
-        const albert = FURNITURE_CATALOGUE.find((p) => p.slug === "albert");
-        const eva = FURNITURE_CATALOGUE.find((p) => p.slug === "eva");
-        const gold = FURNITURE_CATALOGUE.find((p) => p.slug === "gold");
-        if (albert) matchedProducts.push(albert);
-        if (eva) matchedProducts.push(eva);
-        if (gold) matchedProducts.push(gold);
-        replyText =
-          "Our 2026 Puffy Collection features sculptural accent poufs crafted with textured bouclé and architectural metal trims. The Albert (₹6,500), Eva (₹5,500), and Gold (₹6,250) provide tactile seating accents with zero visual clutter.";
-      } else if (query.includes("consultation") || query.includes("process") || query.includes("price") || query.includes("rohit")) {
-        replyText =
-          "Every architectural commission is directed by Rohit Pathak. We begin with our 8-step guided consultation to align floor area, investment budget, and custom joinery requirements. Would you like to launch the onboarding brief or connect directly on WhatsApp?";
-      } else {
-        matchedProducts = [
-          FURNITURE_CATALOGUE[1], // Flame
-          FURNITURE_CATALOGUE[3], // Montana
-          FURNITURE_CATALOGUE[16], // Libra
-        ];
-        replyText =
-          "Based on your inquiry, I have curated these architectural selections from our catalogue. Each piece is constructed in our Mumbai atelier with custom dimensions and material specifications available upon request.";
-      }
-
+    processAiMessage(text).then(({ replyText, matchedProducts }) => {
       setMessages((prev) => [
         ...prev,
         {
@@ -116,7 +77,7 @@ export default function AIChatPage() {
         },
       ]);
       setIsTyping(false);
-    }, 800);
+    });
   };
 
   const samplePrompts = [
