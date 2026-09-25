@@ -1,25 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import dynamic from "next/dynamic";
-import { getProductBySlug, FURNITURE_CATALOGUE, ProductVariation } from "@/lib/data/furniture";
-import { BRAND, getProductWhatsAppUrl, getWhatsAppUrl } from "@/lib/config/brand";
+import { motion, AnimatePresence } from "framer-motion";
+import { getProductBySlug, getProductsByCategory, FURNITURE_CATALOGUE, ProductVariant, CATEGORIES } from "@/lib/data/furniture";
+import { getWhatsAppUrl } from "@/lib/config/brand";
 import { Button } from "@/components/ui/Button";
+import { Reveal } from "@/components/ui/Reveal";
 import {
   ArrowLeft,
   ArrowRight,
   Box,
   MessageSquare,
-  CheckCircle2,
   Ruler,
+  Camera,
   Layers,
-  Sparkles,
-  Share2,
+  ChevronRight,
+  Image as ImageIcon,
+  CheckCircle2,
+  AlertTriangle
 } from "lucide-react";
 
-// Dynamic 3D Viewer
 const SpatialCanvas = dynamic(
   () => import("@/components/3d/SpatialCanvas").then((mod) => mod.SpatialCanvas),
   { ssr: false }
@@ -30,100 +34,82 @@ const HeroSpatialScene = dynamic(
   { ssr: false }
 );
 
-export default function ProductOrCategoryPage() {
+export default function FurnitureDynamicRoute() {
   const params = useParams();
   const rawSlug = params?.slug as string;
-  const isCategory = ["sofas", "puffy-collection", "benches"].includes(rawSlug);
-  const categoryProducts = isCategory ? FURNITURE_CATALOGUE.filter((p) => p.category === rawSlug) : [];
-  const product = !isCategory ? getProductBySlug(rawSlug) : undefined;
+
+  const isCategory = CATEGORIES.some(c => c.id === rawSlug);
+  const categoryLabel = CATEGORIES.find(c => c.id === rawSlug)?.name;
+  const product = getProductBySlug(rawSlug);
 
   if (!isCategory && !product) {
     notFound();
   }
 
-  const [selectedVariationIndex, setSelectedVariationIndex] = useState<number>(0);
-  const [view3D, setView3D] = useState<boolean>(false);
+  // State for Product View
+  const [selectedVariantIndex, setSelectedVariantIndex] = useState<number>(0);
+  const [viewMode, setViewMode] = useState<"STUDIO" | "3D" | "AR_TRYON" | "PHOTO_VISUALIZER">("STUDIO");
 
-  // If category view:
+  // ---- CATEGORY VIEW ----
   if (isCategory) {
-    const categoryTitle =
-      rawSlug === "sofas"
-        ? "Sofas & Lounges"
-        : rawSlug === "puffy-collection"
-        ? "Puffy Collection"
-        : "Sculptural Benches";
-
-    const categorySubtitle =
-      rawSlug === "sofas"
-        ? "38+ Handcrafted Settees, Daybeds, and Sectionals — Zenarch 2026 Source"
-        : rawSlug === "puffy-collection"
-        ? "28+ Sculptural Accent Poufs & Ottomans — W.E.F. 1st May 2026"
-        : "Architectural Low Benches & Circular Lounges";
-
+    const categoryProducts = getProductsByCategory(rawSlug);
     return (
-      <div className="min-h-screen bg-zen-ivory text-zen-black pt-32 pb-24 px-6 md:px-12 selection:bg-zen-accent selection:text-white">
-        <div className="max-w-7xl mx-auto space-y-16">
-          <div className="space-y-6 max-w-3xl border-b border-zen-border pb-10">
-            <div className="flex items-center gap-3">
-              <Link href="/furniture" className="text-xs font-mono uppercase tracking-widest text-zen-muted hover:text-zen-black flex items-center gap-1">
-                <ArrowLeft size={12} /> All Collections
-              </Link>
+      <div className="min-h-screen bg-[#0F0F0F] text-zen-ivory pt-32 pb-24 selection:bg-zen-accent selection:text-white">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 space-y-16">
+          <Reveal>
+            <div className="space-y-6 max-w-4xl border-b border-white/10 pb-16">
+              <div className="flex items-center gap-3">
+                <Link href="/furniture" className="text-[10px] uppercase tracking-[0.3em] text-white/40 hover:text-white transition-colors font-mono flex items-center gap-2">
+                  <ArrowLeft size={12}/> All Collections
+                </Link>
+              </div>
+              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl font-normal leading-[1.05] tracking-tight uppercase text-white">
+                {categoryLabel}.
+              </h1>
+              <p className="text-lg text-zen-ivory/70 font-light leading-relaxed max-w-2xl">
+                Verified inventory for the {categoryLabel} collection. Authentic dimensions and approved pricing.
+              </p>
             </div>
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.05] tracking-tight uppercase">
-              {categoryTitle}.
-            </h1>
-            <p className="text-base text-zen-charcoal/80 font-light leading-relaxed">
-              {categorySubtitle}. Verified dimensional tables, fabric meterage calculations, and approved price lists.
-            </p>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categoryProducts.map((p) => (
-              <Link
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 pt-8">
+            {categoryProducts.map((p, idx) => (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
                 key={p.id}
-                href={`/furniture/${p.slug}`}
-                className="group bg-zen-offwhite border border-zen-border p-6 flex flex-col justify-between hover:border-zen-black transition-all duration-300"
               >
-                <div className="space-y-4">
-                  <div className="relative aspect-[4/3] bg-zen-stone/40 overflow-hidden flex items-center justify-center p-6">
-                    <div className="text-center">
-                      <span className="font-serif text-4xl text-zen-charcoal block group-hover:scale-105 transition-transform duration-500">
-                        {p.name}
-                      </span>
-                      <span className="text-xs text-zen-taupe tracking-wider block mt-2 italic font-serif">
-                        &ldquo;{p.tagline}&rdquo;
-                      </span>
-                    </div>
-                    <div className="absolute bottom-2 right-3 text-[9px] font-mono text-zen-taupe/80">
-                      Pg {p.sourceCatalogue.page}
-                    </div>
+                <Link href={`/furniture/${p.slug}`} className="group flex flex-col h-full">
+                  <div className="relative aspect-square mb-5 bg-[#1A1A1A] overflow-hidden rounded-sm">
+                    {p.images[0] ? (
+                      <Image
+                        src={p.images[0]}
+                        alt={p.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-contain p-8 group-hover:scale-110 transition-transform duration-700 ease-[0.16,1,0.3,1] mix-blend-screen"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-white/20 font-mono text-xs">NO IMAGE</div>
+                    )}
                   </div>
-
-                  <div className="pt-2 space-y-2">
-                    <div className="flex justify-between items-baseline">
-                      <h2 className="font-serif text-2xl font-normal group-hover:text-zen-accent transition-colors">
-                        {p.name}
-                      </h2>
-                      <span className="text-xs font-mono text-zen-black font-medium">
-                        {p.variations.length > 1
-                          ? `From ₹${p.basePrice.toLocaleString("en-IN")}`
-                          : `₹${p.basePrice.toLocaleString("en-IN")}`}
-                      </span>
+                  <div className="flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="font-serif text-xl sm:text-2xl text-white group-hover:text-zen-accent transition-colors">{p.name}</h3>
+                      {p.basePrice && p.priceStatus === 'VERIFIED' && (
+                        <span className="text-[11px] font-mono text-white/60 pt-1">₹{p.basePrice.toLocaleString("en-IN")}</span>
+                      )}
                     </div>
-                    <p className="text-xs text-zen-taupe line-clamp-2 leading-relaxed font-light">
-                      {p.description}
+                    <p className="text-xs text-white/40 font-mono mb-4 flex-grow line-clamp-2">
+                      {p.variants.length > 1 ? `${p.variants.length} Configurations` : 'Standard'}
                     </p>
+                    <div className="flex items-center text-[10px] uppercase tracking-widest font-medium text-zen-accent mt-auto group-hover:translate-x-2 transition-transform duration-300">
+                      View Details <ChevronRight size={14} className="ml-1" />
+                    </div>
                   </div>
-                </div>
-
-                <div className="pt-6 border-t border-zen-border/70 flex items-center justify-between mt-4">
-                  <span className="text-[10px] text-zen-muted font-mono">{p.sourceCatalogue.catalogueName}</span>
-                  <span className="text-xs uppercase tracking-widest font-medium text-zen-black group-hover:text-zen-accent transition-colors flex items-center gap-1">
-                    <span>View</span>
-                    <ArrowRight size={14} />
-                  </span>
-                </div>
-              </Link>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -131,255 +117,378 @@ export default function ProductOrCategoryPage() {
     );
   }
 
-  // Otherwise product detail view:
+  // ---- PRODUCT DETAIL VIEW ----
   if (!product) return null;
-  const currentVariation: ProductVariation =
-    product.variations[selectedVariationIndex] || product.variations[0];
+  const currentVariant: ProductVariant = product.variants[selectedVariantIndex] || product.variants[0];
 
   const relatedProducts = FURNITURE_CATALOGUE.filter(
     (p) => p.category === product.category && p.slug !== product.slug
-  ).slice(0, 3);
+  ).slice(0, 4);
 
-  const whatsappLink = getProductWhatsAppUrl(
-    product.name,
-    currentVariation.seater,
-    currentVariation.priceInr
-  );
+  const whatsappMessage = `Hi Zen Arch, I'm interested in the ${product.name} from the ${product.collection} collection. Please share the current price and available configurations for the ${currentVariant.name} variant.`;
+  const whatsappLink = getWhatsAppUrl(whatsappMessage);
 
   return (
-    <div className="min-h-screen bg-zen-ivory text-zen-black pt-28 pb-24 px-6 md:px-12 selection:bg-zen-accent selection:text-white">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <div className="min-h-screen bg-[#0F0F0F] text-zen-ivory pt-32 pb-24 selection:bg-zen-accent selection:text-white">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 space-y-16">
+        
         {/* Breadcrumb Navigation */}
-        <div className="flex items-center justify-between border-b border-zen-border pb-6 text-xs font-mono uppercase tracking-widest text-zen-muted">
+        <div className="flex items-center justify-between border-b border-white/10 pb-6 text-[10px] font-mono uppercase tracking-widest text-white/40">
           <Link
             href="/furniture"
-            className="flex items-center gap-2 hover:text-zen-black transition-colors"
+            className="flex items-center gap-2 hover:text-white transition-colors"
           >
             <ArrowLeft size={14} />
-            <span>Catalogue</span>
+            <span>Showroom</span>
           </Link>
           <div className="flex items-center gap-2">
-            <span>{product.categoryLabel}</span>
+            <Link href={`/furniture/${product.category}`} className="hover:text-white transition-colors">{product.collection}</Link>
             <span>/</span>
-            <span className="text-zen-black font-semibold">{product.name}</span>
+            <span className="text-white font-medium">{product.name}</span>
           </div>
         </div>
 
         {/* Main Product Presentation Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Visual Presentation (Studio or 3D) */}
+          
+          {/* Left Column: Visual Presentation & Try In My Space */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="relative aspect-[4/3] bg-zen-stone/40 border border-zen-border overflow-hidden flex items-center justify-center p-8">
-              {/* Top View Toggle */}
-              {product.has3dModel && (
-                <div className="absolute top-4 right-4 z-20 flex gap-2">
+            <div className="relative aspect-square md:aspect-[4/3] bg-[#1A1A1A] overflow-hidden flex flex-col justify-between rounded-sm">
+              
+              {/* Top View Toggles */}
+              <div className="absolute top-6 right-6 z-20 flex flex-wrap gap-2 justify-end max-w-[80%]">
+                <button
+                  onClick={() => setViewMode("STUDIO")}
+                  className={`px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono transition-colors border backdrop-blur-md ${
+                    viewMode === "STUDIO"
+                      ? "bg-white text-black border-white"
+                      : "bg-black/40 text-white/80 border-white/20 hover:border-white/50"
+                  }`}
+                >
+                  Gallery
+                </button>
+                {product.has3dModel ? (
                   <button
-                    onClick={() => setView3D(false)}
-                    className={`px-3 py-1 text-[10px] uppercase tracking-widest font-mono transition-colors border ${
-                      !view3D
-                        ? "bg-zen-black text-zen-ivory border-zen-black"
-                        : "bg-zen-ivory/80 text-zen-black border-zen-border"
-                    }`}
-                  >
-                    Studio View
-                  </button>
-                  <button
-                    onClick={() => setView3D(true)}
-                    className={`px-3 py-1 text-[10px] uppercase tracking-widest font-mono transition-colors border flex items-center gap-1 ${
-                      view3D
+                    onClick={() => setViewMode("3D")}
+                    className={`px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono transition-colors border flex items-center gap-1 backdrop-blur-md ${
+                      viewMode === "3D"
                         ? "bg-zen-accent text-white border-zen-accent"
-                        : "bg-zen-ivory/80 text-zen-black border-zen-border"
+                        : "bg-black/40 text-white/80 border-white/20 hover:border-white/50"
                     }`}
                   >
-                    <Box size={12} /> 3D Orbit
+                    <Box size={10} /> 3D Orbit
                   </button>
-                </div>
-              )}
-
-              {/* Source Page Watermark */}
-              <div className="absolute top-4 left-4 text-[9px] uppercase font-mono tracking-widest text-zen-taupe/80 bg-zen-ivory/60 px-2 py-1 border border-zen-border/50">
-                {product.sourceCatalogue.catalogueName} &bull; Page {product.sourceCatalogue.page}
+                ) : (
+                  <div className="px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono border border-white/10 bg-black/20 text-white/20 flex items-center gap-1 cursor-not-allowed">
+                    <Box size={10} /> 3D Asset Pending
+                  </div>
+                )}
+                
+                <button
+                  onClick={() => setViewMode("AR_TRYON")}
+                  className={`px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono transition-colors border flex items-center gap-1 backdrop-blur-md ${
+                    viewMode === "AR_TRYON"
+                      ? "bg-white text-black border-white"
+                      : "bg-black/40 text-white/80 border-white/20 hover:border-white/50"
+                  }`}
+                >
+                  <Camera size={10} /> AR View
+                </button>
+                <button
+                  onClick={() => setViewMode("PHOTO_VISUALIZER")}
+                  className={`px-3 py-1.5 text-[9px] uppercase tracking-widest font-mono transition-colors border flex items-center gap-1 backdrop-blur-md ${
+                    viewMode === "PHOTO_VISUALIZER"
+                      ? "bg-white text-black border-white"
+                      : "bg-black/40 text-white/80 border-white/20 hover:border-white/50"
+                  }`}
+                >
+                  <ImageIcon size={10} /> Photo Fit
+                </button>
               </div>
 
               {/* View Content */}
-              {view3D ? (
-                <div className="w-full h-full">
-                  <SpatialCanvas>
-                    <HeroSpatialScene />
-                  </SpatialCanvas>
-                </div>
-              ) : (
-                <div className="text-center space-y-4 max-w-md">
-                  <span className="font-serif text-6xl md:text-7xl lg:text-8xl text-zen-charcoal block">
-                    {product.name}
-                  </span>
-                  <span className="text-sm md:text-base font-serif italic text-zen-accent block">
-                    &ldquo;{product.tagline}&rdquo;
-                  </span>
-                  <p className="text-xs text-zen-taupe font-light tracking-wide max-w-sm mx-auto">
-                    Handcrafted architectural proportions. Photographed &amp; documented in the official Zen Arc collection.
-                  </p>
-                </div>
-              )}
+              <div className="absolute inset-0 flex items-center justify-center p-8">
+                <AnimatePresence mode="wait">
+                  {viewMode === "STUDIO" && (
+                    <motion.div
+                      key="studio"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="w-full h-full relative"
+                    >
+                      {product.images[0] ? (
+                        <Image
+                          src={product.images[0]}
+                          alt={product.name}
+                          fill
+                          className="object-contain mix-blend-screen"
+                          sizes="(max-width: 1024px) 100vw, 60vw"
+                          priority
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full text-white/20 font-mono text-sm uppercase tracking-widest">
+                          Image Data Unavailable
+                        </div>
+                      )}
+                    </motion.div>
+                  )}
+                  
+                  {viewMode === "3D" && product.has3dModel && (
+                    <motion.div
+                      key="3d"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="w-full h-full"
+                    >
+                      <SpatialCanvas>
+                        <HeroSpatialScene />
+                      </SpatialCanvas>
+                    </motion.div>
+                  )}
+
+                  {viewMode === "AR_TRYON" && (
+                    <motion.div
+                      key="ar"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="w-full h-full flex flex-col items-center justify-center space-y-4"
+                    >
+                      <Camera size={48} className="text-white/20" />
+                      <h3 className="font-serif text-2xl text-white">Camera / AR Mode</h3>
+                      <p className="text-xs text-white/60 font-mono max-w-sm text-center px-4">
+                        Detecting surface... Place the {product.name} in your physical space using true dimensions: {product.dimensions || "Dimensions Unavailable"}.
+                      </p>
+                      <Button variant="outline" size="sm" onClick={() => {}}>Launch Native AR</Button>
+                    </motion.div>
+                  )}
+
+                  {viewMode === "PHOTO_VISUALIZER" && (
+                    <motion.div
+                      key="photo"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="w-full h-full flex flex-col items-center justify-center space-y-4"
+                    >
+                      <ImageIcon size={48} className="text-white/20" />
+                      <h3 className="font-serif text-2xl text-white">Photo Visualization</h3>
+                      <p className="text-xs text-white/60 font-mono max-w-sm text-center px-4">
+                        Upload a photo of your space to generate a conceptual placement.
+                        <br/><span className="text-[10px] text-zen-accent mt-2 block">ESTIMATED VISUAL PLACEMENT ONLY</span>
+                      </p>
+                      <Button variant="outline" size="sm" onClick={() => {}}>Upload Room Photo</Button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
-            {/* Architectural Traceability Footnote */}
-            <div className="p-4 bg-zen-stone/30 border border-zen-border text-xs text-zen-taupe flex items-center justify-between font-mono">
-              <span>CATALOGUE TRACEABILITY</span>
-              <span>{product.sourceCatalogue.catalogueName} &bull; PG {product.sourceCatalogue.page}</span>
+            {/* Traceability Footnote */}
+            <div className="p-4 bg-[#1A1A1A] border border-white/5 text-xs text-white/40 flex items-center justify-between font-mono rounded-sm">
+              <span className="flex items-center gap-2"><CheckCircle2 size={12} className="text-green-500" /> SOURCE VERIFIED</span>
+              <span>ID: {product.id.toUpperCase()}</span>
             </div>
           </div>
 
-          {/* Right Column: Specifications & Configuration Selector */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="space-y-3">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-zen-accent font-mono block">
-                {product.categoryLabel}
-              </span>
-              <h1 className="font-serif text-4xl md:text-5xl font-normal leading-tight">
-                {product.name}
-              </h1>
-              <p className="text-xs md:text-sm text-zen-charcoal/80 font-light leading-relaxed">
-                {product.description}
-              </p>
-            </div>
+          {/* Right Column: Specifications & Configuration */}
+          <div className="lg:col-span-5 space-y-10">
+            <Reveal>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="px-2 py-0.5 border border-white/20 text-[9px] uppercase tracking-widest font-mono text-white/60">
+                    {product.collection}
+                  </span>
+                  <span className="px-2 py-0.5 border border-white/20 text-[9px] uppercase tracking-widest font-mono text-white/60">
+                    {product.category.replace(/-/g, ' ')}
+                  </span>
+                </div>
+                <h1 className="font-serif text-5xl md:text-6xl font-normal leading-[1.1] text-white">
+                  {product.name}
+                </h1>
+                <p className="text-sm text-white/60 font-light leading-relaxed">
+                  Authentic {product.collection.toLowerCase()} collection piece. 
+                  Hand-finished and configured for premium architectural environments.
+                </p>
+              </div>
+            </Reveal>
 
             {/* Price Display */}
-            <div className="p-6 bg-zen-offwhite border border-zen-border space-y-2">
-              <div className="flex items-baseline justify-between">
-                <span className="text-xs uppercase tracking-widest text-zen-muted font-mono">
-                  Approved Price
-                </span>
-                <span className="font-serif text-3xl md:text-4xl text-zen-black font-normal">
-                  ₹{currentVariation.priceInr.toLocaleString("en-IN")}
-                </span>
-              </div>
-              <p className="text-[11px] text-zen-taupe font-light">
-                {product.pricingTerms}
-              </p>
-              {product.fabricRateNote && (
-                <p className="text-[11px] text-zen-accent font-medium">
-                  {product.fabricRateNote}
-                </p>
-              )}
-            </div>
-
-            {/* Variation / Seater Selector */}
-            {product.variations.length > 1 && (
-              <div className="space-y-3">
-                <span className="text-xs uppercase tracking-[0.2em] text-zen-black font-medium block">
-                  Select Seater Configuration
-                </span>
-                <div className="grid grid-cols-3 gap-3">
-                  {product.variations.map((v, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedVariationIndex(index)}
-                      className={`p-3 text-center border transition-all duration-200 flex flex-col items-center justify-center gap-1 ${
-                        selectedVariationIndex === index
-                          ? "border-zen-black bg-zen-black text-zen-ivory"
-                          : "border-zen-border bg-zen-ivory hover:border-zen-charcoal text-zen-charcoal"
-                      }`}
-                    >
-                      <span className="text-xs font-medium uppercase tracking-wider">
-                        {v.seater}
-                      </span>
-                      <span className="text-[11px] font-mono opacity-80">
-                        ₹{v.priceInr.toLocaleString("en-IN")}
-                      </span>
-                    </button>
-                  ))}
+            <Reveal delay={0.1}>
+              <div className="p-6 bg-[#1A1A1A] border border-white/10 space-y-2 rounded-sm">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-xs uppercase tracking-widest text-white/40 font-mono">
+                    Base Price
+                  </span>
+                  {product.priceStatus === 'VERIFIED' && currentVariant.priceInr ? (
+                    <span className="font-serif text-4xl text-white font-normal">
+                      ₹{currentVariant.priceInr.toLocaleString("en-IN")}
+                    </span>
+                  ) : product.priceStatus === 'CONFLICT' ? (
+                    <span className="flex items-center gap-2 text-zen-accent font-mono text-sm border border-zen-accent px-3 py-1">
+                      <AlertTriangle size={14} /> PRICE UNDER REVIEW
+                    </span>
+                  ) : (
+                    <span className="font-mono text-sm text-white/40 border border-white/10 px-3 py-1">
+                      PRICE ON REQUEST
+                    </span>
+                  )}
                 </div>
+                <p className="text-[10px] text-white/40 font-mono uppercase tracking-widest pt-2">
+                  Ex-Warehouse. GST, Packing, forwarding & installation extra.
+                </p>
               </div>
+            </Reveal>
+
+            {/* Variation Selector */}
+            {product.variants.length > 1 && (
+              <Reveal delay={0.2}>
+                <div className="space-y-4">
+                  <span className="text-[10px] uppercase tracking-widest text-white/60 font-mono block">
+                    Select Configuration
+                  </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {product.variants.map((v, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedVariantIndex(index)}
+                        className={`p-3 text-center border transition-all duration-300 flex flex-col items-center justify-center gap-1 rounded-sm ${
+                          selectedVariantIndex === index
+                            ? "border-white bg-white text-black"
+                            : "border-white/10 bg-[#1A1A1A] hover:border-white/40 text-white/80"
+                        }`}
+                      >
+                        <span className="text-[10px] font-medium uppercase tracking-widest">
+                          {v.name}
+                        </span>
+                        {v.priceInr && (
+                          <span className={`text-[10px] font-mono ${selectedVariantIndex === index ? 'text-black/60' : 'text-white/40'}`}>
+                            ₹{v.priceInr.toLocaleString("en-IN")}
+                          </span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
             )}
 
-            {/* Dimensional & Specification Table */}
-            <div className="border border-zen-border divide-y divide-zen-border text-xs">
-              <div className="p-3.5 flex justify-between bg-zen-stone/20">
-                <span className="text-zen-muted font-mono uppercase">Dimensions (Size)</span>
-                <span className="font-medium text-zen-black">{currentVariation.sizeFt || "Custom"}</span>
+            {/* Technical Specifications */}
+            <Reveal delay={0.3}>
+              <div className="space-y-4">
+                <span className="text-[10px] uppercase tracking-widest text-white/60 font-mono flex items-center justify-between">
+                  <span>Technical Specifications</span>
+                  {product.dimensions && <span className="flex items-center gap-1"><Ruler size={10}/> DIMENSIONS VERIFIED</span>}
+                </span>
+                
+                <div className="border border-white/10 divide-y divide-white/10 text-xs font-mono rounded-sm overflow-hidden">
+                  <div className="p-4 flex justify-between bg-white/[0.02]">
+                    <span className="text-white/40">Dimensions</span>
+                    <span className="font-medium text-white text-right max-w-[60%]">{product.dimensions || "NOT PROVIDED"}</span>
+                  </div>
+                  
+                  {product.specifications && product.specifications.length > 0 ? (
+                    product.specifications.map((spec, i) => (
+                      <div key={i} className={`p-4 flex justify-between ${i%2!==0 ? 'bg-white/[0.02]' : ''}`}>
+                        <span className="text-white/40">{spec.key}</span>
+                        <span className="font-medium text-white text-right max-w-[60%] leading-relaxed">{spec.value}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-4 flex justify-between">
+                      <span className="text-white/40">Detailed Specs</span>
+                      <span className="font-medium text-white/40">NOT PROVIDED IN SOURCE</span>
+                    </div>
+                  )}
+                </div>
               </div>
-              {currentVariation.fabricMeters && (
-                <div className="p-3.5 flex justify-between">
-                  <span className="text-zen-muted font-mono uppercase">Fabric Consumption</span>
-                  <span className="font-medium text-zen-black">{currentVariation.fabricMeters} Meters</span>
-                </div>
-              )}
-              {product.specifications.frameMaterial && (
-                <div className="p-3.5 flex justify-between bg-zen-stone/20">
-                  <span className="text-zen-muted font-mono uppercase">Frame Structure</span>
-                  <span className="font-medium text-zen-black">{product.specifications.frameMaterial}</span>
-                </div>
-              )}
-              {product.specifications.legFinish && (
-                <div className="p-3.5 flex justify-between">
-                  <span className="text-zen-muted font-mono uppercase">Leg / Base Finish</span>
-                  <span className="font-medium text-zen-black">{product.specifications.legFinish}</span>
-                </div>
-              )}
-            </div>
+            </Reveal>
 
-            {/* Order & WhatsApp CTA Area */}
-            <div className="space-y-3 pt-2">
-              <Button
-                href={whatsappLink}
-                isExternal
-                variant="whatsapp"
-                size="lg"
-                fullWidth
-                icon={<MessageSquare size={16} />}
-              >
-                Inquire on WhatsApp ({currentVariation.seater})
-              </Button>
-              <Button
-                href="/consultation"
-                variant="outline"
-                size="md"
-                fullWidth
-              >
-                Book Space Consultation with Rohit Pathak
-              </Button>
-            </div>
+            {/* Space Fit Assistant Component */}
+            <Reveal delay={0.4}>
+               <div className="p-4 border border-white/10 bg-white/[0.02] space-y-3 rounded-sm">
+                  <span className="text-[10px] uppercase tracking-widest text-white/60 font-mono flex items-center gap-2">
+                    <Layers size={12} /> Space Fit Assistant
+                  </span>
+                  <div className="flex gap-2">
+                    <input type="text" placeholder="Room Width (ft)" className="w-full bg-[#0F0F0F] border border-white/10 px-3 py-2 text-xs font-mono text-white placeholder:text-white/20 focus:outline-none focus:border-zen-accent rounded-sm" />
+                    <input type="text" placeholder="Room Length (ft)" className="w-full bg-[#0F0F0F] border border-white/10 px-3 py-2 text-xs font-mono text-white placeholder:text-white/20 focus:outline-none focus:border-zen-accent rounded-sm" />
+                    <Button variant="outline" size="sm" className="whitespace-nowrap px-4 py-2 text-[10px] rounded-sm">Calculate Fit</Button>
+                  </div>
+                  <p className="text-[9px] font-mono text-white/40 uppercase">This is a planning aid. Real product footprint may vary slightly.</p>
+               </div>
+            </Reveal>
+
+            {/* Actions */}
+            <Reveal delay={0.5}>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  href={whatsappLink}
+                  isExternal
+                  variant="whatsapp"
+                  size="lg"
+                  className="flex-1 rounded-sm"
+                  icon={<MessageSquare size={16} />}
+                >
+                  Inquire on WhatsApp
+                </Button>
+                <Button
+                  href="/consultation"
+                  variant="outline"
+                  size="lg"
+                  className="flex-1 rounded-sm"
+                >
+                  Request Quote
+                </Button>
+              </div>
+            </Reveal>
           </div>
         </div>
 
-        {/* Related Products from Collection */}
+        {/* Related Products */}
         {relatedProducts.length > 0 && (
-          <div className="pt-16 border-t border-zen-border space-y-8">
-            <div className="flex justify-between items-end">
+          <div className="pt-24 space-y-10">
+            <div className="flex justify-between items-end border-b border-white/10 pb-6">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-zen-accent font-mono block mb-1">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-zen-accent font-mono block mb-2">
                   Atelier Curation
                 </span>
-                <h3 className="font-serif text-3xl font-normal uppercase">
+                <h3 className="font-serif text-4xl text-white">
                   Related Designs
                 </h3>
               </div>
               <Link
-                href="/furniture"
-                className="text-xs uppercase tracking-widest text-zen-black hover:text-zen-accent transition-colors flex items-center gap-1"
+                href={`/furniture/${product.category}`}
+                className="text-[10px] font-mono uppercase tracking-widest text-white/60 hover:text-white transition-colors flex items-center gap-1 pb-1"
               >
-                <span>All Catalogues</span>
+                <span>View Collection</span>
                 <ArrowRight size={14} />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((p) => (
                 <Link
                   key={p.id}
                   href={`/furniture/${p.slug}`}
-                  className="p-6 bg-zen-offwhite border border-zen-border hover:border-zen-black transition-colors group block space-y-4"
+                  className="group block space-y-4"
                 >
-                  <div className="aspect-[4/3] bg-zen-stone/40 flex items-center justify-center p-4">
-                    <span className="font-serif text-3xl text-zen-charcoal group-hover:scale-105 transition-transform">
-                      {p.name}
-                    </span>
+                  <div className="relative aspect-square bg-[#1A1A1A] overflow-hidden rounded-sm">
+                    {p.images[0] && (
+                      <Image
+                        src={p.images[0]}
+                        alt={p.name}
+                        fill
+                        className="object-contain p-6 mix-blend-screen group-hover:scale-110 transition-transform duration-700 ease-[0.16,1,0.3,1]"
+                      />
+                    )}
                   </div>
-                  <div className="flex justify-between items-baseline">
-                    <h4 className="font-serif text-xl">{p.name}</h4>
-                    <span className="text-xs font-mono text-zen-black">
-                      From ₹{p.basePrice.toLocaleString("en-IN")}
+                  <div>
+                    <h4 className="font-serif text-xl text-white group-hover:text-zen-accent transition-colors">{p.name}</h4>
+                    <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest">
+                      {p.priceStatus === 'VERIFIED' && p.basePrice ? `₹${p.basePrice.toLocaleString("en-IN")}` : 'Price On Request'}
                     </span>
                   </div>
                 </Link>

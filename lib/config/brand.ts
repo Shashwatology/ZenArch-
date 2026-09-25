@@ -31,8 +31,8 @@ export interface BrandConfig {
 }
 
 export const BRAND: BrandConfig = {
-  name: "Zen Arc Interior Solution",
-  shortName: "Zen Arc",
+  name: "Zen Arch Interior Solution",
+  shortName: "Zen Arch",
   tagline: "Spaces designed around the way you live.",
   subTagline: "Luxury Architectural Studio & Bespoke Furniture Atelier",
   founder: "Rohit Pathak",
@@ -74,14 +74,14 @@ export const BRAND: BrandConfig = {
 
 export function getWhatsAppUrl(message?: string): string {
   const defaultText = encodeURIComponent(
-    message || "Hello Rohit, I would like to enquire about Zen Arc interior architectural services and bespoke furniture."
+    message || "Hello Rohit, I would like to enquire about Zen Arch interior architectural services and bespoke furniture."
   );
   return `https://wa.me/${BRAND.whatsapp}?text=${defaultText}`;
 }
 
 export function getProductWhatsAppUrl(productName: string, variation?: string, price?: number): string {
   const text = encodeURIComponent(
-    `Hello Zen Arc, I am interested in the ${productName}${variation ? ` (${variation})` : ""}${price ? ` listed at ₹${price.toLocaleString("en-IN")}` : ""}. Please share catalogue specifications and lead times.`
+    `Hello Zen Arch, I am interested in the ${productName}${variation ? ` (${variation})` : ""}${price ? ` listed at ₹${price.toLocaleString("en-IN")}` : ""}. Please share catalogue specifications and lead times.`
   );
   return `https://wa.me/${BRAND.whatsapp}?text=${text}`;
 }

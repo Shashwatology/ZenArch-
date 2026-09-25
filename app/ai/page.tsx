@@ -30,7 +30,7 @@ export default function AIChatPage() {
     {
       id: "welcome",
       sender: "assistant",
-      text: "Welcome to the Zen Arc Spatial Studio. I am your architectural design assistant. I can guide you through our 2026 furniture collections, dimensional specifications, fabric requirements, and spatial styling for your home or project. How may I assist your space today?",
+      text: "Welcome to the Zen Arch Spatial Studio. I am your architectural design assistant. I can guide you through our 2026 furniture collections, dimensional specifications, fabric requirements, and spatial styling for your home or project. How may I assist your space today?",
       recommendedProducts: [
         FURNITURE_CATALOGUE[0], // Vegas
         FURNITURE_CATALOGUE[4], // Arcus
@@ -123,7 +123,7 @@ export default function AIChatPage() {
     "What are the specifications and prices for the Vegas sofa?",
     "Recommend curved organic seating for a living room",
     "Show me sculptural accent poufs from the Puffy collection",
-    "How does the Zen Arc guided consultation work?",
+    "How does the Zen Arch guided consultation work?",
   ];
 
   return (
@@ -134,7 +134,7 @@ export default function AIChatPage() {
           <div className="space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-zen-black text-zen-ivory text-[10px] uppercase tracking-[0.25em] font-mono">
               <Sparkles size={12} className="text-zen-accent" />
-              <span>Zen Arc Spatial Intelligence</span>
+              <span>Zen Arch Spatial Intelligence</span>
             </div>
             <h1 className="font-serif text-3xl sm:text-5xl font-normal uppercase tracking-tight">
               Design Assistant.
@@ -149,7 +149,7 @@ export default function AIChatPage() {
               Transform Your Space
             </Button>
             <Button
-              href={getWhatsAppUrl("Hello Rohit, I was using the Zen Arc AI design assistant and would like to continue our discussion.")}
+              href={getWhatsAppUrl("Hello Rohit, I was using the Zen Arch AI design assistant and would like to continue our discussion.")}
               isExternal
               variant="whatsapp"
               size="sm"
@@ -213,7 +213,7 @@ export default function AIChatPage() {
                             </div>
                             <div className="flex justify-between items-center pt-1 border-t border-zen-border/50">
                               <span className="text-[9px] font-mono text-zen-muted">
-                                Pg {p.sourceCatalogue.page}
+                                Collection: {p.collection}
                               </span>
                               <div className="flex gap-2">
                                 <Link
@@ -224,7 +224,7 @@ export default function AIChatPage() {
                                   <ArrowUpRight size={12} />
                                 </Link>
                                 <a
-                                  href={getProductWhatsAppUrl(p.name, p.variations[0]?.seater, p.basePrice)}
+                                  href={getProductWhatsAppUrl(p.name, p.variants[0]?.name, p.basePrice)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-[10px] uppercase tracking-wider text-[#25D366] hover:underline"

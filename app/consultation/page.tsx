@@ -75,7 +75,7 @@ export default function ConsultationPage() {
 
   const getSummaryWhatsAppText = () => {
     return encodeURIComponent(
-      `Hello Rohit Pathak & Zen Arc Team, I have completed the Project Consultation brief:\n\n` +
+      `Hello Rohit Pathak & Zen Arch Team, I have completed the Project Consultation brief:\n\n` +
         `• Name: ${formData.name || "Prospective Client"}\n` +
         `• Phone: ${formData.phone}\n` +
         `• Email: ${formData.email}\n` +

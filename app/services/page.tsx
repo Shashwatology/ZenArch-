@@ -60,11 +60,11 @@ export default function ServicesPage() {
       title: "Spatial 3D & AI Design Studio",
       subtitle: "Photorealistic & Conceptual Intelligence",
       description:
-        "Before a single wall is touched, we construct comprehensive digital twins of your space. Using real-time 3D rendering and Zen Arc AI spatial tools, clients explore daylighting, material textures, and furniture arrangements with total confidence.",
+        "Before a single wall is touched, we construct comprehensive digital twins of your space. Using real-time 3D rendering and Zen Arch AI spatial tools, clients explore daylighting, material textures, and furniture arrangements with total confidence.",
       deliverables: [
         "Interactive 3D spatial models with responsive lighting",
         "Photorealistic 4K architectural visual renders",
-        "Zen Arc AI space transformation concepts",
+        "Zen Arch AI space transformation concepts",
         "Material sampling moodboards & physical tactile swatches",
       ],
     },
@@ -188,7 +188,7 @@ export default function ServicesPage() {
           </div>
           <div className="flex gap-4">
             <Button
-              href={getWhatsAppUrl("Hello Zen Arc, I would like to inquire about your architectural services.")}
+              href={getWhatsAppUrl("Hello Zen Arch, I would like to inquire about your architectural services.")}
               isExternal
               variant="whatsapp"
               size="md"

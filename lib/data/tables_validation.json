@@ -1,0 +1,1522 @@
+[
+  {
+    "page": 2,
+    "region": "Region A",
+    "product": "XM 018",
+    "dimensions": null,
+    "price": "62000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 2,
+    "region": "Region B",
+    "product": "THE LEAF",
+    "dimensions": "1920 X 390",
+    "price": "120000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 2,
+    "region": "Region C",
+    "product": "XM 018",
+    "dimensions": null,
+    "price": "62000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 2,
+    "region": "Region D",
+    "product": "MINI LEAF",
+    "dimensions": null,
+    "price": "72000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 2,
+    "region": "Region E",
+    "product": "BN-40",
+    "dimensions": null,
+    "price": "50000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region A",
+    "product": "WT 300",
+    "dimensions": "900*900*300* | 450*400",
+    "price": "104000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region B",
+    "product": "FD 402",
+    "dimensions": "950*340 | 500*440",
+    "price": "70000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region C",
+    "product": "FD 402",
+    "dimensions": "950*340 | 500*440",
+    "price": "70000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region D",
+    "product": "WT 300",
+    "dimensions": "900*900*300* | 450*400",
+    "price": "104000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region E",
+    "product": "BHT 103",
+    "dimensions": "1200*1200*290 | 450*390",
+    "price": "70000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region F",
+    "product": "FYX 402",
+    "dimensions": "1200*750*330",
+    "price": "54000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region G",
+    "product": "BHT 103",
+    "dimensions": "1200*1200*290 | 450*390",
+    "price": "70000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 3,
+    "region": "Region H",
+    "product": "FYX 402",
+    "dimensions": "1200*750*330",
+    "price": "54000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region A",
+    "product": "2306",
+    "dimensions": "900*300 & 500*500",
+    "price": "75000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region B",
+    "product": "CJ1135AB",
+    "dimensions": null,
+    "price": "84000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region C",
+    "product": "CJ1135AB",
+    "dimensions": null,
+    "price": "84000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region D",
+    "product": "2301",
+    "dimensions": "1000*800*330 & 450*550*400",
+    "price": "68000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region E",
+    "product": "T05",
+    "dimensions": "850*320 & 520*430",
+    "price": "41000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region F",
+    "product": "2343",
+    "dimensions": "900*360 & 600*460",
+    "price": "68000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 4,
+    "region": "Region G",
+    "product": "2304",
+    "dimensions": "1000*300 & 600*400",
+    "price": "68000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region A",
+    "product": "2323",
+    "dimensions": "1400*800*250",
+    "price": "44500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region B",
+    "product": "2410",
+    "dimensions": "800 X 300 & 545 X 360",
+    "price": "48000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region C",
+    "product": "8513",
+    "dimensions": null,
+    "price": "62000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region D",
+    "product": "1300*700*330 & 500*400*440",
+    "dimensions": null,
+    "price": "95000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region E",
+    "product": "801",
+    "dimensions": "1160*850*380 & 550*480",
+    "price": "38000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 5,
+    "region": "Region F",
+    "product": "T07",
+    "dimensions": null,
+    "price": "36000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region A",
+    "product": "YB 257",
+    "dimensions": "1300*700*220 & 800*900*350",
+    "price": "78000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region B",
+    "product": "YB 2530",
+    "dimensions": "500*500*400",
+    "price": "68000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region C",
+    "product": "CJ 791 C & D (Set of 2 only)",
+    "dimensions": "600*550",
+    "price": "105000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region D",
+    "product": "CJ 943 A & B",
+    "dimensions": "950*425*350",
+    "price": "135000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region E",
+    "product": "F33#",
+    "dimensions": "500*500*460",
+    "price": "60000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 6,
+    "region": "Region F",
+    "product": "540*510",
+    "dimensions": null,
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 6,
+    "region": "Region G",
+    "product": "V13 SET",
+    "dimensions": "540*510",
+    "price": "31000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region A",
+    "product": "F17",
+    "dimensions": null,
+    "price": "49000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region B",
+    "product": "F38",
+    "dimensions": "130*70*35 | 55*48",
+    "price": "60000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region C",
+    "product": "BN 09",
+    "dimensions": "1340*812*330 & 673*444*430",
+    "price": "56000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region D",
+    "product": "R 09",
+    "dimensions": "580*500",
+    "price": "62000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region E",
+    "product": "803",
+    "dimensions": "900*900*360 & 700*700*450",
+    "price": "40000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 7,
+    "region": "Region F",
+    "product": "Y22",
+    "dimensions": null,
+    "price": "40000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region A",
+    "product": "YB 247",
+    "dimensions": "500*500*450",
+    "price": "75000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region B",
+    "product": "YB 241",
+    "dimensions": "600*600*420",
+    "price": "68000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region C",
+    "product": "211",
+    "dimensions": null,
+    "price": "58000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region D",
+    "product": "950",
+    "dimensions": null,
+    "price": "65000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region E",
+    "product": "SC 185",
+    "dimensions": "600*600*500",
+    "price": "60000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 8,
+    "region": "Region F",
+    "product": "Sc178",
+    "dimensions": "600*340",
+    "price": "42000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region D",
+    "product": "016",
+    "dimensions": "880*410 & 570*470",
+    "price": "70000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region E",
+    "product": "058",
+    "dimensions": "820*380 & 520*490",
+    "price": "44000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region F",
+    "product": "009",
+    "dimensions": "760*410 & 515*490",
+    "price": "44000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region J",
+    "product": "812 & 812B SET",
+    "dimensions": "800*430 & 600*500",
+    "price": "32000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region K",
+    "product": "M122",
+    "dimensions": "800*390 & 550*480",
+    "price": "36000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region L",
+    "product": "Y07",
+    "dimensions": "900*290 & 600*450",
+    "price": "42000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region R",
+    "product": "Sc036",
+    "dimensions": "800*450h & 600*350h",
+    "price": "37000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region S",
+    "product": "815 SET",
+    "dimensions": "900*400h & 500*500h",
+    "price": "52000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 9,
+    "region": "Region T",
+    "product": "SC 024",
+    "dimensions": "800*450 h & 600*380 h (Wht/Blk)",
+    "price": "28000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region D",
+    "product": "T02",
+    "dimensions": "900*330 & 550*420",
+    "price": "39000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region E",
+    "product": "Q10",
+    "dimensions": "800*400 & 500*500",
+    "price": "46000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region F",
+    "product": "266",
+    "dimensions": "1000*1000*300 & 600*470",
+    "price": "74000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region J",
+    "product": "2498",
+    "dimensions": "1000 x 400 | 580 x 450",
+    "price": "42000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region K",
+    "product": "2485",
+    "dimensions": "960 x 350 | 770 x 270",
+    "price": "38000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region L",
+    "product": "YB 265",
+    "dimensions": "1200 x 750 x 350 | 600 x 430 x360",
+    "price": "42000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region P",
+    "product": "V01SET",
+    "dimensions": "790*420 & 590*500",
+    "price": "17500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region Q",
+    "product": "2313",
+    "dimensions": "900*380 & 500*450",
+    "price": "38000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 10,
+    "region": "Region R",
+    "product": "V08 SET",
+    "dimensions": "790*420 & 590*500",
+    "price": "21000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 11,
+    "region": "Region A",
+    "product": "CJ 787 SET",
+    "dimensions": "Marble)",
+    "price": "88000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 11,
+    "region": "Region D",
+    "product": "2429",
+    "dimensions": "1300*700*300",
+    "price": "42000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 11,
+    "region": "Region E",
+    "product": "817",
+    "dimensions": "1360 X 720 X 400",
+    "price": "32000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 11,
+    "region": "Region H",
+    "product": "Sc130",
+    "dimensions": "1300 X 700 X 450",
+    "price": "38000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 11,
+    "region": "Region I",
+    "product": "CT 826",
+    "dimensions": "1400 X 725 X 400",
+    "price": "38000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region D",
+    "product": "Ct50",
+    "dimensions": "800x420 & 600x360",
+    "price": "16000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region E",
+    "product": "2589",
+    "dimensions": "800*800*360 & 500*450",
+    "price": "33000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region F",
+    "product": "SHS SET - 38000/-",
+    "dimensions": null,
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 12,
+    "region": "Region K",
+    "product": "305",
+    "dimensions": "800 X 800 X 420 | 550 X 550 X 470",
+    "price": "9500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region L",
+    "product": "SHS (BIG TABLE ONLY)",
+    "dimensions": null,
+    "price": "22000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region Q",
+    "product": "072",
+    "dimensions": "650*450*450",
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 12,
+    "region": "Region R",
+    "product": "041 THREE FLOORS",
+    "dimensions": "770*430*840",
+    "price": "29000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region A",
+    "product": "CJ 138C",
+    "dimensions": "Marble)",
+    "price": "26000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region D",
+    "product": "CJ 1083B",
+    "dimensions": "500*500",
+    "price": "13000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region E",
+    "product": "009",
+    "dimensions": "515*490",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region I",
+    "product": "BN 09 (ONLY CORNER)",
+    "dimensions": null,
+    "price": "17000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region J",
+    "product": "B1035",
+    "dimensions": null,
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region K",
+    "product": "BN 28",
+    "dimensions": null,
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region O",
+    "product": "B1037 COPPER",
+    "dimensions": null,
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region P",
+    "product": "K60",
+    "dimensions": null,
+    "price": "13000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 13,
+    "region": "Region Q",
+    "product": "B 1033",
+    "dimensions": "450*510",
+    "price": "13000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region D",
+    "product": "SL 069",
+    "dimensions": "570*490*520",
+    "price": "23000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region E",
+    "product": "922B",
+    "dimensions": "500*450*480",
+    "price": "14500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region F",
+    "product": "012",
+    "dimensions": "450*400*500",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region J",
+    "product": "SL 036",
+    "dimensions": "480*500",
+    "price": "15500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region K",
+    "product": "SL 019",
+    "dimensions": "500*500",
+    "price": "14500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region L",
+    "product": "C21",
+    "dimensions": null,
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region P",
+    "product": "SL 023",
+    "dimensions": "430*500",
+    "price": "16000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region Q",
+    "product": "SL 046",
+    "dimensions": "430*510",
+    "price": "14500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 14,
+    "region": "Region R",
+    "product": "SL 041",
+    "dimensions": "620*400*700",
+    "price": "23000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region A",
+    "product": "CJ 1118B",
+    "dimensions": "450x480x500",
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region D",
+    "product": "CJ 1035B",
+    "dimensions": "550x400x465",
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region E",
+    "product": "CJ 809B",
+    "dimensions": "600x500x500",
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region F",
+    "product": "CJ 1118B",
+    "dimensions": "450x480x500",
+    "price": "18500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region J",
+    "product": "2580",
+    "dimensions": "520*450",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region K",
+    "product": "V13 SIDE TABLE",
+    "dimensions": "540*510",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region L",
+    "product": "2608",
+    "dimensions": "500*510",
+    "price": "18000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region P",
+    "product": "B1026",
+    "dimensions": "400*580",
+    "price": "16500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region Q",
+    "product": "B1034 GOLD",
+    "dimensions": "500*500",
+    "price": "16000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 15,
+    "region": "Region R",
+    "product": "GT 01",
+    "dimensions": "450*540",
+    "price": "15000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region A",
+    "product": "CT 015",
+    "dimensions": "500 X 500 h",
+    "price": "11500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region B",
+    "product": "E07",
+    "dimensions": "500 X 580 h",
+    "price": "11500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region D",
+    "product": "CT 036",
+    "dimensions": "500 X 500h",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region H",
+    "product": "817B",
+    "dimensions": "600 X 420 X 510",
+    "price": "17500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region I",
+    "product": "021",
+    "dimensions": "450 X 500",
+    "price": "16000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region J",
+    "product": "SL 011",
+    "dimensions": "HT ADJ 700*400*500-760",
+    "price": "19000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region N",
+    "product": "K30",
+    "dimensions": "380*520",
+    "price": "5000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region O",
+    "product": "299S-1",
+    "dimensions": "500 X 465",
+    "price": "6600/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 16,
+    "region": "Region P",
+    "product": "K31",
+    "dimensions": "380 X 550",
+    "price": "5000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region D",
+    "product": "Sc114",
+    "dimensions": "450\u00d8 X 550h",
+    "price": "15000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region E",
+    "product": "Sc075",
+    "dimensions": "800\u00d8 X 450 h | 600\u00d8 X 380 h",
+    "price": "22000/- | 17500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region F",
+    "product": "Sc110",
+    "dimensions": "500*500*550",
+    "price": "15000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region J",
+    "product": "905B",
+    "dimensions": "650*450",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region K",
+    "product": "K12",
+    "dimensions": "590*500",
+    "price": "11000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region L",
+    "product": "903B",
+    "dimensions": "450*520",
+    "price": "16500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region P",
+    "product": "Ah99",
+    "dimensions": "420*420*500",
+    "price": "9000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region Q",
+    "product": "T59",
+    "dimensions": "560*340*600",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 17,
+    "region": "Region R",
+    "product": "P -19",
+    "dimensions": null,
+    "price": "9000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region D",
+    "product": "Z 230",
+    "dimensions": "600 \u00d8 X 450 h",
+    "price": "7800/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region E",
+    "product": "Z 293",
+    "dimensions": "500 \u00d8 X 450 h",
+    "price": "9000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region F",
+    "product": "322",
+    "dimensions": "500 \u00d8 X 480 h",
+    "price": "5800/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region J",
+    "product": "1703",
+    "dimensions": "750 \u00d8 X 500 h | 600 \u00d8 X 500 h",
+    "price": "14000/- | 12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region K",
+    "product": "4Star",
+    "dimensions": "600 \u00d8 X 450 h",
+    "price": "8000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region L",
+    "product": "605S",
+    "dimensions": "500\u00d8 X 520 h",
+    "price": "16000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region P",
+    "product": "Gemini",
+    "dimensions": "860\u00d8 X 450 h | 600\u00d8 X 450h",
+    "price": "18000/- | 15000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region Q",
+    "product": "4012",
+    "dimensions": "675 X 355 X 400 h",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 18,
+    "region": "Region R",
+    "product": "SL 068",
+    "dimensions": "570*390*460",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 19,
+    "region": "Region A",
+    "product": "ST 057",
+    "dimensions": "1400*400*800",
+    "price": "47000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 19,
+    "region": "Region B",
+    "product": "ST 059",
+    "dimensions": "1400*400*800",
+    "price": "52000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 19,
+    "region": "Region C",
+    "product": "ST 046",
+    "dimensions": "1400*400*800",
+    "price": "49000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 19,
+    "region": "Region D",
+    "product": "ST 029",
+    "dimensions": "1400*400*800",
+    "price": "45000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 20,
+    "region": "Region A",
+    "product": "ST 018",
+    "dimensions": "1400*400*800",
+    "price": "49000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 20,
+    "region": "Region B",
+    "product": "ST 52",
+    "dimensions": "1400*400*800",
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 20,
+    "region": "Region C",
+    "product": "ST 006",
+    "dimensions": "1400*400*800",
+    "price": "49000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 20,
+    "region": "Region D",
+    "product": "STH 4101",
+    "dimensions": "1500*430*800",
+    "price": "51000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region D",
+    "product": "SD 103 | 900\u00d8 X 750 h",
+    "dimensions": "Gold | Rose Gold",
+    "price": "23000/- | 23000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region E",
+    "product": "SD 083",
+    "dimensions": "1200 \u00d8 X 750 h",
+    "price": "50000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region F",
+    "product": "SD 152",
+    "dimensions": "900 \u00d8 X 750 h",
+    "price": "23000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region K",
+    "product": "Z 232 | 900 \u00d8 740 h",
+    "dimensions": "White)",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region L",
+    "product": "750 \u00d8 X 750 h",
+    "dimensions": null,
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 21,
+    "region": "Region M",
+    "product": "Ct8",
+    "dimensions": "White)",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region Q",
+    "product": "All Season 800\u00d8 X 750 h",
+    "dimensions": "(Black - Folding)",
+    "price": "13500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region R",
+    "product": "Z 231",
+    "dimensions": "800 \u00d8 X 740 h",
+    "price": "10000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 21,
+    "region": "Region S",
+    "product": "T18",
+    "dimensions": "1200X800X750h",
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 22,
+    "region": "Region A",
+    "product": "Milano",
+    "dimensions": "800 X 800 X 750 h",
+    "price": "13000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region D",
+    "product": "Z 207",
+    "dimensions": "1200 X 800 X 750 | 800 X 800 X 750",
+    "price": "15000/- | 12500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region E",
+    "product": "Milano Glass Round",
+    "dimensions": "800\u00d8 X 750 h",
+    "price": "12500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region J",
+    "product": "T-19",
+    "dimensions": "600X600X1050 h",
+    "price": "17000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region K",
+    "product": "BAR TABLE",
+    "dimensions": "600 \u00d8/ 750 \u00d8 X 1050 h",
+    "price": "12000/- | 13500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region L",
+    "product": "Z 218",
+    "dimensions": "600 \u00d8 1050 h",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region P",
+    "product": "A-M",
+    "dimensions": "1500 X 600 X 1050 h",
+    "price": "26000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 22,
+    "region": "Region Q",
+    "product": "N-M",
+    "dimensions": "600 X 600 X 1020 h",
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 22,
+    "region": "Region R",
+    "product": "Z267",
+    "dimensions": "1200 X 600 X 1050 h",
+    "price": "14500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region E",
+    "product": "Bar Table Stand",
+    "dimensions": "500 \u00d8 X 1020 h",
+    "price": "8000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region F",
+    "product": "Square Stand",
+    "dimensions": "380 /500 X 725 h",
+    "price": "6600/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region G",
+    "product": "Round",
+    "dimensions": "400/ 500/ 580/ 720 X 725 h",
+    "price": "14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region K",
+    "product": "E55A",
+    "dimensions": "700 X 700 X 725 h",
+    "price": "8200/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region L",
+    "product": "Z210 FRAME",
+    "dimensions": null,
+    "price": "6600/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region M",
+    "product": "BL-056-5",
+    "dimensions": null,
+    "price": "6900/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region Q",
+    "product": "E55A Black",
+    "dimensions": null,
+    "price": "6250/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region R",
+    "product": "Z 232 SS GOLD",
+    "dimensions": "500*720H",
+    "price": "10500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 23,
+    "region": "Region S",
+    "product": "T-2016",
+    "dimensions": "520 X 520 X 725 h",
+    "price": "8000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region D",
+    "product": "Z6 (F)",
+    "dimensions": "680 X 680 X 725 h",
+    "price": "8500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region E",
+    "product": "Z16 (F)",
+    "dimensions": "750 X 750 X 725 h",
+    "price": "11000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region F",
+    "product": "413",
+    "dimensions": "680 X 680 X 725 h",
+    "price": "8500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region J",
+    "product": "Z232 (Black, White)",
+    "dimensions": "500\u00d8 X 725 h",
+    "price": "6000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region K",
+    "product": "Height Adjustable (with Top)",
+    "dimensions": "Top Size 700 X 400",
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 24,
+    "region": "Region L",
+    "product": "Height Adjustable (Only Frame)",
+    "dimensions": null,
+    "price": "15000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region P",
+    "product": "E94",
+    "dimensions": "540\u00d8 X 725 h | 430\u00d8 X 725 h",
+    "price": "2800/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region Q",
+    "product": "E98",
+    "dimensions": "400 X 700 X 725 h",
+    "price": "4000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 24,
+    "region": "Region R",
+    "product": "E95",
+    "dimensions": "450X450X725h",
+    "price": "3000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region C",
+    "product": "Rectangle",
+    "dimensions": "400X700X725h | 450X900X725h",
+    "price": "12000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region D",
+    "product": "1200 X 700 X 720 h",
+    "dimensions": null,
+    "price": "13000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region G",
+    "product": "JD 104 (F)",
+    "dimensions": "Folding",
+    "price": "13500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region H",
+    "product": "H13 FOLDING TABLE STAND",
+    "dimensions": null,
+    "price": "18000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region I",
+    "product": "Heavy black Flat Square",
+    "dimensions": "500*500",
+    "price": "5200/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region J",
+    "product": "Heavy Black Flat Round",
+    "dimensions": "400 mm | 500 mm",
+    "price": "4100/- | 5200/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 25,
+    "region": "Region L",
+    "product": "Heavy Black Flat Rectangle",
+    "dimensions": "400*700",
+    "price": "6500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 26,
+    "region": "Region C",
+    "product": "H 47",
+    "dimensions": "1100 mm | 1700 mm",
+    "price": "17000/- | 17500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 26,
+    "region": "Region D",
+    "product": "Zd01",
+    "dimensions": "1150 mm |1750 mm",
+    "price": "13500/- | 15500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 26,
+    "region": "Region F",
+    "product": "BL 056 - 3",
+    "dimensions": "2380 X 1180 X 725h",
+    "price": "17000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 26,
+    "region": "Region H",
+    "product": "FRAME : Z207 | Z208",
+    "dimensions": "1150 X 680 X 725H | 680 X 680 X 725",
+    "price": "9000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 27,
+    "region": "Region B",
+    "product": "BL 001",
+    "dimensions": "1180X600X725h|1780X780X725h",
+    "price": "12000/- | 14000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 27,
+    "region": "Region D",
+    "product": "BL 056 - 1",
+    "dimensions": "1480 X 580 X 725h",
+    "price": "11500/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 27,
+    "region": "Region E",
+    "product": "DOUBLE MOTOR",
+    "dimensions": null,
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  },
+  {
+    "page": 27,
+    "region": "Region G",
+    "product": "LIFTING DESK",
+    "dimensions": "SINGLE MOTOR",
+    "price": "23000/-",
+    "status": "VERIFIED"
+  },
+  {
+    "page": 28,
+    "region": "Region B",
+    "product": "MY CHAIR MY PRIDE",
+    "dimensions": null,
+    "price": null,
+    "status": "NEEDS_REVIEW"
+  }
+]

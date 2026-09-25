@@ -133,7 +133,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-zen-muted">
               <li>
                 <Link href="/ai" className="hover:text-zen-ivory transition-colors flex items-center gap-2">
-                  <span>Zen Arc AI Consultant</span>
+                  <span>Zen Arch AI Consultant</span>
                   <span className="text-[9px] px-1.5 py-0.2 bg-zen-accent/80 text-white rounded uppercase font-sans">
                     Live
                   </span>

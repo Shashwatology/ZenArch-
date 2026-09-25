@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { ContactShadows, OrbitControls } from "@react-three/drei";
+import { ContactShadows, OrbitControls, Environment } from "@react-three/drei";
 import * as THREE from "three";
 
 export type MaterialPreset = "champagne-boucle" | "charcoal-velvet" | "cognac-leather";
@@ -93,7 +93,7 @@ export function ZenArcArchitecturalChair({
       </mesh>
 
       {/* =========================================================
-          ZEN ARC SIGNATURE LOUNGE CHAIR (Product Model)
+          ZEN ARCH SIGNATURE LOUNGE CHAIR (Product Model)
          ========================================================= */}
       <group position={[0, -0.1, 0]}>
         {/* 1. SEAT CUSHION — Sculptural Organic Radius */}
@@ -116,30 +116,40 @@ export function ZenArcArchitecturalChair({
           />
         </mesh>
 
-        {/* 3. CURVED BARREL BACKREST — Embracing Architectural Form */}
-        <group position={[0, 0.32, -0.15]}>
-          {/* Main curved semi-cylinder backrest */}
-          <mesh castShadow receiveShadow rotation={[0, Math.PI * 0.75, 0]}>
-            <cylinderGeometry
-              args={[0.82, 0.84, 0.68, 48, 1, true, 0, Math.PI * 1.5]}
-            />
-            <meshStandardMaterial
-              color={config.upholsteryColor}
-              roughness={config.upholsteryRoughness}
-              metalness={config.upholsteryMetalness}
-              side={THREE.DoubleSide}
-            />
-          </mesh>
+        {/* 3. CURVED BARREL BACKREST — Plush Horseshoe Tub Design */}
+        <group position={[0, 0.45, 0]}>
+          {/* We rotate the horseshoe so the opening faces exactly +Z (front) */}
+          <group rotation={[Math.PI / 2, 0, Math.PI * 0.875]}>
+            {/* Thick plush backrest/armrest wrapper */}
+            <mesh castShadow receiveShadow>
+              <torusGeometry args={[0.75, 0.22, 32, 64, Math.PI * 1.25]} />
+              <meshStandardMaterial
+                color={config.upholsteryColor}
+                roughness={config.upholsteryRoughness}
+                metalness={config.upholsteryMetalness}
+              />
+            </mesh>
+            
+            {/* End Cap 1 */}
+            <mesh position={[0.75, 0, 0]} castShadow receiveShadow>
+              <sphereGeometry args={[0.22, 32, 32]} />
+              <meshStandardMaterial
+                color={config.upholsteryColor}
+                roughness={config.upholsteryRoughness}
+                metalness={config.upholsteryMetalness}
+              />
+            </mesh>
 
-          {/* Crown cushion roll atop the backrest */}
-          <mesh position={[0, 0.35, 0]} rotation={[Math.PI / 2, 0, 0]} castShadow>
-            <torusGeometry args={[0.83, 0.075, 24, 48, Math.PI * 1.5]} />
-            <meshStandardMaterial
-              color={config.upholsteryColor}
-              roughness={config.upholsteryRoughness}
-              metalness={config.upholsteryMetalness}
-            />
-          </mesh>
+            {/* End Cap 2 */}
+            <mesh position={[0.75 * Math.cos(Math.PI * 1.25), 0.75 * Math.sin(Math.PI * 1.25), 0]} castShadow receiveShadow>
+              <sphereGeometry args={[0.22, 32, 32]} />
+              <meshStandardMaterial
+                color={config.upholsteryColor}
+                roughness={config.upholsteryRoughness}
+                metalness={config.upholsteryMetalness}
+              />
+            </mesh>
+          </group>
         </group>
 
         {/* 4. ARCHITECTURAL BRUSHED BRASS HARDWARE & CHASSIS */}
@@ -240,20 +250,22 @@ export function HeroSpatialScene({
   return (
     <group scale={responsiveScale} position={[0, responsiveY, 0]}>
       {/* Studio Architectural Golden-Hour Lighting */}
-      <ambientLight intensity={0.75} color="#FAF7F2" />
+      <ambientLight intensity={0.4} color="#FAF7F2" />
       <directionalLight
-        position={[4, 6, 4]}
-        intensity={2.0}
+        position={[5, 8, 5]}
+        intensity={1.5}
         castShadow
-        shadow-mapSize={[1024, 1024]}
+        shadow-mapSize={[2048, 2048]}
         color="#FFF5E6"
       />
       <directionalLight
-        position={[-4, 3, -3]}
-        intensity={0.8}
+        position={[-4, 4, -4]}
+        intensity={0.6}
         color="#D9CCBA"
       />
-      <pointLight position={[0, 2.5, 2]} intensity={0.8} color="#C5A880" />
+      
+      {/* High-fidelity PBR Environment Reflections */}
+      <Environment preset="city" />
 
       {/* Product Model */}
       <ZenArcArchitecturalChair preset={materialPreset} />

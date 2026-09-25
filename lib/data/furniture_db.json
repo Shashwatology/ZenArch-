@@ -1,0 +1,7507 @@
+[
+  {
+    "id": "arcus-sofas",
+    "slug": "arcus-sofas",
+    "name": "ARCUS",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 64000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/arcus.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 64000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "vegas-sofas",
+    "slug": "vegas-sofas",
+    "name": "VEGAS",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 92000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/vegas.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 92000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "lopez-sofas",
+    "slug": "lopez-sofas",
+    "name": "LOPEZ",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 62000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/lopez.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 62000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "flame-sofas",
+    "slug": "flame-sofas",
+    "name": "FLAME",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 82000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/flame.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 82000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zurich-sofas",
+    "slug": "zurich-sofas",
+    "name": "ZURICH",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 98000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zurich.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 98000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "new-vogue-sofas",
+    "slug": "new-vogue-sofas",
+    "name": "NEW VOGUE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/new-vogue.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "chester-sofas",
+    "slug": "chester-sofas",
+    "name": "CHESTER",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 65000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/chester.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 65000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "heritage-sofas",
+    "slug": "heritage-sofas",
+    "name": "HERITAGE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 65000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/heritage.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 65000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "imperial-sofas",
+    "slug": "imperial-sofas",
+    "name": "IMPERIAL",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/imperial-6-22.jpeg",
+      "/images/products/imperial.jpeg",
+      "/images/products/imperial-6-20.jpeg",
+      "/images/products/imperial-6-21.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "IMPERIAL",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "glamour-sofas",
+    "slug": "glamour-sofas",
+    "name": "GLAMOUR",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 65000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/glamour.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 65000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "fortune-sofas",
+    "slug": "fortune-sofas",
+    "name": "FORTUNE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 56000,
+    "priceStatus": "CONFLICT",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/fortune.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 56000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "liberty-sofas",
+    "slug": "liberty-sofas",
+    "name": "LIBERTY",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 98000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/liberty.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 98000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "mapple-sofas",
+    "slug": "mapple-sofas",
+    "name": "MAPPLE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 54565000,
+    "priceStatus": "CONFLICT",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/mapple-8-31.jpeg",
+      "/images/products/mapple.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "MAPPLE",
+        "priceInr": 54565000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "tokyo-sofas",
+    "slug": "tokyo-sofas",
+    "name": "TOKYO",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 4541000,
+    "priceStatus": "CONFLICT",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/tokyo-8-32.jpeg",
+      "/images/products/tokyo.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "TOKYO",
+        "priceInr": 4541000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zara-sofas",
+    "slug": "zara-sofas",
+    "name": "ZARA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 84000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zara-sofa.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 84000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "oxy-sofas",
+    "slug": "oxy-sofas",
+    "name": "OXY",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/oxy.jpeg",
+      "/images/products/oxy-9-36.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "OXY",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "june-sofas",
+    "slug": "june-sofas",
+    "name": "JUNE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 53000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/june.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 53000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "spencer-sofas",
+    "slug": "spencer-sofas",
+    "name": "SPENCER",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 98000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/spencer.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 98000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "dream-sofas",
+    "slug": "dream-sofas",
+    "name": "DREAM",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/dream.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "meridian-sofas",
+    "slug": "meridian-sofas",
+    "name": "MERIDIAN",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 82000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/meridian.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 82000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "california-sofas",
+    "slug": "california-sofas",
+    "name": "CALIFORNIA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 52000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/california.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 52000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "saphire-sofas",
+    "slug": "saphire-sofas",
+    "name": "SAPHIRE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 54500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/saphire.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 54500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "curve-sofas",
+    "slug": "curve-sofas",
+    "name": "CURVE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/curve.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "tiara-sofas",
+    "slug": "tiara-sofas",
+    "name": "TIARA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 72000,
+    "priceStatus": "CONFLICT",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/tiara.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 72000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "florance-sofas",
+    "slug": "florance-sofas",
+    "name": "FLORANCE",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 54000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/florance.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 54000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "montana-sofas",
+    "slug": "montana-sofas",
+    "name": "MONTANA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 72000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/montana.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 72000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "corbusier-sofas",
+    "slug": "corbusier-sofas",
+    "name": "CORBUSIER",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 63000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/corbusier.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 63000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "barcelona-sofas",
+    "slug": "barcelona-sofas",
+    "name": "BARCELONA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 74000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/barcelona.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 74000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "kitkat-sofas",
+    "slug": "kitkat-sofas",
+    "name": "KITKAT",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 52000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/kitkat.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 52000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "havoc-sofas",
+    "slug": "havoc-sofas",
+    "name": "HAVOC",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 45500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/havoc.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 45500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "futon-sofas",
+    "slug": "futon-sofas",
+    "name": "FUTON",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 45500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/futon.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 45500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "veronica-sofas",
+    "slug": "veronica-sofas",
+    "name": "VERONICA",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 81000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/veronica.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 81000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "benz-sofas",
+    "slug": "benz-sofas",
+    "name": "BENZ",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 56000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/benz.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 56000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "crystal-sofas",
+    "slug": "crystal-sofas",
+    "name": "CRYSTAL",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 65000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/crystal.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 65000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "nero-sofas",
+    "slug": "nero-sofas",
+    "name": "NERO",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/nero.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "aero-sofas",
+    "slug": "aero-sofas",
+    "name": "AERO",
+    "category": "sofas",
+    "collection": "Sofas",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/aero.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "freedom-executive",
+    "slug": "freedom-executive",
+    "name": "FREEDOM",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Black frame chrome aluminium diecast with korean mesh."
+      },
+      {
+        "key": "Feature",
+        "value": "Black frame chrome alloy 5D armrest."
+      },
+      {
+        "key": "Feature",
+        "value": "50mm Adjustable Lumbar Support."
+      },
+      {
+        "key": "Feature",
+        "value": "Wire control with multi position knee tilt syncro along with seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Die cast base with 68mm Nylon Castor."
+      }
+    ],
+    "images": [
+      "/images/products/freedom.jpeg",
+      "/images/products/freedom-1-99.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "FREEDOM",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "falcon-elite-executive",
+    "slug": "falcon-elite-executive",
+    "name": "FALCON ELITE",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/falcon-elite-grey-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "norway-executive",
+    "slug": "norway-executive",
+    "name": "NORWAY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon frame with korean mesh in back and seat"
+      },
+      {
+        "key": "Feature",
+        "value": "3D Adjustable armrest."
+      },
+      {
+        "key": "Feature",
+        "value": "Innovation mechanism."
+      },
+      {
+        "key": "Feature",
+        "value": "Two position lock, zero pressure seat."
+      },
+      {
+        "key": "Feature",
+        "value": "700 mm Nylon base with 60mm castors & class 4 gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/norway-hb.jpeg",
+      "/images/products/norway-hb-2-106.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "NORWAY HB",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "700mm-executive",
+    "slug": "700mm-executive",
+    "name": "700MM",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/700mm-25-197.jpeg",
+      "/images/products/700mm-25-199.jpeg",
+      "/images/products/700mm-26-204.jpeg",
+      "/images/products/700mm-21-183.jpeg",
+      "/images/products/700mm-23-191.jpeg",
+      "/images/products/700mm-9-134.jpeg",
+      "/images/products/700mm-10-138.jpeg",
+      "/images/products/700mm-10-137.jpeg",
+      "/images/products/700mm.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "700MM",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "rooster-executive",
+    "slug": "rooster-executive",
+    "name": "ROOSTER",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon back with korean mesh and 3D headrest."
+      },
+      {
+        "key": "Feature",
+        "value": "4D adjustable armrest with PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Self adjustable lumbar support with Shadow function."
+      },
+      {
+        "key": "Feature",
+        "value": "Wire control with multi position knee tilt synchro along with seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "Unleash comfort with an extendable footrest."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Die cast base with 60mm nylon castors."
+      }
+    ],
+    "images": [
+      "/images/products/rooster-hb-grey.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "destiny-executive",
+    "slug": "destiny-executive",
+    "name": "DESTINY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/destiny-hb-grey.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bassel-executive",
+    "slug": "bassel-executive",
+    "name": "BASSEL",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 27000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with lumbar support & mesh fabric."
+      },
+      {
+        "key": "Feature",
+        "value": "4D Adjustable Armrest with Gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Self weight syncro tilt mechanism with multi position lock & seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm aluminium diecast base with glass filled nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/bassel-white-hb.jpeg",
+      "/images/products/bassel-black-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "BASSEL WHITE HB",
+        "priceInr": 27000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "gamma-executive",
+    "slug": "gamma-executive",
+    "name": "GAMMA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/gamma.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 0
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "muse-executive",
+    "slug": "muse-executive",
+    "name": "MUSE",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 28500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with lumbar support & mesh fabric."
+      },
+      {
+        "key": "Feature",
+        "value": "4D Adjustable Armrest with Gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Self weight syncro tilt mechanism with multi position lock & seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm aluminium diecast base with glass filled nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/muse-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 28500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "galaxy-executive",
+    "slug": "galaxy-executive",
+    "name": "GALAXY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with lumbar support & mesh fabric."
+      },
+      {
+        "key": "Feature",
+        "value": "6D Adjustable Armrest with Gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Multi lock syncro tilt mechanism with seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon base with nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/galaxy-grey-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "galaxy-mesh-executive",
+    "slug": "galaxy-mesh-executive",
+    "name": "GALAXY MESH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 31000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/galaxy-mesh-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 31000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zoy-executive",
+    "slug": "zoy-executive",
+    "name": "ZOY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with lumbar support & mesh fabric."
+      },
+      {
+        "key": "Feature",
+        "value": "4D Adjustable Armrest with Gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Self weight syncro tilt mechanism with multi position lock & seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm aluminium diecast base with glass filled nylon castors &"
+      }
+    ],
+    "images": [
+      "/images/products/zoy-white-hb.jpeg",
+      "/images/products/zoy-black-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "ZOY WHITE HB",
+        "priceInr": 500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "700mm-aluminium-diecast-base-with-glass-filled-nylon-castors-&-executive",
+    "slug": "700mm-aluminium-diecast-base-with-glass-filled-nylon-castors-&-executive",
+    "name": "700MM ALUMINIUM DIECAST BASE WITH GLASS FILLED NYLON CASTORS &",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/700mm-aluminium-diecast-base-with-glass-filled-nylon-castors.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cross-executive",
+    "slug": "cross-executive",
+    "name": "CROSS",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 17500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cross-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "acosta-executive",
+    "slug": "acosta-executive",
+    "name": "ACOSTA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 20500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon back with composite leather on seat &back."
+      },
+      {
+        "key": "Feature",
+        "value": "3D adjustable armrest with gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "Lumbar support with extra cushion padding."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm nylon base with 60mm nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/acosta-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 20500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "spark-executive",
+    "slug": "spark-executive",
+    "name": "SPARK",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/spark-white-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "perth-executive",
+    "slug": "perth-executive",
+    "name": "PERTH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 19000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon back with fabric on seat &back."
+      },
+      {
+        "key": "Feature",
+        "value": "3D adjustable armrest with gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "Lumbar support with extra cushion padding."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm nylon base with 60mm nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/perth-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 19000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "wisdom-executive",
+    "slug": "wisdom-executive",
+    "name": "WISDOM",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 17500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/wisdom-black-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "troy-executive",
+    "slug": "troy-executive",
+    "name": "TROY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with lumbar support & mesh fabric."
+      },
+      {
+        "key": "Feature",
+        "value": "4D Adjustable Armrest with Gel PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Self weight syncro tilt mechanism with multi position lock & seat slider."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm aluminium diecast base with glass filled nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/troy-white-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 0
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "winner-executive",
+    "slug": "winner-executive",
+    "name": "WINNER",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 13750,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon backrest with adjustable lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Cantilever nylon armrest with PU pad with flipping movement."
+      },
+      {
+        "key": "Feature",
+        "value": "Centre tilt mechanism with single position locking."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm nylon base with 60mm nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/winner-black-hb.jpeg",
+      "/images/products/winner-grey-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "WINNER GREY HB",
+        "priceInr": 13750
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "650mm-executive",
+    "slug": "650mm-executive",
+    "name": "650MM",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/650mm-16-164.jpeg",
+      "/images/products/650mm.jpeg",
+      "/images/products/650mm-13-149.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "650MM",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ergon-cush-executive",
+    "slug": "ergon-cush-executive",
+    "name": "ERGON CUSH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ergon-cush-white-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ergon-mesh-executive",
+    "slug": "ergon-mesh-executive",
+    "name": "ERGON MESH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 21500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon seat & back with korean mesh."
+      },
+      {
+        "key": "Feature",
+        "value": "Fully adjustable backrest, armrest & seat depth."
+      },
+      {
+        "key": "Feature",
+        "value": "Adjustable headrest & lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Syncro tilt with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with 60mm nylon castors & class 4 gaslift."
+      }
+    ],
+    "images": [
+      "/images/products/ergon-mesh-black-hb.jpeg",
+      "/images/products/ergon-mesh-white-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "ERGON MESH BLACK HB",
+        "priceInr": 21500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "glaze-mesh-executive",
+    "slug": "glaze-mesh-executive",
+    "name": "GLAZE MESH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 10000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon back with mesh and fabric seat."
+      },
+      {
+        "key": "Feature",
+        "value": "Fixed PP armrest attached with the back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fixed Lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt with single position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm nylon base with 60mm nylon castors & class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/glaze-mesh-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 10000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "glaze-cushion-executive",
+    "slug": "glaze-cushion-executive",
+    "name": "GLAZE CUSHION",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 8500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/glaze-cushion-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "hexa-executive",
+    "slug": "hexa-executive",
+    "name": "HEXA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 13500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/hexa-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "deca-executive",
+    "slug": "deca-executive",
+    "name": "DECA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled Nylon back with Fabric Mesh."
+      },
+      {
+        "key": "Feature",
+        "value": "Fixed PP armrest attached with back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt mechanism with single position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm nylon base with twin wheel nylon castors & class 4 gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/deca-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "trio-executive",
+    "slug": "trio-executive",
+    "name": "TRIO",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 11500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled Nylon back with Fabric Mesh."
+      },
+      {
+        "key": "Feature",
+        "value": "Fixed PP armrest."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt mechanism with single position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm nylon base with twin wheel nylon castors & class 4 gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/trio-grey-hb.jpeg",
+      "/images/products/trio-black-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "TRIO GREY HB",
+        "priceInr": 11500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "octa-executive",
+    "slug": "octa-executive",
+    "name": "OCTA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled Nylon back with Fabric Mesh."
+      },
+      {
+        "key": "Feature",
+        "value": "Fixed PP armrest attached with back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt mechanism with single position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm nylon base with twin wheel nylon castors & class 4 gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/octa-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "karina-dlx-executive",
+    "slug": "karina-dlx-executive",
+    "name": "KARINA DLX",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/karina-dlx-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 0
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "omega-blk-mesh-executive",
+    "slug": "omega-blk-mesh-executive",
+    "name": "OMEGA BLK MESH",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/omega-blk-mesh-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "omega-wht-executive",
+    "slug": "omega-wht-executive",
+    "name": "OMEGA WHT",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 10000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/omega-wht.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 10000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "atom-dlx-executive",
+    "slug": "atom-dlx-executive",
+    "name": "ATOM DLX",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/atom-dlx-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "eon-dlx-executive",
+    "slug": "eon-dlx-executive",
+    "name": "EON DLX",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/eon-dlx-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "attitude-executive",
+    "slug": "attitude-executive",
+    "name": "ATTITUDE",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 52000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend nylon body with moulded cushion, Finest PU on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Aluminium die cast Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Extra cushion padding for lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base & 60mm nylon castors with class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/attitude-hb.jpeg",
+      "/images/products/attitude-hb-20-178.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "ATTITUDE HB",
+        "priceInr": 52000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bentley-(leather)-executive",
+    "slug": "bentley-(leather)-executive",
+    "name": "BENTLEY (LEATHER)",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 56000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bentley-leather-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 56000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "calvin-leather-executive",
+    "slug": "calvin-leather-executive",
+    "name": "CALVIN LEATHER",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/calvin-leather-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "oyster-(leather)-executive",
+    "slug": "oyster-(leather)-executive",
+    "name": "OYSTER (LEATHER)",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 47500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/oyster-leather-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 47500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "martin-executive",
+    "slug": "martin-executive",
+    "name": "MARTIN",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 76000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Hand crafted exceptional finest grade leather on seat & back placed on multibend"
+      },
+      {
+        "key": "Feature",
+        "value": "Aluminum die cast armrest padded with finest leather."
+      },
+      {
+        "key": "Feature",
+        "value": "Self In-design lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Syncro knee tilt mechanism with multi locking function."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminum Diecast base with Nylon Castor."
+      }
+    ],
+    "images": [
+      "/images/products/martin-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 76000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "magnet-executive",
+    "slug": "magnet-executive",
+    "name": "MAGNET",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 61000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/magnet-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 61000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "marquis-executive",
+    "slug": "marquis-executive",
+    "name": "MARQUIS",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 55000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend plywood with moulded cushion, Finest composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "Innovative air lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base & 60mm nylon castors with class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/marquis-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 55000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "jaguar-executive",
+    "slug": "jaguar-executive",
+    "name": "JAGUAR",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/jaguar-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "winster-executive",
+    "slug": "winster-executive",
+    "name": "WINSTER",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 85000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend plywood with down feather cushion, Finest pure leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "Lumbar support with extra cushion padding."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Wooden base & 60mm nylon castors with class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/winster-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 85000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "trust-executive",
+    "slug": "trust-executive",
+    "name": "TRUST",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend plywood with moulded cushion, Finest PU on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "Lumbar support with extra cushion padding."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm MS chrome base & 60mm nylon castors with class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/trust-hb-25-200.jpeg",
+      "/images/products/trust-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "TRUST HB",
+        "priceInr": 0
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "legacy-executive",
+    "slug": "legacy-executive",
+    "name": "LEGACY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 31000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/legacy-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 31000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "heritage-executive",
+    "slug": "heritage-executive",
+    "name": "HERITAGE",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 114000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend plywood with soft cushion, Finest pure leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Extra cushion padding for lumbar support."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt syncro with multi position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with Gold coating & 60mm Nylon"
+      }
+    ],
+    "images": [
+      "/images/products/heritage-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 114000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "700mm-aluminium-diecast-base-with-60mm-nylon-castors-executive",
+    "slug": "700mm-aluminium-diecast-base-with-60mm-nylon-castors-executive",
+    "name": "700MM ALUMINIUM DIECAST BASE WITH 60MM NYLON CASTORS",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/700mm-aluminium-diecast-base-with-60mm-nylon-castors.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "epson-executive",
+    "slug": "epson-executive",
+    "name": "EPSON",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 32000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/epson-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 32000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "daisy-executive",
+    "slug": "daisy-executive",
+    "name": "DAISY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 30500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Finest composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Aluminum diecast armrest with PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt mechanism with multiposition lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with 60mm nylon castors"
+      }
+    ],
+    "images": [
+      "/images/products/daisy-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 30500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "stanley-executive",
+    "slug": "stanley-executive",
+    "name": "STANLEY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 26500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/stanley-hb-28-213.jpeg",
+      "/images/products/stanley-hb.jpeg",
+      "/images/products/stanley-hb-28-210.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "STANLEY HB",
+        "priceInr": 26500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "maverick-executive",
+    "slug": "maverick-executive",
+    "name": "MAVERICK",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 31000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Multibend plywood with soft cushion, composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Fix armrest with padded cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt with three position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700MM Metal base & 60MM nylon castors with class 4 Gas lift."
+      }
+    ],
+    "images": [
+      "/images/products/maverick-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 31000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "700mm-aluminium-diecast-base-with-60mm-nylon-executive",
+    "slug": "700mm-aluminium-diecast-base-with-60mm-nylon-executive",
+    "name": "700MM ALUMINIUM DIECAST BASE WITH 60MM NYLON",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/700mm-aluminium-diecast-base-with-60mm-nylon.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "&-class-4-gas-lift.-executive",
+    "slug": "&-class-4-gas-lift.-executive",
+    "name": "& CLASS 4 GAS LIFT.",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/class-4-gas-lift.jpeg",
+      "/images/products/class-4-gas-lift-32-233.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "& CLASS 4 GAS LIFT.",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "boss-(brown)-executive",
+    "slug": "boss-(brown)-executive",
+    "name": "BOSS (BROWN)",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 30500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/boss-brown-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 30500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "austin-executive",
+    "slug": "austin-executive",
+    "name": "AUSTIN",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 31000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/austin-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 31000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "dacota-executive",
+    "slug": "dacota-executive",
+    "name": "DACOTA",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 28500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Finest composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Teakwood frame with High density Cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Knee tilt with multiposition lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with 60mm nylon castors"
+      }
+    ],
+    "images": [
+      "/images/products/dacota-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 28500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "oxford-executive",
+    "slug": "oxford-executive",
+    "name": "OXFORD",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 24000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/oxford-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 24000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "aluminium-executive",
+    "slug": "aluminium-executive",
+    "name": "ALUMINIUM",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "NOT_PROVIDED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/aluminium.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "virgo-executive",
+    "slug": "virgo-executive",
+    "name": "VIRGO",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/virgo-hb-31-226.jpeg",
+      "/images/products/virgo-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "VIRGO HB",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "duster-cushion-executive",
+    "slug": "duster-cushion-executive",
+    "name": "DUSTER CUSHION",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 37500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Glass filled nylon back along with headrest & PU cushion back."
+      },
+      {
+        "key": "Feature",
+        "value": "Syncro dynamic mechanism with auto body weight adjustment."
+      },
+      {
+        "key": "Feature",
+        "value": "Cantilever alumnium Diecast armrest with PU pad."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with 60mm nylon castors & class 4 gaslift."
+      }
+    ],
+    "images": [
+      "/images/products/duster-cushion-hb-31-229.jpeg",
+      "/images/products/duster-cushion-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "DUSTER CUSHION HB",
+        "priceInr": 37500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "lucy-executive",
+    "slug": "lucy-executive",
+    "name": "LUCY",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 17000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/lucy-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "venice-executive",
+    "slug": "venice-executive",
+    "name": "VENICE",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 17000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Finest composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Teakwood frame with High density Cushion."
+      },
+      {
+        "key": "Feature",
+        "value": "Center tilt with multiposition lock."
+      },
+      {
+        "key": "Feature",
+        "value": "700mm Aluminium Diecast base with 60mm nylon castors"
+      }
+    ],
+    "images": [
+      "/images/products/venice-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sleek-executive",
+    "slug": "sleek-executive",
+    "name": "SLEEK",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sleek-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "elite-sleek-executive",
+    "slug": "elite-sleek-executive",
+    "name": "ELITE SLEEK",
+    "category": "executive",
+    "collection": "Executive",
+    "basePrice": 23500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [
+      {
+        "key": "Feature",
+        "value": "Finest composite leather on seat & back."
+      },
+      {
+        "key": "Feature",
+        "value": "Chrome finished armrest."
+      },
+      {
+        "key": "Feature",
+        "value": "Torsion bar knee tilt with single position lock."
+      },
+      {
+        "key": "Feature",
+        "value": "650mm Aluminium Diecast base with 60mm nylon castors"
+      }
+    ],
+    "images": [
+      "/images/products/elite-sleek-hb.jpeg"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 23500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "xm-018-tables-and-stands",
+    "slug": "xm-018-tables-and-stands",
+    "name": "XM 018",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 62000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/xm-018.png"
+    ],
+    "variants": [
+      {
+        "name": "Region C",
+        "priceInr": 62000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "the-leaf-tables-and-stands",
+    "slug": "the-leaf-tables-and-stands",
+    "name": "THE LEAF",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 120000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/the-leaf.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 120000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "mini-leaf-tables-and-stands",
+    "slug": "mini-leaf-tables-and-stands",
+    "name": "MINI LEAF",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 72000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/mini-leaf.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 72000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bn-40-tables-and-stands",
+    "slug": "bn-40-tables-and-stands",
+    "name": "BN-40",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 50000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/bn-40.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 50000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "wt-300-tables-and-stands",
+    "slug": "wt-300-tables-and-stands",
+    "name": "WT 300",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 104000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/wt-300.png"
+    ],
+    "variants": [
+      {
+        "name": "Region D",
+        "priceInr": 104000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "fd-402-tables-and-stands",
+    "slug": "fd-402-tables-and-stands",
+    "name": "FD 402",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 70000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/fd-402.png"
+    ],
+    "variants": [
+      {
+        "name": "Region C",
+        "priceInr": 70000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bht-103-tables-and-stands",
+    "slug": "bht-103-tables-and-stands",
+    "name": "BHT 103",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 70000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bht-103.png"
+    ],
+    "variants": [
+      {
+        "name": "Region G",
+        "priceInr": 70000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "fyx-402-tables-and-stands",
+    "slug": "fyx-402-tables-and-stands",
+    "name": "FYX 402",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 54000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/fyx-402.png"
+    ],
+    "variants": [
+      {
+        "name": "Region H",
+        "priceInr": 54000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2306-tables-and-stands",
+    "slug": "2306-tables-and-stands",
+    "name": "2306",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 75000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2306.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 75000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj1135ab-tables-and-stands",
+    "slug": "cj1135ab-tables-and-stands",
+    "name": "CJ1135AB",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 84000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/cj1135ab.png"
+    ],
+    "variants": [
+      {
+        "name": "Region C",
+        "priceInr": 84000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2301-tables-and-stands",
+    "slug": "2301-tables-and-stands",
+    "name": "2301",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2301.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t05-tables-and-stands",
+    "slug": "t05-tables-and-stands",
+    "name": "T05",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 41000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/t05.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 41000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2343-tables-and-stands",
+    "slug": "2343-tables-and-stands",
+    "name": "2343",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2343.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2304-tables-and-stands",
+    "slug": "2304-tables-and-stands",
+    "name": "2304",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2304.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2323-tables-and-stands",
+    "slug": "2323-tables-and-stands",
+    "name": "2323",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 44500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2323.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 44500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2410-tables-and-stands",
+    "slug": "2410-tables-and-stands",
+    "name": "2410",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 48000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2410.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 48000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "8513-tables-and-stands",
+    "slug": "8513-tables-and-stands",
+    "name": "8513",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 62000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/8513.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 62000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "1300*700*330-&-500*400*440-tables-and-stands",
+    "slug": "1300*700*330-&-500*400*440-tables-and-stands",
+    "name": "1300*700*330 & 500*400*440",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 95000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/1300*700*330-&-500*400*440.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 95000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "801-tables-and-stands",
+    "slug": "801-tables-and-stands",
+    "name": "801",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 38000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/801.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 38000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t07-tables-and-stands",
+    "slug": "t07-tables-and-stands",
+    "name": "T07",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 36000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/t07.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 36000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "yb-257-tables-and-stands",
+    "slug": "yb-257-tables-and-stands",
+    "name": "YB 257",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 78000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/yb-257.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 78000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "yb-2530-tables-and-stands",
+    "slug": "yb-2530-tables-and-stands",
+    "name": "YB 2530",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/yb-2530.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-791-c-&-d-(set-of-2-only)-tables-and-stands",
+    "slug": "cj-791-c-&-d-(set-of-2-only)-tables-and-stands",
+    "name": "CJ 791 C & D (Set of 2 only)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 105000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-791-c-&-d-(set-of-2-only).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 105000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-943-a-&-b-tables-and-stands",
+    "slug": "cj-943-a-&-b-tables-and-stands",
+    "name": "CJ 943 A & B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 135000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-943-a-&-b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 135000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "f33#-tables-and-stands",
+    "slug": "f33#-tables-and-stands",
+    "name": "F33#",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 60000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/f33#.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 60000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "v13-set-tables-and-stands",
+    "slug": "v13-set-tables-and-stands",
+    "name": "V13 SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 31000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/v13-set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 31000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "f17-tables-and-stands",
+    "slug": "f17-tables-and-stands",
+    "name": "F17",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 49000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/f17.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 49000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "f38-tables-and-stands",
+    "slug": "f38-tables-and-stands",
+    "name": "F38",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 60000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/f38.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 60000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bn-09-tables-and-stands",
+    "slug": "bn-09-tables-and-stands",
+    "name": "BN 09",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 56000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bn-09.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 56000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "r-09-tables-and-stands",
+    "slug": "r-09-tables-and-stands",
+    "name": "R 09",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 62000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/r-09.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 62000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "803-tables-and-stands",
+    "slug": "803-tables-and-stands",
+    "name": "803",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 40000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/803.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 40000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "y22-tables-and-stands",
+    "slug": "y22-tables-and-stands",
+    "name": "Y22",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 40000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/y22.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 40000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "yb-247-tables-and-stands",
+    "slug": "yb-247-tables-and-stands",
+    "name": "YB 247",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 75000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/yb-247.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 75000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "yb-241-tables-and-stands",
+    "slug": "yb-241-tables-and-stands",
+    "name": "YB 241",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 68000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/yb-241.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 68000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "211-tables-and-stands",
+    "slug": "211-tables-and-stands",
+    "name": "211",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 58000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/211.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 58000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "950-tables-and-stands",
+    "slug": "950-tables-and-stands",
+    "name": "950",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 65000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/950.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 65000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc-185-tables-and-stands",
+    "slug": "sc-185-tables-and-stands",
+    "name": "SC 185",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 60000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc-185.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 60000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc178-tables-and-stands",
+    "slug": "sc178-tables-and-stands",
+    "name": "Sc178",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc178.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "016-tables-and-stands",
+    "slug": "016-tables-and-stands",
+    "name": "016",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 70000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/016.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 70000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "058-tables-and-stands",
+    "slug": "058-tables-and-stands",
+    "name": "058",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 44000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/058.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 44000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "009-tables-and-stands",
+    "slug": "009-tables-and-stands",
+    "name": "009",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 44000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/009.png"
+    ],
+    "variants": [
+      {
+        "name": "Region E",
+        "priceInr": 44000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "812-&-812b-set-tables-and-stands",
+    "slug": "812-&-812b-set-tables-and-stands",
+    "name": "812 & 812B SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 32000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/812-&-812b-set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 32000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "m122-tables-and-stands",
+    "slug": "m122-tables-and-stands",
+    "name": "M122",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 36000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/m122.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 36000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "y07-tables-and-stands",
+    "slug": "y07-tables-and-stands",
+    "name": "Y07",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/y07.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc036-tables-and-stands",
+    "slug": "sc036-tables-and-stands",
+    "name": "Sc036",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 37000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc036.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 37000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "815-set-tables-and-stands",
+    "slug": "815-set-tables-and-stands",
+    "name": "815 SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 52000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/815-set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 52000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc-024-tables-and-stands",
+    "slug": "sc-024-tables-and-stands",
+    "name": "SC 024",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 28000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc-024.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 28000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t02-tables-and-stands",
+    "slug": "t02-tables-and-stands",
+    "name": "T02",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 39000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/t02.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 39000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "q10-tables-and-stands",
+    "slug": "q10-tables-and-stands",
+    "name": "Q10",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 46000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/q10.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 46000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "266-tables-and-stands",
+    "slug": "266-tables-and-stands",
+    "name": "266",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 74000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/266.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 74000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2498-tables-and-stands",
+    "slug": "2498-tables-and-stands",
+    "name": "2498",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2498.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2485-tables-and-stands",
+    "slug": "2485-tables-and-stands",
+    "name": "2485",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 38000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2485.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 38000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "yb-265-tables-and-stands",
+    "slug": "yb-265-tables-and-stands",
+    "name": "YB 265",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/yb-265.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "v01set-tables-and-stands",
+    "slug": "v01set-tables-and-stands",
+    "name": "V01SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 17500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/v01set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2313-tables-and-stands",
+    "slug": "2313-tables-and-stands",
+    "name": "2313",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 38000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2313.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 38000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "v08-set-tables-and-stands",
+    "slug": "v08-set-tables-and-stands",
+    "name": "V08 SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 21000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/v08-set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 21000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-787-set-tables-and-stands",
+    "slug": "cj-787-set-tables-and-stands",
+    "name": "CJ 787 SET",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 88000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-787-set.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 88000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2429-tables-and-stands",
+    "slug": "2429-tables-and-stands",
+    "name": "2429",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 42000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2429.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 42000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "817-tables-and-stands",
+    "slug": "817-tables-and-stands",
+    "name": "817",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 32000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/817.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 32000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc130-tables-and-stands",
+    "slug": "sc130-tables-and-stands",
+    "name": "Sc130",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 38000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc130.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 38000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ct-826-tables-and-stands",
+    "slug": "ct-826-tables-and-stands",
+    "name": "CT 826",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 38000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ct-826.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 38000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ct50-tables-and-stands",
+    "slug": "ct50-tables-and-stands",
+    "name": "Ct50",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ct50.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2589-tables-and-stands",
+    "slug": "2589-tables-and-stands",
+    "name": "2589",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 33000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2589.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 33000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "305-tables-and-stands",
+    "slug": "305-tables-and-stands",
+    "name": "305",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 9500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/305.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 9500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "shs-(big-table-only)-tables-and-stands",
+    "slug": "shs-(big-table-only)-tables-and-stands",
+    "name": "SHS (BIG TABLE ONLY)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 22000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/shs-(big-table-only).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 22000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "072-tables-and-stands",
+    "slug": "072-tables-and-stands",
+    "name": "072",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/072.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "041-three-floors-tables-and-stands",
+    "slug": "041-three-floors-tables-and-stands",
+    "name": "041 THREE FLOORS",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 29000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/041-three-floors.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 29000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-138c-tables-and-stands",
+    "slug": "cj-138c-tables-and-stands",
+    "name": "CJ 138C",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 26000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-138c.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 26000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-1083b-tables-and-stands",
+    "slug": "cj-1083b-tables-and-stands",
+    "name": "CJ 1083B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-1083b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bn-09-(only-corner)-tables-and-stands",
+    "slug": "bn-09-(only-corner)-tables-and-stands",
+    "name": "BN 09 (ONLY CORNER)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 17000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/bn-09-(only-corner).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "b1035-tables-and-stands",
+    "slug": "b1035-tables-and-stands",
+    "name": "B1035",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/b1035.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bn-28-tables-and-stands",
+    "slug": "bn-28-tables-and-stands",
+    "name": "BN 28",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/bn-28.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "b1037-copper-tables-and-stands",
+    "slug": "b1037-copper-tables-and-stands",
+    "name": "B1037 COPPER",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/b1037-copper.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "k60-tables-and-stands",
+    "slug": "k60-tables-and-stands",
+    "name": "K60",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/k60.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "b-1033-tables-and-stands",
+    "slug": "b-1033-tables-and-stands",
+    "name": "B 1033",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/b-1033.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-069-tables-and-stands",
+    "slug": "sl-069-tables-and-stands",
+    "name": "SL 069",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 23000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-069.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 23000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "922b-tables-and-stands",
+    "slug": "922b-tables-and-stands",
+    "name": "922B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/922b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "012-tables-and-stands",
+    "slug": "012-tables-and-stands",
+    "name": "012",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/012.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-036-tables-and-stands",
+    "slug": "sl-036-tables-and-stands",
+    "name": "SL 036",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 15500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-036.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 15500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-019-tables-and-stands",
+    "slug": "sl-019-tables-and-stands",
+    "name": "SL 019",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-019.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "c21-tables-and-stands",
+    "slug": "c21-tables-and-stands",
+    "name": "C21",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18500,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/c21.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-023-tables-and-stands",
+    "slug": "sl-023-tables-and-stands",
+    "name": "SL 023",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-023.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-046-tables-and-stands",
+    "slug": "sl-046-tables-and-stands",
+    "name": "SL 046",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-046.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-041-tables-and-stands",
+    "slug": "sl-041-tables-and-stands",
+    "name": "SL 041",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 23000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-041.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 23000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-1118b-tables-and-stands",
+    "slug": "cj-1118b-tables-and-stands",
+    "name": "CJ 1118B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-1118b.png"
+    ],
+    "variants": [
+      {
+        "name": "Region F",
+        "priceInr": 18500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-1035b-tables-and-stands",
+    "slug": "cj-1035b-tables-and-stands",
+    "name": "CJ 1035B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-1035b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cj-809b-tables-and-stands",
+    "slug": "cj-809b-tables-and-stands",
+    "name": "CJ 809B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cj-809b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2580-tables-and-stands",
+    "slug": "2580-tables-and-stands",
+    "name": "2580",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2580.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "v13-side-table-tables-and-stands",
+    "slug": "v13-side-table-tables-and-stands",
+    "name": "V13 SIDE TABLE",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/v13-side-table.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "2608-tables-and-stands",
+    "slug": "2608-tables-and-stands",
+    "name": "2608",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/2608.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "b1026-tables-and-stands",
+    "slug": "b1026-tables-and-stands",
+    "name": "B1026",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/b1026.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "b1034-gold-tables-and-stands",
+    "slug": "b1034-gold-tables-and-stands",
+    "name": "B1034 GOLD",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/b1034-gold.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "gt-01-tables-and-stands",
+    "slug": "gt-01-tables-and-stands",
+    "name": "GT 01",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 15000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/gt-01.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 15000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ct-015-tables-and-stands",
+    "slug": "ct-015-tables-and-stands",
+    "name": "CT 015",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 11500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ct-015.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 11500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e07-tables-and-stands",
+    "slug": "e07-tables-and-stands",
+    "name": "E07",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 11500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/e07.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 11500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ct-036-tables-and-stands",
+    "slug": "ct-036-tables-and-stands",
+    "name": "CT 036",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ct-036.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "817b-tables-and-stands",
+    "slug": "817b-tables-and-stands",
+    "name": "817B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 17500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/817b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "021-tables-and-stands",
+    "slug": "021-tables-and-stands",
+    "name": "021",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/021.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-011-tables-and-stands",
+    "slug": "sl-011-tables-and-stands",
+    "name": "SL 011",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 19000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-011.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 19000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "k30-tables-and-stands",
+    "slug": "k30-tables-and-stands",
+    "name": "K30",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 5000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/k30.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 5000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "299s-1-tables-and-stands",
+    "slug": "299s-1-tables-and-stands",
+    "name": "299S-1",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6600,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/299s-1.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6600
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "k31-tables-and-stands",
+    "slug": "k31-tables-and-stands",
+    "name": "K31",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 5000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/k31.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 5000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc114-tables-and-stands",
+    "slug": "sc114-tables-and-stands",
+    "name": "Sc114",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 15000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc114.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 15000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc075-tables-and-stands",
+    "slug": "sc075-tables-and-stands",
+    "name": "Sc075",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc075.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sc110-tables-and-stands",
+    "slug": "sc110-tables-and-stands",
+    "name": "Sc110",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 15000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sc110.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 15000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "905b-tables-and-stands",
+    "slug": "905b-tables-and-stands",
+    "name": "905B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/905b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "k12-tables-and-stands",
+    "slug": "k12-tables-and-stands",
+    "name": "K12",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 11000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/k12.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 11000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "903b-tables-and-stands",
+    "slug": "903b-tables-and-stands",
+    "name": "903B",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/903b.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ah99-tables-and-stands",
+    "slug": "ah99-tables-and-stands",
+    "name": "Ah99",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 9000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ah99.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 9000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t59-tables-and-stands",
+    "slug": "t59-tables-and-stands",
+    "name": "T59",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/t59.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "p--19-tables-and-stands",
+    "slug": "p--19-tables-and-stands",
+    "name": "P -19",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 9000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/p--19.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 9000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-230-tables-and-stands",
+    "slug": "z-230-tables-and-stands",
+    "name": "Z 230",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 7800,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-230.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 7800
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-293-tables-and-stands",
+    "slug": "z-293-tables-and-stands",
+    "name": "Z 293",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 9000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-293.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 9000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "322-tables-and-stands",
+    "slug": "322-tables-and-stands",
+    "name": "322",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 5800,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/322.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 5800
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "1703-tables-and-stands",
+    "slug": "1703-tables-and-stands",
+    "name": "1703",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/1703.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "4star-tables-and-stands",
+    "slug": "4star-tables-and-stands",
+    "name": "4Star",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/4star.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "605s-tables-and-stands",
+    "slug": "605s-tables-and-stands",
+    "name": "605S",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 16000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/605s.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 16000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "gemini-tables-and-stands",
+    "slug": "gemini-tables-and-stands",
+    "name": "Gemini",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/gemini.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "4012-tables-and-stands",
+    "slug": "4012-tables-and-stands",
+    "name": "4012",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/4012.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sl-068-tables-and-stands",
+    "slug": "sl-068-tables-and-stands",
+    "name": "SL 068",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sl-068.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-057-tables-and-stands",
+    "slug": "st-057-tables-and-stands",
+    "name": "ST 057",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 47000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-057.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 47000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-059-tables-and-stands",
+    "slug": "st-059-tables-and-stands",
+    "name": "ST 059",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 52000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-059.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 52000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-046-tables-and-stands",
+    "slug": "st-046-tables-and-stands",
+    "name": "ST 046",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 49000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-046.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 49000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-029-tables-and-stands",
+    "slug": "st-029-tables-and-stands",
+    "name": "ST 029",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 45000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-029.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 45000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-018-tables-and-stands",
+    "slug": "st-018-tables-and-stands",
+    "name": "ST 018",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 49000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-018.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 49000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "st-006-tables-and-stands",
+    "slug": "st-006-tables-and-stands",
+    "name": "ST 006",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 49000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/st-006.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 49000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sth-4101-tables-and-stands",
+    "slug": "sth-4101-tables-and-stands",
+    "name": "STH 4101",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 51000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sth-4101.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 51000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sd-103-|-900\u00f8-x-750-h-tables-and-stands",
+    "slug": "sd-103-|-900\u00f8-x-750-h-tables-and-stands",
+    "name": "SD 103 | 900\u00d8 X 750 h",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sd-103-|-900\u00f8-x-750-h.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sd-083-tables-and-stands",
+    "slug": "sd-083-tables-and-stands",
+    "name": "SD 083",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 50000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sd-083.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 50000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "sd-152-tables-and-stands",
+    "slug": "sd-152-tables-and-stands",
+    "name": "SD 152",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 23000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/sd-152.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 23000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-232-|-900-\u00f8-740-h-tables-and-stands",
+    "slug": "z-232-|-900-\u00f8-740-h-tables-and-stands",
+    "name": "Z 232 | 900 \u00d8 740 h",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-232-|-900-\u00f8-740-h.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ct8-tables-and-stands",
+    "slug": "ct8-tables-and-stands",
+    "name": "Ct8",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ct8.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "all-season-800\u00f8-x-750-h-tables-and-stands",
+    "slug": "all-season-800\u00f8-x-750-h-tables-and-stands",
+    "name": "All Season 800\u00d8 X 750 h",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/all-season-800\u00f8-x-750-h.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-231-tables-and-stands",
+    "slug": "z-231-tables-and-stands",
+    "name": "Z 231",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 10000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-231.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 10000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "milano-tables-and-stands",
+    "slug": "milano-tables-and-stands",
+    "name": "Milano",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/milano.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-207-tables-and-stands",
+    "slug": "z-207-tables-and-stands",
+    "name": "Z 207",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-207.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "milano-glass-round-tables-and-stands",
+    "slug": "milano-glass-round-tables-and-stands",
+    "name": "Milano Glass Round",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/milano-glass-round.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t-19-tables-and-stands",
+    "slug": "t-19-tables-and-stands",
+    "name": "T-19",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 17000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/t-19.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bar-table-tables-and-stands",
+    "slug": "bar-table-tables-and-stands",
+    "name": "BAR TABLE",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bar-table.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-218-tables-and-stands",
+    "slug": "z-218-tables-and-stands",
+    "name": "Z 218",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-218.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "a-m-tables-and-stands",
+    "slug": "a-m-tables-and-stands",
+    "name": "A-M",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 26000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/a-m.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 26000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z267-tables-and-stands",
+    "slug": "z267-tables-and-stands",
+    "name": "Z267",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z267.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bar-table-stand-tables-and-stands",
+    "slug": "bar-table-stand-tables-and-stands",
+    "name": "Bar Table Stand",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bar-table-stand.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "square-stand-tables-and-stands",
+    "slug": "square-stand-tables-and-stands",
+    "name": "Square Stand",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6600,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/square-stand.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6600
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "round-tables-and-stands",
+    "slug": "round-tables-and-stands",
+    "name": "Round",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 14000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/round.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 14000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e55a-tables-and-stands",
+    "slug": "e55a-tables-and-stands",
+    "name": "E55A",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8200,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/e55a.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8200
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z210-frame-tables-and-stands",
+    "slug": "z210-frame-tables-and-stands",
+    "name": "Z210 FRAME",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6600,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/z210-frame.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6600
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bl-056-5-tables-and-stands",
+    "slug": "bl-056-5-tables-and-stands",
+    "name": "BL-056-5",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6900,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/bl-056-5.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6900
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e55a-black-tables-and-stands",
+    "slug": "e55a-black-tables-and-stands",
+    "name": "E55A Black",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6250,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/e55a-black.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6250
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z-232-ss-gold-tables-and-stands",
+    "slug": "z-232-ss-gold-tables-and-stands",
+    "name": "Z 232 SS GOLD",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 10500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z-232-ss-gold.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 10500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "t-2016-tables-and-stands",
+    "slug": "t-2016-tables-and-stands",
+    "name": "T-2016",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/t-2016.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z6-(f)-tables-and-stands",
+    "slug": "z6-(f)-tables-and-stands",
+    "name": "Z6 (F)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z6-(f).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z16-(f)-tables-and-stands",
+    "slug": "z16-(f)-tables-and-stands",
+    "name": "Z16 (F)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 11000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z16-(f).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 11000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "413-tables-and-stands",
+    "slug": "413-tables-and-stands",
+    "name": "413",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 8500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/413.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 8500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "z232-(black,-white)-tables-and-stands",
+    "slug": "z232-(black,-white)-tables-and-stands",
+    "name": "Z232 (Black, White)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/z232-(black",
+      "-white).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "height-adjustable-(only-frame)-tables-and-stands",
+    "slug": "height-adjustable-(only-frame)-tables-and-stands",
+    "name": "Height Adjustable (Only Frame)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 15000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/height-adjustable-(only-frame).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 15000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e94-tables-and-stands",
+    "slug": "e94-tables-and-stands",
+    "name": "E94",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 2800,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/e94.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 2800
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e98-tables-and-stands",
+    "slug": "e98-tables-and-stands",
+    "name": "E98",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 4000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/e98.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 4000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "e95-tables-and-stands",
+    "slug": "e95-tables-and-stands",
+    "name": "E95",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 3000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/e95.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 3000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "rectangle-tables-and-stands",
+    "slug": "rectangle-tables-and-stands",
+    "name": "Rectangle",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 12000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/rectangle.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 12000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "1200-x-700-x-720-h-tables-and-stands",
+    "slug": "1200-x-700-x-720-h-tables-and-stands",
+    "name": "1200 X 700 X 720 h",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/1200-x-700-x-720-h.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "jd-104-(f)-tables-and-stands",
+    "slug": "jd-104-(f)-tables-and-stands",
+    "name": "JD 104 (F)",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 13500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/jd-104-(f).png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 13500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "h13-folding-table-stand-tables-and-stands",
+    "slug": "h13-folding-table-stand-tables-and-stands",
+    "name": "H13 FOLDING TABLE STAND",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 18000,
+    "priceStatus": "VERIFIED",
+    "dimensions": null,
+    "specifications": [],
+    "images": [
+      "/images/products/h13-folding-table-stand.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 18000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "heavy-black-flat-square-tables-and-stands",
+    "slug": "heavy-black-flat-square-tables-and-stands",
+    "name": "Heavy black Flat Square",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 5200,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/heavy-black-flat-square.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 5200
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "heavy-black-flat-round-tables-and-stands",
+    "slug": "heavy-black-flat-round-tables-and-stands",
+    "name": "Heavy Black Flat Round",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/heavy-black-flat-round.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "heavy-black-flat-rectangle-tables-and-stands",
+    "slug": "heavy-black-flat-rectangle-tables-and-stands",
+    "name": "Heavy Black Flat Rectangle",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 6500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/heavy-black-flat-rectangle.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 6500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "h-47-tables-and-stands",
+    "slug": "h-47-tables-and-stands",
+    "name": "H 47",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/h-47.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zd01-tables-and-stands",
+    "slug": "zd01-tables-and-stands",
+    "name": "Zd01",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zd01.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bl-056---3-tables-and-stands",
+    "slug": "bl-056---3-tables-and-stands",
+    "name": "BL 056 - 3",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 17000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bl-056---3.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 17000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bl-001-tables-and-stands",
+    "slug": "bl-001-tables-and-stands",
+    "name": "BL 001",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bl-001.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bl-056---1-tables-and-stands",
+    "slug": "bl-056---1-tables-and-stands",
+    "name": "BL 056 - 1",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 11500,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bl-056---1.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 11500
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "lifting-desk-tables-and-stands",
+    "slug": "lifting-desk-tables-and-stands",
+    "name": "LIFTING DESK",
+    "category": "tables-and-stands",
+    "collection": "Table & Stands",
+    "basePrice": 23000,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/lifting-desk.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": 23000
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "albert-puffy",
+    "slug": "albert-puffy",
+    "name": "Albert",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/albert.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "libra-puffy",
+    "slug": "libra-puffy",
+    "name": "Libra",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/libra.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "torry-puffy",
+    "slug": "torry-puffy",
+    "name": "Torry",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/torry.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "kenzi-puffy",
+    "slug": "kenzi-puffy",
+    "name": "Kenzi",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/kenzi.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "vitro-puffy",
+    "slug": "vitro-puffy",
+    "name": "Vitro",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/vitro.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "eva-puffy",
+    "slug": "eva-puffy",
+    "name": "Eva",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/eva.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "gold-puffy",
+    "slug": "gold-puffy",
+    "name": "Gold",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/gold.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "reno-puffy",
+    "slug": "reno-puffy",
+    "name": "Reno",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/reno.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "opal-puffy",
+    "slug": "opal-puffy",
+    "name": "Opal",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/opal.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "astro-puffy",
+    "slug": "astro-puffy",
+    "name": "Astro",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/astro.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "dior-puffy",
+    "slug": "dior-puffy",
+    "name": "Dior",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/dior.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "flow-puffy",
+    "slug": "flow-puffy",
+    "name": "Flow",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/flow.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "merry-puffy",
+    "slug": "merry-puffy",
+    "name": "Merry",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/merry.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "moon-puffy",
+    "slug": "moon-puffy",
+    "name": "Moon",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/moon.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "capsule-puffy",
+    "slug": "capsule-puffy",
+    "name": "Capsule",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/capsule.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "mushroom-puffy",
+    "slug": "mushroom-puffy",
+    "name": "Mushroom",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/mushroom.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "vibe-puffy",
+    "slug": "vibe-puffy",
+    "name": "Vibe",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/vibe.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "snug-puffy",
+    "slug": "snug-puffy",
+    "name": "Snug",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/snug.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "lume-puffy",
+    "slug": "lume-puffy",
+    "name": "Lume",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/lume.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bloomington-puffy",
+    "slug": "bloomington-puffy",
+    "name": "Bloomington",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bloomington.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "bolt-puffy",
+    "slug": "bolt-puffy",
+    "name": "Bolt",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/bolt.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "hush-puffy",
+    "slug": "hush-puffy",
+    "name": "Hush",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/hush.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "drift-puffy",
+    "slug": "drift-puffy",
+    "name": "Drift",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/drift.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zoya-puffy",
+    "slug": "zoya-puffy",
+    "name": "Zoya",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zoya.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "majesty-puffy",
+    "slug": "majesty-puffy",
+    "name": "Majesty",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/majesty.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "louis-puffy",
+    "slug": "louis-puffy",
+    "name": "Louis",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/louis.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "drum-puffy",
+    "slug": "drum-puffy",
+    "name": "Drum",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/drum.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "novel-puffy",
+    "slug": "novel-puffy",
+    "name": "Novel",
+    "category": "puffy",
+    "collection": "Puffy",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/novel.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "quartz-prince",
+    "slug": "quartz-prince",
+    "name": "Quartz",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/quartz.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "paradox-prince",
+    "slug": "paradox-prince",
+    "name": "Paradox",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/paradox.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ferrari-prince",
+    "slug": "ferrari-prince",
+    "name": "Ferrari",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ferrari.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "valour-prince",
+    "slug": "valour-prince",
+    "name": "Valour",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/valour.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "soho-prince",
+    "slug": "soho-prince",
+    "name": "Soho",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/soho.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "tiago-prince",
+    "slug": "tiago-prince",
+    "name": "Tiago",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/tiago.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "allure-prince",
+    "slug": "allure-prince",
+    "name": "Allure",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/allure.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "pebble-prince",
+    "slug": "pebble-prince",
+    "name": "Pebble",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/pebble.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "crafty-prince",
+    "slug": "crafty-prince",
+    "name": "Crafty",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/crafty.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "marina-prince",
+    "slug": "marina-prince",
+    "name": "Marina",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/marina.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "osaka-prince",
+    "slug": "osaka-prince",
+    "name": "Osaka",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/osaka.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "azzura-prince",
+    "slug": "azzura-prince",
+    "name": "Azzura",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/azzura.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "cassina-prince",
+    "slug": "cassina-prince",
+    "name": "Cassina",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/cassina.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "meraki-prince",
+    "slug": "meraki-prince",
+    "name": "Meraki",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/meraki.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "scorpio-prince",
+    "slug": "scorpio-prince",
+    "name": "Scorpio",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/scorpio.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "tiesto-prince",
+    "slug": "tiesto-prince",
+    "name": "Tiesto",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/tiesto.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "avita-prince",
+    "slug": "avita-prince",
+    "name": "Avita",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/avita.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "june-prince",
+    "slug": "june-prince",
+    "name": "June",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/june.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "rolf-prince",
+    "slug": "rolf-prince",
+    "name": "Rolf",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/rolf.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "symphony-prince",
+    "slug": "symphony-prince",
+    "name": "Symphony",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/symphony.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "lancer-prince",
+    "slug": "lancer-prince",
+    "name": "Lancer",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/lancer.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zara-prince",
+    "slug": "zara-prince",
+    "name": "Zara",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zara.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "zara-without-arms-prince",
+    "slug": "zara-without-arms-prince",
+    "name": "Zara without arms",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/zara-without-arms.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "oxy-prince",
+    "slug": "oxy-prince",
+    "name": "Oxy",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/oxy.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "finista-prince",
+    "slug": "finista-prince",
+    "name": "Finista",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/finista.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "ethan-prince",
+    "slug": "ethan-prince",
+    "name": "Ethan",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/ethan.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "antonia-prince",
+    "slug": "antonia-prince",
+    "name": "Antonia",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/antonia.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "mackanzy-prince",
+    "slug": "mackanzy-prince",
+    "name": "Mackanzy",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/mackanzy.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "mustang-prince",
+    "slug": "mustang-prince",
+    "name": "Mustang",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/mustang.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  },
+  {
+    "id": "maharaja-prince",
+    "slug": "maharaja-prince",
+    "name": "Maharaja",
+    "category": "prince",
+    "collection": "Prince",
+    "basePrice": null,
+    "priceStatus": "VERIFIED",
+    "dimensions": "VERIFIED",
+    "specifications": [],
+    "images": [
+      "/images/products/maharaja.png"
+    ],
+    "variants": [
+      {
+        "name": "Standard",
+        "priceInr": null
+      }
+    ],
+    "has3dModel": false
+  }
+]

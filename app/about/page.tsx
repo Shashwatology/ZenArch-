@@ -19,7 +19,7 @@ export default function AboutPage() {
             </span>
           </div>
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.05] tracking-tight uppercase">
-            About Zen Arc.
+            About Zen Arch.
           </h1>
           <p className="text-base md:text-lg text-zen-charcoal/80 font-light leading-relaxed">
             Founded with a singular conviction: that architecture and furniture should never exist in isolation, but in continuous, sympathetic dialogue.
@@ -39,7 +39,7 @@ export default function AboutPage() {
               {BRAND.title}
             </span>
             <p className="text-xs md:text-sm text-zen-sand/80 font-light leading-relaxed">
-              Rohit Pathak directs all spatial concepts, bespoke furniture geometry, and architectural commissions at Zen Arc Interior Solution. His work balances contemporary structural minimalism with deep tactile warmth.
+              Rohit Pathak directs all spatial concepts, bespoke furniture geometry, and architectural commissions at Zen Arch Interior Solution. His work balances contemporary structural minimalism with deep tactile warmth.
             </p>
             <div className="pt-4 border-t border-zen-charcoal space-y-2 text-xs text-zen-sand font-mono">
               <div>STUDIO: Mumbai, Maharashtra</div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
               The Architecture of Living
             </h3>
             <p>
-              Zen Arc was established to redefine how high-end residences and commercial flagships are conceived in India. Rather than sourcing generic catalog furniture to fill an already built room, we design the furniture and the architectural shell simultaneously.
+              Zen Arch was established to redefine how high-end residences and commercial flagships are conceived in India. Rather than sourcing generic catalog furniture to fill an already built room, we design the furniture and the architectural shell simultaneously.
             </p>
             <p>
               Our Mumbai workshop employs master carpenters, metal fabricators, and upholstery artisans who construct every piece from kiln-dried hardwoods, structural steel, and curated fabrics specified at standard rates of ₹500/meter or imported designer textiles.

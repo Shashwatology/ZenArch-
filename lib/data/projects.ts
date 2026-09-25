@@ -27,9 +27,9 @@ export const PROJECTS_DATA: ProjectCaseStudy[] = [
     leadArchitect: "Rohit Pathak",
     tagline: "Fluid living where coastal light meets architectural restraint.",
     overview:
-      "A three-storey private coastal sanctuary conceived as a series of cascading travertine terraces overlooking the Arabian Sea. Designed for seamless indoor-outdoor living with bespoke custom acoustics and custom Zen Arc furniture.",
+      "A three-storey private coastal sanctuary conceived as a series of cascading travertine terraces overlooking the Arabian Sea. Designed for seamless indoor-outdoor living with bespoke custom acoustics and custom Zen Arch furniture.",
     designStory:
-      "The client sought a space that resisted typical Mumbai high-gloss opulence in favor of calm, contemplative architectural permanence. We stripped the spatial envelope to its structural columns, flooding the central double-height salon with daylight filtered through custom fluted louver screens. The furniture was conceived specifically for the floorplan: the curving Zen Arc Arcus sofa anchors the formal reception, while low-profile Benz platforms ground the ocean-facing sunroom.",
+      "The client sought a space that resisted typical Mumbai high-gloss opulence in favor of calm, contemplative architectural permanence. We stripped the spatial envelope to its structural columns, flooding the central double-height salon with daylight filtered through custom fluted louver screens. The furniture was conceived specifically for the floorplan: the curving Zen Arch Arcus sofa anchors the formal reception, while low-profile Benz platforms ground the ocean-facing sunroom.",
     materials: [
       "Honed Roman Travertine",
       "Smoked White Oak Paneling",

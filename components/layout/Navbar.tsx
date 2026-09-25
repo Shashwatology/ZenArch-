@@ -58,7 +58,7 @@ export function Navbar() {
                 isScrolled ? "text-zen-black" : "text-zen-ivory"
               }`}
             >
-              Zen Arc
+              Zen Arch
             </span>
             <span
               className={`text-[9px] uppercase tracking-[0.28em] font-sans -mt-1 transition-colors duration-300 ${

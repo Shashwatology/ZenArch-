@@ -155,7 +155,7 @@ export default function ProjectDetailPage() {
           </div>
           <div className="flex gap-4">
             <Button
-              href={getWhatsAppUrl(`Hello Zen Arc, I would like to discuss a project inspired by ${project.title}.`)}
+              href={getWhatsAppUrl(`Hello Zen Arch, I would like to discuss a project inspired by ${project.title}.`)}
               isExternal
               variant="whatsapp"
               size="md"

@@ -40,7 +40,7 @@ export default function ContactPage() {
             </span>
           </div>
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.05] tracking-tight uppercase">
-            Connect with Zen Arc.
+            Connect with Zen Arch.
           </h1>
           <p className="text-base md:text-lg text-zen-charcoal/80 font-light leading-relaxed">
             Direct access to Rohit Pathak and the architectural studio. For new residential commissions, commercial projects, and custom furniture orders.
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 Official Coordinates
               </span>
               <h2 className="font-serif text-3xl font-normal">
-                Zen Arc Interior Solution
+                Zen Arch Interior Solution
               </h2>
 
               <div className="space-y-4 text-xs font-mono text-zen-sand pt-4 border-t border-zen-charcoal">

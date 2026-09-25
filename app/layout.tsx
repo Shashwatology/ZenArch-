@@ -3,7 +3,7 @@ import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-
+import { AIConsultant } from "@/components/ai/AIConsultant";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -18,11 +18,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Zen Arc Interior Solution — Luxury Architecture & Bespoke Furniture Atelier",
+  title: "Zen Arch Interior Solution — Luxury Architecture & Bespoke Furniture Atelier",
   description:
-    "Spaces designed around the way you live. Zen Arc combines contemporary architectural design, bespoke handcrafted furniture collections, and intelligent digital spatial exploration. Founded by Rohit Pathak.",
+    "Spaces designed around the way you live. Zen Arch combines contemporary architectural design, bespoke handcrafted furniture collections, and intelligent digital spatial exploration. Founded by Rohit Pathak.",
   keywords: [
-    "Zen Arc",
+    "Zen Arch",
     "Rohit Pathak",
     "Interior Architecture Mumbai",
     "Luxury Furniture India",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "High-End Interior Design",
   ],
   openGraph: {
-    title: "Zen Arc Interior Solution — Architectural Studio & Furniture Atelier",
+    title: "Zen Arch Interior Solution — Architectural Studio & Furniture Atelier",
     description: "Spaces designed around the way you live. Bespoke interiors and handcrafted furniture.",
     type: "website",
     locale: "en_IN",
@@ -52,6 +52,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <AIConsultant />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-# Technical Architecture & Project Documentation: Zen Arc Interior Solution
+# Technical Architecture & Project Documentation: Zen Arch Interior Solution
 
 **Sole Technical Owner & Architect:** Antigravity (Google DeepMind)  
 **Version:** 2.0.0 — Single-Agent Architecture  
@@ -7,7 +7,7 @@
 
 ## 1. Project Context & Charter
 
-Zen Arc is now a single-agent implementation project.
+Zen Arch is now a single-agent implementation project.
 
 Antigravity is the sole development agent responsible for:
 - UX/UI
@@ -31,7 +31,7 @@ Antigravity is the sole development agent responsible for:
 
 ## 2. Approved Brand Coordinates
 
-- **Brand:** Zen Arc Interior Solution
+- **Brand:** Zen Arch Interior Solution
 - **Founder & Creative Director:** Rohit Pathak
 - **Email:** zenarchsolution@gmail.com
 - **Phone:** +91 93729 21244
@@ -45,7 +45,7 @@ Antigravity is the sole development agent responsible for:
   Mumbai,  
   Maharashtra 400072,  
   India  
-*(Notice: Zen Arc operates Pan-India from Mumbai. No overseas or Dubai references).*
+*(Notice: Zen Arch operates Pan-India from Mumbai. No overseas or Dubai references).*
 
 ---
 
@@ -63,7 +63,7 @@ Antigravity is the sole development agent responsible for:
 
 ## 4. Complete Catalogue Ingestion Requirement
 
-Zen Arc catalogues and all verified source materials are normalized into a unified schema:
+Zen Arch catalogues and all verified source materials are normalized into a unified schema:
 - Sofas & Lounges (Vegas, Flame, Lopez, etc.)
 - Puffy Collection & Sculptural Benches (Gold, Zoya, Majesty, Drum, Novel, etc.)
 - Executive Collection
@@ -92,6 +92,6 @@ Every product record preserves:
 | **Milestone 2** | Complete Catalogue Ingestion (Sofas, Puffy, Executive, Table & Stand, Prince) & Catalogue Exploration (`/furniture`, `/furniture/[category]`, `/furniture/[slug]`) | Queued |
 | **Milestone 3** | Projects Gallery & Architectural Services Portfolios (`/projects`, `/services`) | Queued |
 | **Milestone 4** | 8-Step Interactive Consultation Suite (`/consultation`) with WhatsApp & Lead Routing | Queued |
-| **Milestone 5** | Grounded Zen Arc AI Studio & Spatial Visualizer (`/ai`, `/ai/transform-space`) | Queued |
+| **Milestone 5** | Grounded Zen Arch AI Studio & Spatial Visualizer (`/ai`, `/ai/transform-space`) | Queued |
 | **Milestone 6** | Backend Integration / Server Layer, Prisma Persistence, CRM & Leads API | Queued |
 | **Milestone 7** | End-to-End Browser QA, Accessibility, SEO & Lighthouse Performance Polish | Queued |
