@@ -64,7 +64,7 @@ export async function POST(req: Request) {
       }
     });
 
-    return result.toTextStreamResponse();
+    return result.toDataStreamResponse();
   } catch (error) {
     console.error("[AI CHAT ERROR]", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
