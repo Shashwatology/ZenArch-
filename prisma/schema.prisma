@@ -32,7 +32,8 @@ model User {
   clientProjects       ClientProject[]
   clientProjectMembers ClientProjectMember[]
   CouponRedemption     CouponRedemption[]
-  Lead                 Lead[]
+  assignedLeads        Lead[]                @relation("LeadAssignedTo")
+  customerLeads        Lead[]                @relation("LeadCustomer")
   LeadActivity         LeadActivity[]
   MarketingConsent     MarketingConsent?
   EmailLog             EmailLog[]
@@ -92,12 +93,12 @@ model Product {
   priceStatus PriceStatus @default(VERIFIED)
 
   dimensions String?
-  
+
   // 3D & AR
-  asset3dUrl     String?
-  assetArUrl     String?
-  has3dModel     Boolean @default(false)
-  hasArModel     Boolean @default(false)
+  asset3dUrl String?
+  assetArUrl String?
+  has3dModel Boolean @default(false)
+  hasArModel Boolean @default(false)
 
   // SEO
   seoTitle       String?
@@ -247,7 +248,7 @@ model Project {
   year        Int?
 
   status PublishStatus @default(DRAFT)
-  
+
   // SEO
   seoTitle       String?
   seoDescription String?
@@ -313,6 +314,7 @@ model QuoteRequest {
   updatedAt       DateTime       @updatedAt
   clientProjectId String?
   clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+  Lead            Lead[]
 }
 
 model QuoteVersion {
@@ -426,7 +428,19 @@ model Lead {
   status LeadStatus @default(NEW)
 
   assignedToId String?
-  assignedTo   User?   @relation(fields: [assignedToId], references: [id])
+  assignedTo   User?   @relation("LeadAssignedTo", fields: [assignedToId], references: [id])
+
+  // Commercial Linkage
+  customerId      String?
+  customer        User?          @relation("LeadCustomer", fields: [customerId], references: [id])
+  quoteRequestId  String?
+  quoteRequest    QuoteRequest?  @relation(fields: [quoteRequestId], references: [id])
+  orderId         String?
+  order           Order?         @relation(fields: [orderId], references: [id])
+  clientProjectId String?
+  clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+  designBoardId   String?
+  designBoard     DesignBoard?   @relation(fields: [designBoardId], references: [id])
 
   nextAction     String?
   nextFollowUpAt DateTime?
@@ -575,6 +589,7 @@ model Order {
   updatedAt       DateTime       @updatedAt
   clientProjectId String?
   clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+  Lead            Lead[]
 }
 
 enum OrderStatus {
@@ -726,6 +741,7 @@ model DesignBoard {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Lead      Lead[]
 
   @@index([userId])
   @@index([shareToken])
@@ -838,6 +854,7 @@ model ClientProject {
   changeRequests ChangeRequest[]
   members        ClientProjectMember[]
   Project        Project[]
+  Lead           Lead[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
