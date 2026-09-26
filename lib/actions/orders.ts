@@ -90,7 +90,7 @@ export async function updateOrderAdmin(orderId: string, data: { status?: any, de
       recipient: oldOrder.user.email,
       customerId: oldOrder.user.id,
       orderId: updated.orderId || updated.id,
-      trackingId: updated.trackingId,
+      trackingId: updated.trackingId || '',
       deliveryPartner: updated.deliveryPartner || ''
     })
   }

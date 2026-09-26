@@ -11,6 +11,8 @@ type EmailEvent =
   | ({ type: 'quote.sent', recipient: string, customerId: string, quoteRequestId: string, leadId?: string, quoteUrl: string } & BaseEventPayload)
   | ({ type: 'lead.assigned', recipient: string, leadId: string, staffName: string, leadName: string } & BaseEventPayload)
   | ({ type: 'order.created', recipient: string, customerId: string, orderId: string, orderNumber: string, amount: string } & BaseEventPayload)
+  | ({ type: 'order.status_update', recipient: string, customerId: string, orderId: string, status: string } & BaseEventPayload)
+  | ({ type: 'order.tracking_added', recipient: string, customerId: string, orderId: string, trackingId: string, deliveryPartner: string } & BaseEventPayload)
   | ({ type: 'board.shared', recipient: string, designBoardId: string, boardName: string, shareUrl: string } & BaseEventPayload)
 
 export async function dispatchEmailEvent(event: EmailEvent) {
@@ -67,6 +69,22 @@ export async function dispatchEmailEvent(event: EmailEvent) {
         subject,
         `<p>Thank you for your order.</p><p><strong>Order Number:</strong> ${event.orderNumber}<br><strong>Total:</strong> ₹${event.amount}</p>`,
         { text: 'View Order', url: `${process.env.NEXT_PUBLIC_SITE_URL}/account/orders` }
+      )
+      break
+    case 'order.status_update':
+      subject = `Order Status Update - ${event.orderId}`
+      html = renderEmailTemplate(
+        subject,
+        `<p>Your order status has been updated to <strong>${event.status}</strong>.</p>`,
+        { text: 'Track Order', url: `${process.env.NEXT_PUBLIC_SITE_URL}/account/orders/${event.orderId}` }
+      )
+      break
+    case 'order.tracking_added':
+      subject = `Order Dispatched - ${event.orderId}`
+      html = renderEmailTemplate(
+        subject,
+        `<p>Your order has been dispatched via ${event.deliveryPartner}.</p><p>Tracking ID: <strong>${event.trackingId}</strong></p>`,
+        { text: 'Track Shipment', url: `${process.env.NEXT_PUBLIC_SITE_URL}/account/orders/${event.orderId}` }
       )
       break
     case 'board.shared':
