@@ -37,7 +37,7 @@ export default async function AdminOrdersPage() {
                     <div className="text-xs text-gray-500 mt-0.5">{order.user.email}</div>
                   </td>
                   <td className="px-6 py-4 text-gray-400">{order.items.length}</td>
-                  <td className="px-6 py-4 text-[#C8A97E] font-mono">₹{order.totalAmount.toLocaleString('en-IN')}</td>
+                  <td className="px-6 py-4 text-[#C8A97E] font-mono">₹{Number(order.totalAmount).toLocaleString('en-IN')}</td>
                   <td className="px-6 py-4">
                     <span className={`px-2 py-1 text-[10px] font-mono tracking-widest uppercase border rounded-full ${
                       order.status === 'PENDING' ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' :

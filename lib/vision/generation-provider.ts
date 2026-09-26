@@ -37,7 +37,7 @@ Prioritize the exact silhouette, shape, upholstery appearance, and structural de
     return `PLACEMENT INSTRUCTIONS:
 Place the selected furniture naturally on the visible floor plane based on the following context:
 - Room Type: ${analysis.roomType}
-- Floor: ${analysis.floor}
+- Spatial Notes: ${analysis.spatialNotes}
 - Placement Clues: ${analysis.inferred.join(", ")}
 Ensure correct perspective matching the existing camera viewpoint and maintain correct occlusion with any existing foreground objects.`;
   }
@@ -52,7 +52,7 @@ Ensure correct perspective matching the existing camera viewpoint and maintain c
   private buildLightingPrompt(analysis: RoomAnalysisResult): string {
     return `LIGHTING INSTRUCTIONS:
 Create realistic contact shadows and preserve lighting consistency.
-Existing lighting context: ${analysis.lighting}. Match this lighting direction and intensity on the new furniture.`;
+Match the existing lighting direction and intensity on the new furniture based on the visual character: ${analysis.visualCharacter}.`;
   }
 
   private buildNegativeConstraints(): string {

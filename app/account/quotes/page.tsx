@@ -86,7 +86,7 @@ export default async function CustomerQuotesPage() {
                     <div className="text-right">
                       <span className="text-sm block">Qty: {item.quantity}</span>
                       {item.priceAtTime && (
-                        <span className="text-[10px] font-mono text-zen-taupe">₹{item.priceAtTime.toLocaleString('en-IN')}</span>
+                        <span className="text-[10px] font-mono text-zen-taupe">₹{Number(item.priceAtTime).toLocaleString('en-IN')}</span>
                       )}
                     </div>
                   </div>

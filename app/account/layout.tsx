@@ -20,6 +20,9 @@ export default async function AccountLayout({ children }: { children: React.Reac
               <Link href="/account" className="px-4 py-3 text-sm border-l-2 border-transparent hover:border-zen-accent hover:bg-zen-stone/20 transition-colors">
                 Profile Overview
               </Link>
+              <Link href="/account/boards" className="px-4 py-3 text-sm border-l-2 border-transparent hover:border-zen-accent hover:bg-zen-stone/20 transition-colors">
+                Design Boards
+              </Link>
               <Link href="/account/wishlist" className="px-4 py-3 text-sm border-l-2 border-transparent hover:border-zen-accent hover:bg-zen-stone/20 transition-colors">
                 Saved Products
               </Link>

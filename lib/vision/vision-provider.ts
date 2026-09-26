@@ -9,17 +9,18 @@ Analyze this room photograph and return a structured JSON response understanding
 
 DO NOT invent precise dimensions. Use OBSERVED, INFERRED, and UNKNOWN categories strictly.
 Determine if the room is suitable for placing a piece of luxury furniture (i.e., is there visible free floor space, or is it too cluttered/unclear?).
+Also identify where practical: visible floor, walls, windows, doors, existing furniture, open floor regions, major circulation areas, desk/work areas, seating areas.
 
 Return ONLY raw JSON, with exactly this structure:
 {
   "roomType": "living room | bedroom | office | unknown",
-  "floor": "describe the visible floor material",
-  "walls": "describe visible walls/colors",
-  "lighting": "describe lighting conditions",
-  "existingFurniture": ["list", "of", "items"],
-  "observed": ["Fact 1", "Fact 2"],
-  "inferred": ["Inference 1", "Inference 2"],
-  "unknown": ["Unknown 1"],
+  "visualCharacter": "e.g., Warm / Contemporary",
+  "materials": ["Travertine", "Walnut", "Textile"],
+  "palette": ["Warm Ivory", "Taupe", "Walnut"],
+  "spatialNotes": "e.g., Large window, Open central floor, Low seating zone",
+  "observed": ["visible wooden floor", "Fact 2"],
+  "inferred": ["open area suitable for seating", "Inference 2"],
+  "unknown": ["exact room width"],
   "isSuitableForPlacement": true/false,
   "reasonIfNotSuitable": "reason if false, else null"
 }`;

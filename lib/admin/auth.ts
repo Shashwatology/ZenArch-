@@ -27,3 +27,17 @@ export async function requireAdmin() {
 
   return { authUser: user, dbUser }
 }
+
+export async function requireSuperAdmin() {
+  const user = await requireAuth()
+  
+  const dbUser = await prisma.user.findUnique({
+    where: { email: user.email },
+  })
+
+  if (!dbUser || dbUser.role !== 'SUPER_ADMIN') {
+    redirect('/unauthorized')
+  }
+
+  return { authUser: user, dbUser }
+}

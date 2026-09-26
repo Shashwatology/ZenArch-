@@ -52,6 +52,22 @@ export async function requireCustomerAuth() {
   return { authUser: data.user, dbUser }
 }
 
+export async function getCustomerAuth() {
+  const supabase = await createClient()
+  const { data, error } = await supabase.auth.getUser()
+
+  if (error || !data?.user) {
+    return { authUser: null, dbUser: null }
+  }
+
+  const dbUser = await prisma.user.findUnique({
+    where: { email: data.user.email },
+    include: { customerProfile: true }
+  })
+
+  return { authUser: data.user, dbUser }
+}
+
 export async function login(formData: FormData) {
   const email = formData.get('email') as string
   const password = formData.get('password') as string

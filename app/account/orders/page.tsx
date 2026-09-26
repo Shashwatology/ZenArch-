@@ -50,7 +50,7 @@ export default async function CustomerOrdersPage() {
                   <span className="text-[10px] uppercase font-mono tracking-widest text-zen-charcoal block mb-1">
                     Total
                   </span>
-                  <span className="text-sm">₹{order.totalAmount.toLocaleString('en-IN')}</span>
+                  <span className="text-sm">₹{Number(order.totalAmount).toLocaleString('en-IN')}</span>
                 </div>
                 <div>
                   <span className={`px-3 py-1 text-[10px] uppercase font-mono tracking-widest border ${getStatusColor(order.status)}`}>
@@ -74,7 +74,7 @@ export default async function CustomerOrdersPage() {
                     </div>
                     <div className="text-right">
                       <span className="text-sm block">Qty: {item.quantity}</span>
-                      <span className="text-[10px] font-mono text-zen-taupe">₹{item.priceAtTime.toLocaleString('en-IN')} each</span>
+                      <span className="text-[10px] font-mono text-zen-taupe">₹{Number(item.priceAtTime).toLocaleString('en-IN')} each</span>
                     </div>
                   </div>
                 ))}

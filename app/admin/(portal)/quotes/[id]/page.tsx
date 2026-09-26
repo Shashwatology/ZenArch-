@@ -62,7 +62,7 @@ export default async function AdminQuoteDetailPage({ params }: { params: { id: s
                     {item.variant && <p className="text-xs font-mono text-[#C8A97E] uppercase tracking-widest mt-1">{item.variant.name}</p>}
                     <div className="mt-4 flex justify-between text-sm text-gray-400">
                       <span>Qty: {item.quantity}</span>
-                      <span>{item.priceAtTime ? `Snapshot: ₹${item.priceAtTime.toLocaleString('en-IN')}` : 'Price on request'}</span>
+                      <span>{item.priceAtTime ? `Snapshot: ₹${Number(item.priceAtTime).toLocaleString('en-IN')}` : 'Price on request'}</span>
                     </div>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default async function AdminQuoteDetailPage({ params }: { params: { id: s
               </div>
               <div>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-gray-500 block mb-1">Est. Budget</span>
-                {quote.budget ? <span className="text-[#C8A97E]">₹{quote.budget.toLocaleString('en-IN')}</span> : 'N/A'}
+                {quote.budget ? <span className="text-[#C8A97E]">₹{Number(quote.budget).toLocaleString('en-IN')}</span> : 'N/A'}
               </div>
               <div>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-gray-500 block mb-1">Customer Notes</span>

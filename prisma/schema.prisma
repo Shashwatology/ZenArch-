@@ -13,19 +13,29 @@ datasource db {
 // ============================================================================
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  role      Role     @default(CUSTOMER)
-  
+  id    String @id @default(uuid())
+  email String @unique
+  role  Role   @default(CUSTOMER)
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   customerProfile CustomerProfile?
   adminProfile    AdminProfile?
-  
-  auditLogs       AuditLog[]
-  orders          Order[]
-  quotes          QuoteRequest[]
+
+  auditLogs            AuditLog[]
+  orders               Order[]
+  quotes               QuoteRequest[]
+  spatialSessions      SpatialSession[]
+  designBoards         DesignBoard[]
+  boardCollaborations  BoardCollaborator[]
+  clientProjects       ClientProject[]
+  clientProjectMembers ClientProjectMember[]
+  CouponRedemption     CouponRedemption[]
+  Lead                 Lead[]
+  LeadActivity         LeadActivity[]
+  MarketingConsent     MarketingConsent?
+  EmailLog             EmailLog[]
 }
 
 enum Role {
@@ -36,28 +46,28 @@ enum Role {
 }
 
 model CustomerProfile {
-  id        String   @id @default(uuid())
-  userId    String   @unique
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   phone     String?
   firstName String?
   lastName  String?
-  
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+
   savedProducts SavedProduct[]
 }
 
 model AdminProfile {
-  id        String   @id @default(uuid())
-  userId    String   @unique
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   firstName String?
   lastName  String?
-  
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -67,37 +77,51 @@ model AdminProfile {
 // ============================================================================
 
 model Product {
-  id           String   @id @default(uuid())
-  slug         String   @unique
-  sku          String?  @unique
-  name         String
-  
+  id   String  @id @default(uuid())
+  slug String  @unique
+  sku  String? @unique
+  name String
+
   collectionId String?
   collection   Collection? @relation(fields: [collectionId], references: [id])
   categoryId   String?
   category     Category?   @relation(fields: [categoryId], references: [id])
+
+  description String?
+  basePrice   Decimal?
+  priceStatus PriceStatus @default(VERIFIED)
+
+  dimensions String?
   
-  description  String?
-  basePrice    Float?
-  priceStatus  PriceStatus @default(VERIFIED)
-  
-  dimensions   String?
-  
+  // 3D & AR
+  asset3dUrl     String?
+  assetArUrl     String?
+  has3dModel     Boolean @default(false)
+  hasArModel     Boolean @default(false)
+
+  // SEO
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+
   status       PublishStatus @default(DRAFT)
   isFeatured   Boolean       @default(false)
   isBestSeller Boolean       @default(false)
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   variants       ProductVariant[]
   specifications ProductSpecification[]
   images         ProductImage[]
   inventory      InventoryItem[]
-  
-  savedBy        SavedProduct[]
-  orderItems     OrderItem[]
-  quoteItems     QuoteItem[]
+
+  savedBy          SavedProduct[]
+  orderItems       OrderItem[]
+  quoteItems       QuoteItem[]
+  visualizations   Visualization[]
+  designBoardItems DesignBoardItem[]
 }
 
 enum PriceStatus {
@@ -114,66 +138,66 @@ enum PublishStatus {
 }
 
 model ProductVariant {
-  id          String   @id @default(uuid())
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  
-  name        String
-  priceInr    Float?
-  sku         String?  @unique
-  
-  inventory   InventoryItem[]
-  orderItems  OrderItem[]
-  quoteItems  QuoteItem[]
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  name     String
+  priceInr Decimal?
+  sku      String?  @unique
+
+  inventory  InventoryItem[]
+  orderItems OrderItem[]
+  quoteItems QuoteItem[]
 }
 
 model ProductSpecification {
-  id          String   @id @default(uuid())
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  
-  key         String
-  value       String
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  key   String
+  value String
 }
 
 model ProductImage {
-  id          String   @id @default(uuid())
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  
-  url         String
-  altText     String?
-  isCover     Boolean  @default(false)
-  order       Int      @default(0)
-  
-  createdAt   DateTime @default(now())
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  url     String
+  altText String?
+  isCover Boolean @default(false)
+  order   Int     @default(0)
+
+  createdAt DateTime @default(now())
 }
 
 model Collection {
-  id          String   @id @default(uuid())
-  slug        String   @unique
+  id          String    @id @default(uuid())
+  slug        String    @unique
   name        String
   description String?
   products    Product[]
 }
 
 model Category {
-  id          String   @id @default(uuid())
-  slug        String   @unique
+  id          String    @id @default(uuid())
+  slug        String    @unique
   name        String
   description String?
   products    Product[]
 }
 
 model SavedProduct {
-  id          String   @id @default(uuid())
-  profileId   String
-  profile     CustomerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  
-  createdAt   DateTime @default(now())
-  
+  id        String          @id @default(uuid())
+  profileId String
+  profile   CustomerProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
   @@unique([profileId, productId])
 }
 
@@ -182,29 +206,29 @@ model SavedProduct {
 // ============================================================================
 
 model InventoryItem {
-  id          String   @id @default(uuid())
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
-  variantId   String?
-  variant     ProductVariant? @relation(fields: [variantId], references: [id])
-  
-  quantity    Int      @default(0)
-  reserved    Int      @default(0)
+  id        String          @id @default(uuid())
+  productId String
+  product   Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variantId String?
+  variant   ProductVariant? @relation(fields: [variantId], references: [id])
+
+  quantity          Int @default(0)
+  reserved          Int @default(0)
   lowStockThreshold Int @default(5)
-  
-  movements   InventoryMovement[]
+
+  movements InventoryMovement[]
 }
 
 model InventoryMovement {
-  id          String   @id @default(uuid())
+  id          String        @id @default(uuid())
   inventoryId String
   inventory   InventoryItem @relation(fields: [inventoryId], references: [id], onDelete: Cascade)
-  
+
   previousQty Int
   changeQty   Int
   newQty      Int
   reason      String
-  
+
   adminUserId String?
   createdAt   DateTime @default(now())
 }
@@ -214,42 +238,58 @@ model InventoryMovement {
 // ============================================================================
 
 model Project {
-  id          String   @id @default(uuid())
-  slug        String   @unique
+  id          String  @id @default(uuid())
+  slug        String  @unique
   name        String
   location    String?
   category    String?
   description String?
   year        Int?
+
+  status PublishStatus @default(DRAFT)
   
-  status      PublishStatus @default(DRAFT)
-  
-  images      ProjectImage[]
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  // SEO
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+
+  images ProjectImage[]
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+  clientProjectId String?
 }
 
 model ProjectImage {
-  id          String   @id @default(uuid())
-  projectId   String
-  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
-  
-  url         String
-  altText     String?
-  isCover     Boolean  @default(false)
-  order       Int      @default(0)
+  id        String  @id @default(uuid())
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  url     String
+  altText String?
+  isCover Boolean @default(false)
+  order   Int     @default(0)
 }
 
 model Service {
-  id          String   @id @default(uuid())
-  slug        String   @unique
+  id          String  @id @default(uuid())
+  slug        String  @unique
   name        String
   description String?
   imageUrl    String?
-  order       Int      @default(0)
-  
-  status      PublishStatus @default(DRAFT)
+  ctaText     String?
+  ctaLink     String?
+  order       Int     @default(0)
+
+  // SEO
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+
+  status PublishStatus @default(DRAFT)
 }
 
 // ============================================================================
@@ -257,19 +297,241 @@ model Service {
 // ============================================================================
 
 model QuoteRequest {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   status      QuoteStatus @default(NEW)
-  budget      Float?
+  budget      Decimal?
   projectType String?
   notes       String?
-  
-  items       QuoteItem[]
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+
+  items    QuoteItem[]
+  versions QuoteVersion[]
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  clientProjectId String?
+  clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+}
+
+model QuoteVersion {
+  id             String       @id @default(uuid())
+  quoteRequestId String
+  quoteRequest   QuoteRequest @relation(fields: [quoteRequestId], references: [id], onDelete: Cascade)
+  versionNumber  Int
+
+  totalAmount    Decimal
+  totalDiscount  Decimal @default(0)
+  taxAmount      Decimal @default(0)
+  shippingAmount Decimal @default(0)
+  terms          String?
+
+  lineItems        Json // Snapshot of exact QuoteItems at this version
+  appliedDiscounts Json? // Snapshot of applied discounts/coupons
+
+  createdByUserId String?
+  createdAt       DateTime @default(now())
+}
+
+// ============================================================================
+// COMMERCE: PROMOTIONS & COUPONS
+// ============================================================================
+
+model Promotion {
+  id          String       @id @default(uuid())
+  name        String
+  description String?
+  type        DiscountType
+  value       Decimal
+
+  appliesTo ScopeType @default(GLOBAL)
+  targetIds String[] // Could be product IDs, collection IDs depending on appliesTo
+
+  minOrderValue Decimal?
+
+  startAt  DateTime
+  endAt    DateTime?
+  isActive Boolean   @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Coupon {
+  id    String       @id @default(uuid())
+  code  String       @unique // UPPERCASE normalized
+  type  DiscountType
+  value Decimal
+
+  minSubtotal Decimal?
+  maxDiscount Decimal?
+
+  appliesTo ScopeType @default(GLOBAL)
+  targetIds String[]
+
+  usageLimit       Int?
+  perCustomerLimit Int? @default(1)
+
+  startAt   DateTime
+  expiresAt DateTime?
+  isActive  Boolean   @default(true)
+
+  redemptions CouponRedemption[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CouponRedemption {
+  id       String  @id @default(uuid())
+  couponId String
+  coupon   Coupon  @relation(fields: [couponId], references: [id], onDelete: Restrict)
+  userId   String
+  user     User    @relation(fields: [userId], references: [id])
+  orderId  String? // Relate to Order if applied there
+  quoteId  String? // Or Quote Request
+
+  discountAmount Decimal
+
+  createdAt DateTime @default(now())
+}
+
+enum DiscountType {
+  PERCENTAGE
+  FIXED
+}
+
+enum ScopeType {
+  GLOBAL
+  PRODUCT
+  COLLECTION
+  PROJECT_TYPE
+}
+
+// ============================================================================
+// CRM: LEADS & PIPELINE
+// ============================================================================
+
+model Lead {
+  id          String   @id @default(uuid())
+  name        String
+  email       String?
+  phone       String?
+  source      String? // e.g. WEBSITE, WHATSAPP, AI
+  interest    String?
+  budget      Decimal?
+  projectType String?
+
+  status LeadStatus @default(NEW)
+
+  assignedToId String?
+  assignedTo   User?   @relation(fields: [assignedToId], references: [id])
+
+  nextAction     String?
+  nextFollowUpAt DateTime?
+  notes          String?
+
+  activities LeadActivity[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model LeadActivity {
+  id      String  @id @default(uuid())
+  leadId  String
+  lead    Lead    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  actorId String?
+  actor   User?   @relation(fields: [actorId], references: [id])
+
+  type        ActivityType
+  description String
+
+  completedAt  DateTime?
+  nextActionAt DateTime?
+
+  createdAt DateTime @default(now())
+}
+
+enum LeadStatus {
+  NEW
+  QUALIFIED
+  CONTACTED
+  CONSULTATION_BOOKED
+  QUOTE_SENT
+  NEGOTIATION
+  WON
+  LOST
+  ON_HOLD
+}
+
+enum ActivityType {
+  CALL
+  WHATSAPP
+  EMAIL
+  MEETING
+  NOTE
+  FOLLOW_UP
+}
+
+// ============================================================================
+// MARKETING & EMAILS
+// ============================================================================
+
+model MarketingConsent {
+  id     String @id @default(uuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  emailOptIn    Boolean @default(false)
+  smsOptIn      Boolean @default(false)
+  whatsappOptIn Boolean @default(false)
+
+  source    String? // Where consent was given
+  ipAddress String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EmailLog {
+  id     String  @id @default(uuid())
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  recipientEmail    String
+  eventType         String // e.g. WELCOME, QUOTE_READY
+  providerMessageId String?
+  providerEventId   String?
+
+  status String // e.g. SENT, DELIVERED, BOUNCED
+  sentAt DateTime?
+
+  createdAt DateTime @default(now())
+}
+
+// ============================================================================
+// CMS
+// ============================================================================
+
+model PageContent {
+  id    String @id @default(uuid())
+  route String @unique // e.g. "home", "services"
+  title String
+
+  heroCopy String?
+  content  Json? // Structured content blocks
+
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+
+  status PublishStatus @default(DRAFT)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum QuoteStatus {
@@ -283,34 +545,36 @@ enum QuoteStatus {
 }
 
 model QuoteItem {
-  id             String   @id @default(uuid())
+  id             String       @id @default(uuid())
   quoteRequestId String
   quoteRequest   QuoteRequest @relation(fields: [quoteRequestId], references: [id], onDelete: Cascade)
-  
-  productId      String
-  product        Product  @relation(fields: [productId], references: [id])
-  variantId      String?
-  variant        ProductVariant? @relation(fields: [variantId], references: [id])
-  
-  quantity       Int      @default(1)
-  
+
+  productId String
+  product   Product         @relation(fields: [productId], references: [id])
+  variantId String?
+  variant   ProductVariant? @relation(fields: [variantId], references: [id])
+
+  quantity Int @default(1)
+
   // Snapshots to preserve history
-  priceAtTime    Float?
+  priceAtTime       Decimal?
   productNameAtTime String?
 }
 
 model Order {
-  id          String   @id @default(uuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   status      OrderStatus @default(PENDING)
-  totalAmount Float
-  
-  items       OrderItem[]
-  
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  totalAmount Decimal
+
+  items OrderItem[]
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  clientProjectId String?
+  clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
 }
 
 enum OrderStatus {
@@ -322,17 +586,17 @@ enum OrderStatus {
 }
 
 model OrderItem {
-  id          String   @id @default(uuid())
-  orderId     String
-  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
-  
-  productId   String
-  product     Product  @relation(fields: [productId], references: [id])
-  variantId   String?
-  variant     ProductVariant? @relation(fields: [variantId], references: [id])
-  
-  quantity    Int
-  priceAtTime Float    // Immutable price snapshot
+  id      String @id @default(uuid())
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  productId String
+  product   Product         @relation(fields: [productId], references: [id])
+  variantId String?
+  variant   ProductVariant? @relation(fields: [variantId], references: [id])
+
+  quantity          Int
+  priceAtTime       Decimal // Immutable price snapshot
   productNameAtTime String?
 }
 
@@ -341,16 +605,350 @@ model OrderItem {
 // ============================================================================
 
 model AuditLog {
-  id          String   @id @default(uuid())
-  userId      String?
-  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
-  
-  action      String   // e.g. "UPDATED_STOCK"
-  entityType  String   // e.g. "Product"
-  entityId    String   // ID of the entity
-  
-  before      String?  // JSON stringified state
-  after       String?  // JSON stringified state
-  
-  createdAt   DateTime @default(now())
+  id     String  @id @default(uuid())
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  action     String // e.g. "UPDATED_STOCK"
+  entityType String // e.g. "Product"
+  entityId   String // ID of the entity
+
+  before String? // JSON stringified state
+  after  String? // JSON stringified state
+
+  createdAt DateTime @default(now())
+}
+
+// ============================================================================
+// 7. EXPERIENCE LAB & CLIENT PROJECTS
+// ============================================================================
+
+enum AssessmentLevel {
+  GOOD
+  CAUTION
+  NOT_SUPPORTED
+}
+
+enum ProjectStatus {
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+}
+
+enum ProjectRole {
+  OWNER
+  CLIENT
+  DESIGNER
+  STAFF
+}
+
+enum DocumentVisibility {
+  CUSTOMER
+  INTERNAL
+}
+
+model SpatialSession {
+  id     String  @id @default(uuid())
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  sessionToken    String?   @unique
+  analysisVersion String?
+  lastActiveAt    DateTime?
+  expiresAt       DateTime?
+  deletedAt       DateTime?
+
+  roomType        String?
+  visualCharacter String?
+  materials       String[]
+  palette         String[]
+  spatialNotes    String?
+  rawAnalysisJson Json?
+
+  visualizations Visualization[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model Visualization {
+  id        String         @id @default(uuid())
+  sessionId String
+  session   SpatialSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+
+  originalImagePath      String?
+  originalImageExpiresAt DateTime?
+  resultImagePath        String?
+  resultImageExpiresAt   DateTime?
+  styleApplied           String?
+
+  generationProvider String?
+  generationModel    String?
+  promptVersion      String?
+  createdByUserId    String?
+
+  fitLevel             AssessmentLevel?
+  scaleLevel           AssessmentLevel?
+  styleLevel           AssessmentLevel?
+  fitReason            String?
+  scaleReason          String?
+  styleReason          String?
+  assessmentConfidence Int?
+
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([productId])
+}
+
+model DesignBoard {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name        String
+  description String?
+  shareToken  String? @unique
+
+  items         DesignBoardItem[]
+  comments      BoardComment[]
+  collaborators BoardCollaborator[]
+
+  archivedAt     DateTime?
+  shareExpiresAt DateTime?
+  shareRevokedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([shareToken])
+}
+
+model DesignBoardItem {
+  id      String      @id @default(uuid())
+  boardId String
+  board   DesignBoard @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  variantId String?
+
+  quantity  Int     @default(1)
+  note      String?
+  sortOrder Int     @default(0)
+
+  status        ItemApprovalStatus @default(PENDING)
+  approvedPrice Decimal?
+  approvedAt    DateTime?
+
+  removedAt DateTime?
+  createdAt DateTime  @default(now())
+
+  comments BoardComment[]
+
+  @@unique([boardId, productId, variantId])
+  @@index([boardId])
+  @@index([productId])
+}
+
+enum ItemApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model BoardComment {
+  id      String      @id @default(uuid())
+  boardId String
+  board   DesignBoard @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  authorName String
+  userId     String?
+
+  content    String
+  isInternal Boolean @default(false)
+
+  createdAt DateTime  @default(now())
+  editedAt  DateTime?
+  deletedAt DateTime?
+
+  boardItemId String?
+  boardItem   DesignBoardItem? @relation(fields: [boardItemId], references: [id], onDelete: Cascade)
+
+  @@index([boardId])
+  @@index([userId])
+  @@index([boardItemId])
+}
+
+enum BoardRole {
+  OWNER
+  COLLABORATOR
+  VIEWER
+}
+
+enum CollaboratorStatus {
+  PENDING
+  ACCEPTED
+}
+
+model BoardCollaborator {
+  id      String      @id @default(uuid())
+  boardId String
+  board   DesignBoard @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  email  String?
+
+  role   BoardRole          @default(VIEWER)
+  status CollaboratorStatus @default(PENDING)
+
+  inviteToken String?   @unique
+  expiresAt   DateTime?
+
+  createdAt  DateTime  @default(now())
+  acceptedAt DateTime?
+
+  @@unique([boardId, email])
+  @@unique([boardId, userId])
+  @@index([boardId])
+  @@index([inviteToken])
+}
+
+model ClientProject {
+  id     String @id @default(uuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  name   String
+  phase  ProjectPhase  @default(DISCOVERY)
+  status ProjectStatus @default(ACTIVE)
+
+  quotes         QuoteRequest[]
+  orders         Order[]
+  milestones     ProjectMilestone[]
+  documents      ProjectDocument[]
+  changeRequests ChangeRequest[]
+  members        ClientProjectMember[]
+  Project        Project[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([phase])
+  @@index([status])
+}
+
+model ClientProjectMember {
+  id              String        @id @default(uuid())
+  clientProjectId String
+  clientProject   ClientProject @relation(fields: [clientProjectId], references: [id], onDelete: Cascade)
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  role ProjectRole
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([clientProjectId, userId])
+  @@index([clientProjectId])
+  @@index([userId])
+}
+
+enum ProjectPhase {
+  DISCOVERY
+  DESIGN
+  SELECTIONS
+  QUOTE
+  APPROVAL
+  PROCUREMENT
+  INSTALLATION
+  HANDOVER
+}
+
+model ProjectMilestone {
+  id              String        @id @default(uuid())
+  clientProjectId String
+  clientProject   ClientProject @relation(fields: [clientProjectId], references: [id], onDelete: Cascade)
+
+  title       String
+  description String?
+  isCompleted Boolean   @default(false)
+  dueDate     DateTime?
+  sortOrder   Int       @default(0)
+
+  completedAt       DateTime?
+  completedByUserId String?
+
+  createdAt DateTime @default(now())
+
+  @@index([clientProjectId])
+}
+
+model ProjectDocument {
+  id              String        @id @default(uuid())
+  clientProjectId String
+  clientProject   ClientProject @relation(fields: [clientProjectId], references: [id], onDelete: Cascade)
+
+  name        String
+  storagePath String
+  fileType    String
+  mimeType    String
+  fileSize    Int?
+
+  visibility       DocumentVisibility @default(CUSTOMER)
+  uploadedByAdmin  Boolean            @default(true)
+  uploadedByUserId String?
+  expiresAt        DateTime?
+
+  createdAt DateTime @default(now())
+
+  @@index([clientProjectId])
+}
+
+model ChangeRequest {
+  id              String        @id @default(uuid())
+  clientProjectId String
+  clientProject   ClientProject @relation(fields: [clientProjectId], references: [id], onDelete: Cascade)
+
+  title         String
+  description   String
+  priceDelta    Decimal?
+  timelineDelta Int?
+
+  priceAtRequest       Decimal?
+  priceAtResolution    Decimal?
+  timelineAtRequest    Int?
+  timelineAtResolution Int?
+
+  customerNote String?
+  internalNote String?
+
+  createdByUserId  String?
+  resolvedByUserId String?
+
+  status ChangeRequestStatus @default(PENDING)
+
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
+
+  @@index([clientProjectId])
+  @@index([status])
+}
+
+enum ChangeRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
 }

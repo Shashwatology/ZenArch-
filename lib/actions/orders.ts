@@ -84,7 +84,7 @@ export async function createOrderFromQuote(quoteId: string) {
   if (!quote) throw new Error('Quote not found')
 
   // Calculate total amount based on items
-  const totalAmount = quote.items.reduce((sum, item) => sum + ((item.priceAtTime || 0) * item.quantity), 0)
+  const totalAmount = quote.items.reduce((sum, item) => sum + ((Number(item.priceAtTime) || 0) * item.quantity), 0)
 
   const order = await prisma.order.create({
     data: {

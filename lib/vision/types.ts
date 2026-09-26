@@ -1,9 +1,9 @@
 export interface RoomAnalysisResult {
   roomType: string;
-  floor: string;
-  walls: string;
-  lighting: string;
-  existingFurniture: string[];
+  visualCharacter: string;
+  materials: string[];
+  palette: string[];
+  spatialNotes: string;
   observed: string[];
   inferred: string[];
   unknown: string[];
