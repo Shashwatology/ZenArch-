@@ -39,6 +39,10 @@ export async function createLeadAction(data: {
       after: JSON.stringify(lead)
     }
   })
+  
+  // Analytics
+  const { trackEvent } = await import('@/lib/analytics/tracker')
+  await trackEvent('lead_created', { leadId: lead.id, source: data.source }, { userId: dbUser.id, source: 'SERVER' })
 
   revalidatePath('/admin/leads')
   return lead

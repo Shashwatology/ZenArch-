@@ -38,6 +38,10 @@ model User {
   MarketingConsent     MarketingConsent?
   EmailLog             EmailLog[]
   aiAuditLogs          AIAuditLog[]
+  
+  analyticsEvents      AnalyticsEvent[]
+  firstTouchAttribution FirstTouchAttribution?
+  sessionAttributions  SessionAttribution[]
 }
 
 enum Role {
@@ -1030,4 +1034,56 @@ enum ChangeRequestStatus {
   APPROVED
   REJECTED
   CANCELLED
+}
+
+// ============================================================================
+// 10. ANALYTICS (H7)
+// ============================================================================
+
+model AnalyticsEvent {
+  id         String   @id @default(uuid())
+  eventName  String
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  sessionId  String
+  
+  properties Json?
+  source     String   @default("CLIENT")
+  
+  createdAt  DateTime @default(now())
+
+  @@index([eventName])
+  @@index([sessionId])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model FirstTouchAttribution {
+  id               String   @id @default(uuid())
+  sessionId        String   @unique
+  userId           String?  @unique
+  user             User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  utmSource        String?
+  utmMedium        String?
+  utmCampaign      String?
+  referrer         String?
+  landingPage      String?
+  
+  createdAt        DateTime @default(now())
+}
+
+model SessionAttribution {
+  id               String   @id @default(uuid())
+  sessionId        String   @unique
+  userId           String?
+  user             User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  utmSource        String?
+  utmMedium        String?
+  utmCampaign      String?
+  referrer         String?
+  landingPage      String?
+  
+  createdAt        DateTime @default(now())
 }

@@ -61,16 +61,33 @@ export async function aiSearchKnowledge(topic: string) {
   })
 }
 
-export async function aiGetRecentAnalytics() {
+export async function aiGetRecentAnalytics(days: number = 30) {
   await requireAdmin()
-  // Just aggregate some high level stats to prove concept
+  
+  const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000)
+  
   const totalLeads = await prisma.lead.count()
   const totalOrders = await prisma.order.count()
   const totalRevenue = await prisma.order.aggregate({ _sum: { totalAmount: true } })
   
+  const pageViews = await prisma.analyticsEvent.count({
+    where: { eventName: 'page_view', createdAt: { gte: cutoff } }
+  })
+  const productViews = await prisma.analyticsEvent.count({
+    where: { eventName: 'product_view', createdAt: { gte: cutoff } }
+  })
+  
   return {
-    totalLeads,
-    totalOrders,
-    totalRevenue: totalRevenue._sum.totalAmount?.toNumber() || 0
+    status: "OBSERVED",
+    timeframe: `${days} Days`,
+    historical_baseline: {
+      totalLeads,
+      totalOrders,
+      totalRevenue: totalRevenue._sum.totalAmount?.toNumber() || 0
+    },
+    metrics: {
+      page_views: pageViews,
+      product_views: productViews
+    }
   }
 }

@@ -117,6 +117,11 @@ export async function createOrderFromQuote(quoteId: string) {
     where: { id: quote.id },
     data: { status: 'ACCEPTED' }
   })
+  
+  // Analytics tracking for quote_accepted and order_created
+  const { trackEvent } = await import('@/lib/analytics/tracker')
+  await trackEvent('quote_accepted', { quoteId: quote.id, amount: totalAmount }, { userId: quote.userId, source: 'SERVER' })
+  await trackEvent('order_created', { orderId: order.id, amount: totalAmount, sourceQuoteId: quote.id }, { userId: quote.userId, source: 'SERVER' })
 
   const orderUser = await prisma.user.findUnique({ where: { id: quote.userId } })
   if (orderUser?.email) {

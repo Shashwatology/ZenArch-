@@ -3,6 +3,7 @@ import { getProductBySlug, getProductsByCategory, PublicProduct } from '@/lib/ca
 import { CATEGORIES } from '@/lib/data/furniture'
 import { notFound } from 'next/navigation'
 import { Suspense } from 'react'
+import { EventTracker } from '@/components/analytics/EventTracker'
 
 export const dynamic = 'force-dynamic'
 
@@ -62,6 +63,7 @@ export default async function FurniturePage({ params }: { params: { slug: string
     
     return (
       <Suspense fallback={<div className="min-h-screen bg-[#0F0F0F]" />}>
+        <EventTracker eventName="category_view" properties={{ category: slug, categoryLabel }} />
         <ProductClient 
           isCategory={true} 
           categoryLabel={categoryLabel} 
@@ -138,6 +140,7 @@ export default async function FurniturePage({ params }: { params: { slug: string
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Suspense fallback={<div className="min-h-screen bg-[#0F0F0F]" />}>
+        <EventTracker eventName="product_view" properties={{ product: slug, productId: dbProduct.id }} />
         <ProductClient 
           isCategory={false} 
           product={product} 

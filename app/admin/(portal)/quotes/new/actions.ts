@@ -30,6 +30,11 @@ export async function createAdminQuoteAction(data: {
       promotionCode: data.promotionCode,
       couponCode: data.couponCode
     })
+    
+    // Analytics
+    const { trackEvent } = await import('@/lib/analytics/tracker')
+    await trackEvent('quote_created', { quoteId: quoteReq.id, userId: data.userId }, { userId: data.userId, source: 'SERVER' })
+    
   } catch (err: any) {
     // If generation fails, we should delete the empty quote request
     await prisma.quoteRequest.delete({ where: { id: quoteReq.id } })

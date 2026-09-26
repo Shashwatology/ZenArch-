@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground selection:bg-zen-accent selection:text-white">
+        <AnalyticsProvider />
         <Navbar />
         <main className="flex-1">
           {children}
