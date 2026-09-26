@@ -3,6 +3,26 @@ import HomepageClient from './HomepageClient'
 
 export const dynamic = 'force-dynamic'
 
+export async function generateMetadata() {
+  const pageContent = await prisma.pageContent.findUnique({
+    where: { route: 'home' }
+  })
+  
+  if (!pageContent) return { title: 'ZEN ARCH | Silence & Form' }
+
+  return {
+    title: pageContent.seoTitle || 'ZEN ARCH | Silence & Form',
+    description: pageContent.seoDescription,
+    alternates: {
+      canonical: pageContent.canonical,
+    },
+    robots: {
+      index: !pageContent.noindex,
+      follow: !pageContent.noindex,
+    }
+  }
+}
+
 export default async function Home() {
   const pageContent = await prisma.pageContent.findUnique({
     where: { route: 'home' }
@@ -22,5 +42,27 @@ export default async function Home() {
 
   const content = pageContent || defaultContent
 
-  return <HomepageClient pageContent={content} />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ZENARCH INTERIOR SOLUTION",
+    "image": "https://zenarch.com/logo.png",
+    "url": "https://zenarch.com",
+    "telephone": "+919372921244",
+    "email": "zenarchsolution@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    }
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HomepageClient pageContent={content} />
+    </>
+  )
 }

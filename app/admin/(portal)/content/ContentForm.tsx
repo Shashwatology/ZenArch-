@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { updateHomepageContent } from './actions'
+import { SeoFieldsForm } from '@/components/admin/SeoFieldsForm'
 
 export function ContentForm({ initialContent }: { initialContent: any }) {
   const [loading, setLoading] = useState(false)
@@ -88,6 +89,8 @@ export function ContentForm({ initialContent }: { initialContent: any }) {
         </div>
       </div>
 
+      {/* 4. SEO Fields */}
+      <SeoFieldsForm defaultValues={initialContent} />
       <div className="bg-[#121212] border border-[#C8A97E]/30 p-4 rounded-xl text-sm text-[#C8A97E]/80">
         <strong>Note:</strong> Sections like "Featured Products", "Best Sellers", "Services", and "Featured Projects" are populated dynamically based on their respective settings in the <a href="/admin/merchandising" className="underline text-[#C8A97E]">Merchandising</a> and Projects tabs.
       </div>

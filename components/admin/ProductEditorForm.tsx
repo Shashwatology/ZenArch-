@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { updateProduct } from '@/app/admin/(portal)/products/actions'
 import Image from 'next/image'
 import { ProductMediaUploader } from './ProductMediaUploader'
+import { SeoFieldsForm } from './SeoFieldsForm'
 
 export function ProductEditorForm({ product, collections, categories }: { product: any, collections: any[], categories: any[] }) {
   const router = useRouter()
@@ -261,25 +262,7 @@ export function ProductEditorForm({ product, collections, categories }: { produc
           {/* TAB 9: SEO */}
           {activeTab === 'SEO' && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-2">
-              <h3 className="text-lg font-medium text-white mb-6">Search Engine Optimization</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">SEO Title</label>
-                  <input type="text" name="seoTitle" defaultValue={product.seoTitle || ''} placeholder="Keep under 60 characters" className="w-full bg-[#121212] border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#C8A97E]" />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">SEO Description</label>
-                  <textarea name="seoDescription" defaultValue={product.seoDescription || ''} rows={3} placeholder="Keep under 160 characters" className="w-full bg-[#121212] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#C8A97E]"></textarea>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Canonical URL</label>
-                  <input type="text" name="canonical" defaultValue={product.canonical || ''} placeholder="e.g. https://zenarch.com/furniture/..." className="w-full bg-[#121212] border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#C8A97E]" />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">OG Image URL</label>
-                  <input type="text" name="ogImage" defaultValue={product.ogImage || ''} className="w-full bg-[#121212] border border-white/10 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#C8A97E]" />
-                </div>
-              </div>
+              <SeoFieldsForm defaultValues={product} />
             </div>
           )}
 

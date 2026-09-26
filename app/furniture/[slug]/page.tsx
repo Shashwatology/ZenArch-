@@ -23,6 +23,33 @@ function adaptProduct(dbProduct: PublicProduct | null) {
   }
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params
+  const isCategory = CATEGORIES.some(c => c.id === slug)
+  if (isCategory) {
+    const categoryLabel = CATEGORIES.find(c => c.id === slug)?.name
+    return { title: `${categoryLabel} | ZEN ARCH` }
+  }
+
+  const dbProduct = await getProductBySlug(slug)
+  if (!dbProduct) return { title: 'Product Not Found' }
+
+  return {
+    title: dbProduct.seoTitle || `${dbProduct.name} | ZEN ARCH`,
+    description: dbProduct.seoDescription,
+    alternates: {
+      canonical: dbProduct.canonical || `${process.env.NEXT_PUBLIC_SITE_URL}/furniture/${dbProduct.slug}`,
+    },
+    openGraph: {
+      images: [dbProduct.ogImage || dbProduct.images[0]?.url || ''],
+    },
+    robots: {
+      index: !dbProduct.noindex,
+      follow: !dbProduct.noindex,
+    }
+  }
+}
+
 export default async function FurniturePage({ params }: { params: { slug: string } }) {
   const { slug } = await params
   
@@ -87,14 +114,37 @@ export default async function FurniturePage({ params }: { params: { slug: string
     // Ignore auth errors on public pages
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": dbProduct.name,
+    "image": dbProduct.images.map(img => img.url),
+    "description": dbProduct.description,
+    "sku": dbProduct.sku,
+    "offers": {
+      "@type": "Offer",
+      "url": `${process.env.NEXT_PUBLIC_SITE_URL}/furniture/${dbProduct.slug}`,
+      "priceCurrency": "INR",
+      "price": dbProduct.basePrice ? dbProduct.basePrice.toString() : "0",
+      "availability": dbProduct.inventory.length > 0 && dbProduct.inventory[0].quantity > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  }
+
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#0F0F0F]" />}>
-      <ProductClient 
-        isCategory={false} 
-        product={product} 
-        relatedProducts={relatedProducts}
-        isSaved={isSaved}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-    </Suspense>
+      <Suspense fallback={<div className="min-h-screen bg-[#0F0F0F]" />}>
+        <ProductClient 
+          isCategory={false} 
+          product={product} 
+          relatedProducts={relatedProducts}
+          isSaved={isSaved}
+        />
+      </Suspense>
+    </>
   )
 }

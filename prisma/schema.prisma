@@ -37,6 +37,7 @@ model User {
   LeadActivity         LeadActivity[]
   MarketingConsent     MarketingConsent?
   EmailLog             EmailLog[]
+  aiAuditLogs          AIAuditLog[]
 }
 
 enum Role {
@@ -105,6 +106,7 @@ model Product {
   seoDescription String?
   canonical      String?
   ogImage        String?
+  noindex        Boolean @default(false)
 
   status       PublishStatus @default(DRAFT)
   isFeatured   Boolean       @default(false)
@@ -179,6 +181,13 @@ model Collection {
   slug        String    @unique
   name        String
   description String?
+  
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+  noindex        Boolean @default(false)
+  
   products    Product[]
 }
 
@@ -187,6 +196,13 @@ model Category {
   slug        String    @unique
   name        String
   description String?
+  
+  seoTitle       String?
+  seoDescription String?
+  canonical      String?
+  ogImage        String?
+  noindex        Boolean @default(false)
+  
   products    Product[]
 }
 
@@ -249,11 +265,11 @@ model Project {
 
   status PublishStatus @default(DRAFT)
 
-  // SEO
   seoTitle       String?
   seoDescription String?
   canonical      String?
   ogImage        String?
+  noindex        Boolean @default(false)
 
   images ProjectImage[]
 
@@ -289,8 +305,11 @@ model Service {
   seoDescription String?
   canonical      String?
   ogImage        String?
+  noindex        Boolean @default(false)
 
   status PublishStatus @default(DRAFT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 // ============================================================================
@@ -566,6 +585,7 @@ model PageContent {
   seoDescription String?
   canonical      String?
   ogImage        String?
+  noindex        Boolean @default(false)
 
   status PublishStatus @default(DRAFT)
 
@@ -656,6 +676,20 @@ model AuditLog {
 
   before String? // JSON stringified state
   after  String? // JSON stringified state
+
+  createdAt DateTime @default(now())
+}
+
+model AIAuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  agent     String   // e.g. SALES, MARKET, MARKETING, SEO, INSIGHTS
+  action    String   // e.g. USER_PROMPT, TOOL_CALL
+  tool      String?  // e.g. getLead, searchProducts
+  outcome   String?  // JSON context or summary
+  promptId  String?  // grouping identifier
 
   createdAt DateTime @default(now())
 }

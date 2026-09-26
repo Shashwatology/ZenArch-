@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { upsertProject } from '@/app/admin/(portal)/projects/actions'
+import { SeoFieldsForm } from './SeoFieldsForm'
 
 export function ProjectEditorForm({ project }: { project: any }) {
   const router = useRouter()
@@ -96,6 +97,9 @@ export function ProjectEditorForm({ project }: { project: any }) {
           </div>
         </div>
       )}
+
+      {/* SEO Fields */}
+      <SeoFieldsForm defaultValues={project} />
 
       <div className="flex justify-end pt-4 gap-4">
         <button

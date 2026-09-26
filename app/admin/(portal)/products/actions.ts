@@ -27,6 +27,7 @@ export async function updateProduct(formData: FormData) {
     const seoDescription = formData.get('seoDescription') as string || null
     const canonical = formData.get('canonical') as string || null
     const ogImage = formData.get('ogImage') as string || null
+    const noindex = formData.get('noindex') === 'on'
     
     // 3D/AR
     const asset3dUrl = formData.get('asset3dUrl') as string || null
@@ -57,6 +58,7 @@ export async function updateProduct(formData: FormData) {
         seoDescription,
         canonical,
         ogImage,
+        noindex,
         asset3dUrl,
         assetArUrl,
         has3dModel,
