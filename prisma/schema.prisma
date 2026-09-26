@@ -626,11 +626,34 @@ model QuoteItem {
 
 model Order {
   id     String @id @default(uuid())
+  orderId String? @unique // e.g. ZNA-2026-000001
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  status      OrderStatus @default(PENDING)
-  totalAmount Decimal
+  status           OrderStatus @default(PENDING)
+  paymentStatus    String      @default("PENDING") // PENDING, PAID, FAILED, REFUNDED
+  fulfillmentStatus String     @default("UNFULFILLED") // UNFULFILLED, PARTIAL, FULFILLED
+  
+  totalAmount      Decimal
+  discountAmount   Decimal?    @default(0)
+  currency         String      @default("INR")
+
+  shippingName     String?
+  shippingAddress  String?
+  shippingCity     String?
+  shippingState    String?
+  shippingPincode  String?
+  shippingPhone    String?
+  
+  billingAddress   String?
+
+  // Delivery Metadata
+  deliveryPartner  String?
+  trackingId       String?
+  trackingUrl      String?
+  dispatchDate     DateTime?
+  estimatedDeliveryDate DateTime?
+  lastTrackingUpdate DateTime?
 
   items OrderItem[]
 
@@ -646,6 +669,11 @@ enum OrderStatus {
   PENDING
   CONFIRMED
   PROCESSING
+  READY_TO_DISPATCH
+  DISPATCHED
+  IN_TRANSIT
+  OUT_FOR_DELIVERY
+  DELIVERED
   COMPLETED
   CANCELLED
 }
@@ -663,6 +691,8 @@ model OrderItem {
   quantity          Int
   priceAtTime       Decimal // Immutable price snapshot
   productNameAtTime String?
+  variantNameAtTime String?
+  discountAtTime    Decimal? @default(0)
 }
 
 // ============================================================================

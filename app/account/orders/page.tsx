@@ -38,7 +38,9 @@ export default async function CustomerOrdersPage() {
                   <span className="text-[10px] uppercase font-mono tracking-widest text-zen-charcoal block mb-1">
                     Order Reference
                   </span>
-                  <span className="font-mono text-sm">{order.id.split('-')[0].toUpperCase()}</span>
+                  <Link href={`/account/orders/${order.orderId}`} className="font-mono text-sm text-zen-accent hover:underline">
+                    {order.orderId}
+                  </Link>
                 </div>
                 <div>
                   <span className="text-[10px] uppercase font-mono tracking-widest text-zen-charcoal block mb-1">
@@ -56,6 +58,11 @@ export default async function CustomerOrdersPage() {
                   <span className={`px-3 py-1 text-[10px] uppercase font-mono tracking-widest border ${getStatusColor(order.status)}`}>
                     {order.status}
                   </span>
+                </div>
+                <div className="sm:ml-auto">
+                  <Link href={`/account/orders/${order.orderId}`} className="text-[10px] uppercase tracking-widest border border-zen-black px-4 py-2 hover:bg-zen-black hover:text-white transition-colors">
+                    Track Order
+                  </Link>
                 </div>
               </div>
 

@@ -12,12 +12,21 @@ import { getWhatsAppUrl } from "@/lib/config/brand";
 export function AIConsultant() {
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [files, setFiles] = useState<File[] | undefined>(undefined);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: "/api/ai/chat",
     onError: (e) => console.error(e)
   });
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleSubmit(e, {
+      experimental_attachments: files,
+    });
+    setFiles(undefined);
+  };
 
   useEffect(() => {
     if (messagesEndRef.current) {
@@ -106,13 +115,24 @@ export function AIConsultant() {
                   <div key={m.id} className={`flex flex-col ${m.role === 'user' ? 'items-end' : 'items-start'}`}>
                     {m.role === 'assistant' && <span className="text-[9px] uppercase tracking-widest text-white/20 mb-1 ml-1 font-mono">ZEN ARCH AI</span>}
                     
-                    {/* Text content */}
-                    {m.content && (
+                    {/* Text content & attachments */}
+                    {(m.content || m.experimental_attachments) && (
                       <div className={`px-4 py-3 max-w-[85%] text-sm font-light leading-relaxed ${
                         m.role === 'user' 
                           ? 'bg-white text-black rounded-l-xl rounded-tr-xl' 
                           : 'bg-[#1A1A1A] text-white border border-white/5 rounded-r-xl rounded-tl-xl'
                       }`}>
+                        {m.experimental_attachments?.map((attachment, index) => (
+                          <div key={index} className="mb-2 w-full max-w-[200px] rounded overflow-hidden">
+                            <Image 
+                              src={attachment.url} 
+                              alt="Uploaded photo" 
+                              width={200}
+                              height={200}
+                              className="object-cover"
+                            />
+                          </div>
+                        ))}
                         {m.content}
                       </div>
                     )}
@@ -214,21 +234,65 @@ export function AIConsultant() {
 
             {/* Input Area */}
             <div className="p-4 bg-[#111] border-t border-white/10">
-              <form onSubmit={handleSubmit} className="relative">
+              {/* File Preview Area */}
+              {files && files.length > 0 && (
+                <div className="flex gap-2 mb-2 flex-wrap">
+                  {Array.from(files).map((file, index) => (
+                    <div key={index} className="relative w-16 h-16 bg-[#1A1A1A] rounded border border-white/10 overflow-hidden group">
+                      {file.type.startsWith('image/') ? (
+                        <Image src={URL.createObjectURL(file)} alt="preview" fill className="object-cover" />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-[10px] text-white/40">File</div>
+                      )}
+                      <button 
+                        type="button"
+                        className="absolute top-1 right-1 bg-black/50 rounded-full p-0.5 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+                        onClick={() => {
+                          const newFiles = Array.from(files).filter((_, i) => i !== index);
+                          setFiles(newFiles.length > 0 ? newFiles : undefined);
+                        }}
+                      >
+                        <X size={12} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <form onSubmit={onSubmit} className="relative flex items-center gap-2">
                 <input
-                  value={input}
-                  onChange={handleInputChange}
-                  placeholder="Ask about a product, style, or budget..."
-                  className="w-full bg-[#1A1A1A] border border-white/10 rounded-full pl-4 pr-12 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-colors"
-                  disabled={isLoading}
+                  type="file"
+                  id="chat-file-upload"
+                  className="hidden"
+                  accept="image/png, image/jpeg, image/webp"
+                  multiple
+                  onChange={(e) => {
+                    if (e.target.files) {
+                      setFiles(Array.from(e.target.files));
+                    }
+                  }}
                 />
-                <button
-                  type="submit"
-                  disabled={isLoading || !input?.trim()}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-white text-black disabled:opacity-50 disabled:bg-white/20 disabled:text-white/40 transition-colors"
+                <label 
+                  htmlFor="chat-file-upload" 
+                  className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full bg-[#1A1A1A] border border-white/10 text-white/60 hover:text-white cursor-pointer transition-colors"
                 >
-                  <ArrowRight size={16} />
-                </button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                </label>
+                <div className="relative flex-1">
+                  <input
+                    value={input}
+                    onChange={handleInputChange}
+                    placeholder="Ask about a product, style, or upload a photo..."
+                    className="w-full bg-[#1A1A1A] border border-white/10 rounded-full pl-4 pr-12 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-colors"
+                    disabled={isLoading}
+                  />
+                  <button
+                    type="submit"
+                    disabled={isLoading || (!input?.trim() && (!files || files.length === 0))}
+                    className="absolute right-1.5 top-1/2 -translate-y-1/2 w-7 h-7 flex items-center justify-center rounded-full bg-white text-black disabled:opacity-50 disabled:bg-white/20 disabled:text-white/40 transition-colors"
+                  >
+                    <ArrowRight size={14} />
+                  </button>
+                </div>
               </form>
             </div>
           </motion.div>

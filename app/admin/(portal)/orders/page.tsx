@@ -9,9 +9,18 @@ export default async function AdminOrdersPage() {
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto">
-      <div>
-        <h2 className="text-2xl font-light tracking-wider text-white mb-2">Order Management</h2>
-        <p className="text-sm text-gray-400">Review and process customer orders.</p>
+      <div className="flex justify-between items-end">
+        <div>
+          <h2 className="text-2xl font-light tracking-wider text-white mb-2">Order Management</h2>
+          <p className="text-sm text-gray-400">Review and process customer orders.</p>
+        </div>
+        <a 
+          href="/api/admin/orders/export"
+          target="_blank"
+          className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-xs tracking-widest uppercase font-mono border border-white/20 rounded-sm transition-colors"
+        >
+          Export Excel (CSV)
+        </a>
       </div>
 
       <div className="bg-[#1E1E1E] border border-white/10 rounded-xl overflow-hidden">

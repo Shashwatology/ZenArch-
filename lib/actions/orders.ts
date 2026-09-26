@@ -143,3 +143,82 @@ export async function createOrderFromQuote(quoteId: string) {
 
   return { success: true, orderId: order.id }
 }
+
+export async function createDirectOrder(data: {
+  productId: string
+  variantId?: string
+  quantity: number
+  shippingName: string
+  shippingAddress: string
+  shippingCity: string
+  shippingState: string
+  shippingPincode: string
+  shippingPhone: string
+}) {
+  const { dbUser } = await requireCustomerAuth()
+
+  // Get Product Pricing
+  const product = await prisma.product.findUnique({
+    where: { id: data.productId },
+    include: { variants: true }
+  })
+
+  if (!product) return { error: 'Product not found' }
+
+  let price: number = 0
+  let productName = product.name
+  let variantName: string | null = null
+
+  if (data.variantId) {
+    const variant = product.variants.find(v => v.id === data.variantId)
+    if (!variant || !variant.priceInr) return { error: 'Variant pricing not available' }
+    price = variant.priceInr.toNumber()
+    variantName = variant.name
+  } else {
+    if (!product.basePrice) return { error: 'Product pricing not available' }
+    price = product.basePrice.toNumber()
+  }
+
+  // Basic order ID generator ZNA-YYYY-XXXXXX
+  const generateOrderId = () => {
+    const year = new Date().getFullYear()
+    const rand = Math.floor(Math.random() * 900000) + 100000
+    return `ZNA-${year}-${rand}`
+  }
+
+  const orderIdStr = generateOrderId()
+  const totalAmount = price * data.quantity
+
+  try {
+    const order = await prisma.order.create({
+      data: {
+        orderId: orderIdStr,
+        userId: dbUser.id,
+        status: 'CONFIRMED', 
+        totalAmount: totalAmount,
+        currency: 'INR',
+        shippingName: data.shippingName,
+        shippingAddress: data.shippingAddress,
+        shippingCity: data.shippingCity,
+        shippingState: data.shippingState,
+        shippingPincode: data.shippingPincode,
+        shippingPhone: data.shippingPhone,
+        items: {
+          create: {
+            productId: product.id,
+            variantId: data.variantId,
+            quantity: data.quantity,
+            priceAtTime: price,
+            productNameAtTime: productName,
+            variantNameAtTime: variantName
+          }
+        }
+      }
+    })
+
+    return { success: true, orderId: order.orderId }
+  } catch (err: any) {
+    console.error("Order creation failed:", err)
+    return { error: 'Failed to create order. Please try again.' }
+  }
+}

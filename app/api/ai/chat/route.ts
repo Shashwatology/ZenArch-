@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     const result = streamText({
-      model: google("gemini-1.5-flash-8b"), // fast model for chat
+      model: google("gemini-1.5-flash"), // capable model for vision and chat
       system: systemPrompt,
       messages,
       tools: catalogTools,

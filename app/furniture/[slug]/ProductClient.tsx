@@ -439,28 +439,22 @@ export function ProductClient({
             <Reveal delay={0.5}>
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
                 <Button
-                  href={`/ai/transform-space?product=${product.slug}`}
+                  href={`/checkout/${product.slug}?variant=${selectedVariantIndex}`}
                   variant="primary"
+                  size="lg"
+                  className="flex-1 rounded-sm bg-zen-accent hover:bg-zen-accent/90"
+                  icon={<Box size={16} />}
+                >
+                  Book This Product
+                </Button>
+                <Button
+                  href={`/ai/transform-space?product=${product.slug}`}
+                  variant="outline"
                   size="lg"
                   className="flex-1 rounded-sm"
                   icon={<ImageIcon size={16} />}
                 >
                   Try in My Space
-                </Button>
-                <Button
-                  onClick={() => {
-                    const stored = localStorage.getItem('zen_arch_local_board');
-                    const localBoard = stored ? JSON.parse(stored) : { name: "My Temporary Board", items: [], comments: [] };
-                    localBoard.items.push({ id: Date.now().toString(), product: product, quantity: 1, status: 'PENDING' });
-                    localStorage.setItem('zen_arch_local_board', JSON.stringify(localBoard));
-                    alert("Added to temporary design board! View it at /board/local. (Login to persist)");
-                  }}
-                  variant="outline"
-                  size="lg"
-                  className="flex-1 rounded-sm"
-                  icon={<Layers size={16} />}
-                >
-                  Save to Board
                 </Button>
                 <Button
                   href={whatsappLink}

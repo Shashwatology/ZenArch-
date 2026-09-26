@@ -1,15 +1,21 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { login } from '@/lib/actions/customerAuth'
 import { Button } from '@/components/ui/Button'
 
-export default function LoginPage() {
+function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const searchParams = useSearchParams()
+  const redirectUrl = searchParams?.get('redirect') || ''
 
   async function handleSubmit(formData: FormData) {
+    if (redirectUrl) {
+      formData.append('redirectUrl', redirectUrl)
+    }
     setIsLoading(true)
     setError(null)
     const result = await login(formData)
@@ -71,5 +77,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-zen-ivory flex items-center justify-center">Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   )
 }

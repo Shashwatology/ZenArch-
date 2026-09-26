@@ -108,6 +108,16 @@ export function Navbar() {
           {/* Action Area (Desktop) */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
+              href="/account"
+              className={`px-3 py-2 text-xs tracking-[0.18em] uppercase font-medium transition-colors ${
+                isScrolled
+                  ? "text-zen-charcoal/80 hover:text-zen-accent"
+                  : "text-zen-ivory/80 hover:text-zen-ivory"
+              }`}
+            >
+              Account
+            </Link>
+            <Link
               href="/consultation"
               className={`px-5 py-2.5 text-xs tracking-[0.18em] uppercase font-medium transition-all duration-300 border ${
                 isScrolled
@@ -121,6 +131,16 @@ export function Navbar() {
 
           {/* Mobile Menu Trigger */}
           <div className="lg:hidden flex items-center gap-3">
+            <Link
+              href="/account"
+              className={`px-2 py-1.5 text-[10px] tracking-widest uppercase font-medium transition-colors ${
+                isScrolled
+                  ? "text-zen-charcoal"
+                  : "text-zen-ivory"
+              }`}
+            >
+              Account
+            </Link>
             <Link
               href="/consultation"
               className={`px-3 py-1.5 text-[10px] tracking-widest uppercase font-medium border transition-colors ${

@@ -71,6 +71,7 @@ export async function getCustomerAuth() {
 export async function login(formData: FormData) {
   const email = formData.get('email') as string
   const password = formData.get('password') as string
+  const redirectUrl = formData.get('redirectUrl') as string
   
   if (!email || !password) {
     return { error: 'Email and password are required' }
@@ -86,7 +87,7 @@ export async function login(formData: FormData) {
     return { error: error.message }
   }
 
-  redirect('/account')
+  redirect(redirectUrl || '/account')
 }
 
 export async function signup(formData: FormData) {
