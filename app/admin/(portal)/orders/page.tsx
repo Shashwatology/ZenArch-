@@ -39,7 +39,11 @@ export default async function AdminOrdersPage() {
             <tbody className="divide-y divide-white/5 text-sm">
               {orders.map(order => (
                 <tr key={order.id} className="hover:bg-white/[0.02] transition-colors">
-                  <td className="px-6 py-4 font-mono text-white">{order.id.split('-')[0].toUpperCase()}</td>
+                  <td className="px-6 py-4 font-mono text-white">
+                    <Link href={`/admin/orders/${order.id}`} className="hover:underline text-[#C8A97E]">
+                      {order.orderId ? order.orderId : order.id.split('-')[0].toUpperCase()}
+                    </Link>
+                  </td>
                   <td className="px-6 py-4 text-gray-400">{new Date(order.createdAt).toLocaleDateString()}</td>
                   <td className="px-6 py-4">
                     <div className="text-white">{order.user.customerProfile?.firstName} {order.user.customerProfile?.lastName}</div>

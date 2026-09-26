@@ -28,11 +28,40 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
 
+    // Instrumentation for AI Image processing
+    const hasImages = messages.some((msg: any) => 
+      msg.experimental_attachments?.some((attachment: any) => 
+        attachment.contentType?.startsWith('image/')
+      )
+    );
+
+    if (hasImages) {
+      const attachments = messages.flatMap((msg: any) => msg.experimental_attachments || [])
+        .filter((a: any) => a.contentType?.startsWith('image/'));
+      
+      console.log("[AI VISION] Processing image request", {
+        image_received: true,
+        count: attachments.length,
+        mime_types: attachments.map((a: any) => a.contentType),
+        size_bytes: attachments.map((a: any) => a.url?.length ? Math.round(a.url.length * 0.75) : 0),
+        provider_request_started: new Date().toISOString()
+      });
+    }
+
     const result = streamText({
-      model: google("gemini-1.5-flash"), // capable model for vision and chat
+      model: google(process.env.AI_CHAT_MODEL || "gemini-1.5-pro"),
       system: systemPrompt,
       messages,
       tools: catalogTools,
+      onFinish: (event) => {
+        if (hasImages) {
+          console.log("[AI VISION] Provider request finished", {
+            provider_request_succeeded: true,
+            finishReason: event.finishReason,
+            usage: event.usage
+          });
+        }
+      }
     });
 
     return result.toTextStreamResponse();

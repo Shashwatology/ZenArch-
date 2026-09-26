@@ -31,6 +31,38 @@ export default async function OrderDetailsPage({ params }: { params: { orderId: 
 
   if (!order) notFound()
 
+  const auditLogs = await prisma.auditLog.findMany({
+    where: {
+      entityType: 'Order',
+      entityId: order.id,
+      action: {
+        in: ['ORDER_CREATED', 'ORDER_STATUS_CHANGED', 'ORDER_UPDATED']
+      }
+    },
+    orderBy: { createdAt: 'desc' }
+  })
+
+  // Basic Timeline Reconstruction
+  const timelineEvents = auditLogs.map(log => {
+    let note = ''
+    try {
+      const before = JSON.parse(log.before || '{}')
+      const after = JSON.parse(log.after || '{}')
+      if (after.status && before.status !== after.status) {
+        note = `Status updated to ${after.status}`
+      }
+      if (after.trackingId && before.trackingId !== after.trackingId) {
+        note = `Tracking information added`
+      }
+    } catch(e) {}
+
+    return {
+      id: log.id,
+      date: log.createdAt,
+      note: note || log.action
+    }
+  })
+
   return (
     <div className="min-h-screen bg-zen-ivory text-zen-black pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-6 space-y-12">
@@ -73,15 +105,37 @@ export default async function OrderDetailsPage({ params }: { params: { orderId: 
                 </div>
               </div>
 
-              {order.trackingUrl && (
+              {order.trackingUrl ? (
                 <div className="pt-4 mt-4 border-t border-zen-border">
                   <p className="text-sm">Tracking Partner: <span className="font-medium">{order.deliveryPartner}</span></p>
                   <p className="text-sm">Tracking ID: <span className="font-medium">{order.trackingId}</span></p>
-                  <a href={order.trackingUrl} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs uppercase tracking-widest bg-zen-black text-white px-4 py-2">
+                  <a href={order.trackingUrl} target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs uppercase tracking-widest bg-zen-black text-white px-4 py-2 hover:bg-zen-accent transition-colors">
                     Track Shipment
                   </a>
                 </div>
+              ) : (
+                <div className="pt-4 mt-4 border-t border-zen-border">
+                  <p className="text-sm text-zen-taupe">Tracking information will be added after dispatch.</p>
+                </div>
               )}
+            </div>
+
+            {/* Timeline */}
+            <div className="bg-white p-6 border border-zen-border space-y-6">
+              <h2 className="font-sans text-xs uppercase tracking-widest text-zen-taupe mb-4">Order Timeline</h2>
+              <div className="space-y-4">
+                {timelineEvents.map(event => (
+                  <div key={event.id} className="flex gap-4">
+                    <div className="w-24 shrink-0 text-xs text-zen-taupe font-mono mt-0.5">
+                      {new Date(event.date).toLocaleDateString()}<br/>
+                      {new Date(event.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                    </div>
+                    <div className="border-l-2 border-zen-border pl-4 pb-4">
+                      <p className="text-sm">{event.note}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Items */}

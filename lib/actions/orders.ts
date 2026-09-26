@@ -45,27 +45,55 @@ export async function getAdminOrders() {
   })
 }
 
-export async function updateOrderStatus(orderId: string, status: any) {
+export async function updateOrderAdmin(orderId: string, data: { status?: any, deliveryPartner?: string, trackingId?: string, trackingUrl?: string }) {
   const { dbUser } = await requireAdmin()
 
-  const oldOrder = await prisma.order.findUnique({ where: { id: orderId } })
+  const oldOrder = await prisma.order.findUnique({ 
+    where: { id: orderId },
+    include: { user: true } 
+  })
   if (!oldOrder) throw new Error('Order not found')
 
   const updated = await prisma.order.update({
     where: { id: orderId },
-    data: { status }
+    data
   })
 
+  // Audit log
   await prisma.auditLog.create({
     data: {
       userId: dbUser.id,
-      action: 'ORDER_STATUS_CHANGED',
+      action: 'ORDER_UPDATED',
       entityType: 'Order',
       entityId: orderId,
-      before: JSON.stringify({ status: oldOrder.status }),
-      after: JSON.stringify({ status: updated.status })
+      before: JSON.stringify({ status: oldOrder.status, trackingId: oldOrder.trackingId }),
+      after: JSON.stringify({ status: updated.status, trackingId: updated.trackingId })
     }
   })
+
+  // Dispatch emails
+  const { dispatchEmailEvent } = await import('@/lib/email/dispatcher')
+  
+  if (data.status && data.status !== oldOrder.status) {
+    await dispatchEmailEvent({
+      type: 'order.status_update',
+      recipient: oldOrder.user.email,
+      customerId: oldOrder.user.id,
+      orderId: updated.orderId || updated.id,
+      status: updated.status
+    })
+  }
+
+  if (data.trackingId && data.trackingId !== oldOrder.trackingId) {
+    await dispatchEmailEvent({
+      type: 'order.tracking_added',
+      recipient: oldOrder.user.email,
+      customerId: oldOrder.user.id,
+      orderId: updated.orderId || updated.id,
+      trackingId: updated.trackingId,
+      deliveryPartner: updated.deliveryPartner || ''
+    })
+  }
 
   revalidatePath('/account/orders')
   revalidatePath('/admin/orders')
