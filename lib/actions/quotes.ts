@@ -113,10 +113,8 @@ export async function updateQuoteStatus(quoteId: string, status: any, adminNotes
 
   const updated = await prisma.quoteRequest.update({
     where: { id: quoteId },
-    data: { 
-      status,
-      // If we had internal notes field... wait, let's check schema.
-    }
+    data: { status },
+    include: { user: true }
   })
 
   await prisma.auditLog.create({
@@ -129,6 +127,17 @@ export async function updateQuoteStatus(quoteId: string, status: any, adminNotes
       after: JSON.stringify({ status: updated.status })
     }
   })
+
+  if (status === 'QUOTED' && oldQuote.status !== 'QUOTED') {
+    const { dispatchEmailEvent } = await import('@/lib/email/dispatcher')
+    await dispatchEmailEvent({
+      type: 'quote.sent',
+      recipient: updated.user.email,
+      customerId: updated.user.id,
+      quoteRequestId: updated.id,
+      quoteUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/account/quotes/${updated.id}`
+    })
+  }
 
   revalidatePath('/account/quotes')
   revalidatePath('/admin/quotes')

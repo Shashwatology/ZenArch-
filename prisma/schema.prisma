@@ -315,6 +315,7 @@ model QuoteRequest {
   clientProjectId String?
   clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
   Lead            Lead[]
+  EmailLog        EmailLog[]
 }
 
 model QuoteVersion {
@@ -448,8 +449,9 @@ model Lead {
 
   activities LeadActivity[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  EmailLog  EmailLog[]
 }
 
 model LeadActivity {
@@ -516,12 +518,35 @@ model EmailLog {
 
   recipientEmail    String
   eventType         String // e.g. WELCOME, QUOTE_READY
+  template          String?
+  subject           String?
   providerMessageId String?
   providerEventId   String?
+  idempotencyKey    String? @unique
 
-  status String // e.g. SENT, DELIVERED, BOUNCED
-  sentAt DateTime?
+  status        String // e.g. SENT, DELIVERED, BOUNCED, FAILED
+  failureReason String?
+  sentAt        DateTime?
 
+  // Commercial Linkages
+  leadId          String?
+  lead            Lead?          @relation(fields: [leadId], references: [id])
+  quoteRequestId  String?
+  quoteRequest    QuoteRequest?  @relation(fields: [quoteRequestId], references: [id])
+  orderId         String?
+  order           Order?         @relation(fields: [orderId], references: [id])
+  clientProjectId String?
+  clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
+  designBoardId   String?
+  designBoard     DesignBoard?   @relation(fields: [designBoardId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+model EmailSuppression {
+  email     String   @id
+  reason    String // BOUNCED, COMPLAINED, OPT_OUT, INVALID
+  source    String? // e.g. AWS_SES, RESEND, USER
   createdAt DateTime @default(now())
 }
 
@@ -590,6 +615,7 @@ model Order {
   clientProjectId String?
   clientProject   ClientProject? @relation(fields: [clientProjectId], references: [id])
   Lead            Lead[]
+  EmailLog        EmailLog[]
 }
 
 enum OrderStatus {
@@ -739,9 +765,10 @@ model DesignBoard {
   shareExpiresAt DateTime?
   shareRevokedAt DateTime?
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
   Lead      Lead[]
+  EmailLog  EmailLog[]
 
   @@index([userId])
   @@index([shareToken])
@@ -856,8 +883,9 @@ model ClientProject {
   Project        Project[]
   Lead           Lead[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  EmailLog  EmailLog[]
 
   @@index([userId])
   @@index([phase])

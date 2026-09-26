@@ -115,7 +115,7 @@ export async function signup(formData: FormData) {
   // Create in Prisma
   if (data.user) {
     try {
-      await prisma.user.create({
+      const newUser = await prisma.user.create({
         data: {
           email: data.user.email!,
           role: 'CUSTOMER',
@@ -127,6 +127,14 @@ export async function signup(formData: FormData) {
             }
           }
         }
+      })
+
+      const { dispatchEmailEvent } = await import('@/lib/email/dispatcher')
+      await dispatchEmailEvent({
+        type: 'welcome',
+        recipient: data.user.email!,
+        userId: newUser.id,
+        name: firstName || 'there'
       })
     } catch (e) {
       // If user already exists in DB, ignore

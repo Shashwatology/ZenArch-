@@ -4,6 +4,7 @@ import prisma from '@/lib/prisma'
 import { requireAdmin } from '@/lib/admin/auth'
 import { revalidatePath } from 'next/cache'
 import { ActivityType, LeadStatus } from '@prisma/client'
+import { dispatchEmailEvent } from '@/lib/email/dispatcher'
 
 export async function createLeadAction(data: {
   name: string
@@ -70,7 +71,8 @@ export async function assignLeadAction(leadId: string, assignedToId: string | nu
 
   const lead = await prisma.lead.update({
     where: { id: leadId },
-    data: { assignedToId }
+    data: { assignedToId },
+    include: { assignedTo: { include: { adminProfile: true } } }
   })
 
   await prisma.auditLog.create({
@@ -82,6 +84,16 @@ export async function assignLeadAction(leadId: string, assignedToId: string | nu
       after: JSON.stringify({ assignedToId })
     }
   })
+
+  if (assignedToId && lead.assignedTo?.email) {
+    await dispatchEmailEvent({
+      type: 'lead.assigned',
+      recipient: lead.assignedTo.email,
+      leadId: lead.id,
+      staffName: lead.assignedTo.adminProfile?.firstName || 'Staff',
+      leadName: lead.name
+    })
+  }
 
   revalidatePath('/admin/leads')
   revalidatePath(`/admin/leads/${leadId}`)

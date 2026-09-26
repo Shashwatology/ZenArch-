@@ -281,6 +281,38 @@ export async function revokeShare(boardId: string, userId: string) {
   return updated
 }
 
+export async function inviteCollaborator(boardId: string, email: string, role: 'COLLABORATOR' | 'VIEWER', userId: string) {
+  const board = await prisma.designBoard.findUnique({ where: { id: boardId } })
+  if (!board || board.userId !== userId) throw new Error("Unauthorized")
+
+  // Generate an invitation token
+  const token = crypto.randomBytes(16).toString('hex')
+  const expiresAt = new Date()
+  expiresAt.setDate(expiresAt.getDate() + 7) // 7 days valid
+
+  const invite = await prisma.boardCollaborator.create({
+    data: {
+      boardId,
+      email,
+      role: role as any,
+      inviteToken: token,
+      expiresAt,
+      status: 'PENDING'
+    }
+  })
+
+  const { dispatchEmailEvent } = await import('@/lib/email/dispatcher')
+  await dispatchEmailEvent({
+    type: 'board.shared',
+    recipient: email,
+    designBoardId: boardId,
+    boardName: board.name,
+    shareUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/board/invite/${token}`
+  })
+
+  return invite
+}
+
 export async function addComment(boardId: string, content: string, authorName: string, userId?: string, isInternal: boolean = false, boardItemId?: string) {
   const board = await prisma.designBoard.findUnique({
     where: { id: boardId },

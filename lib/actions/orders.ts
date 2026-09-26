@@ -118,6 +118,19 @@ export async function createOrderFromQuote(quoteId: string) {
     data: { status: 'ACCEPTED' }
   })
 
+  const orderUser = await prisma.user.findUnique({ where: { id: quote.userId } })
+  if (orderUser?.email) {
+    const { dispatchEmailEvent } = await import('@/lib/email/dispatcher')
+    await dispatchEmailEvent({
+      type: 'order.created',
+      recipient: orderUser.email,
+      customerId: orderUser.id,
+      orderId: order.id,
+      orderNumber: order.id.substring(0, 8).toUpperCase(),
+      amount: totalAmount.toString()
+    })
+  }
+
   revalidatePath('/account/orders')
   revalidatePath('/admin/orders')
   revalidatePath('/account/quotes')
