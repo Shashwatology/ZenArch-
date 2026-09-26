@@ -9,9 +9,17 @@ export default async function AdminQuotesPage() {
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto">
-      <div>
-        <h2 className="text-2xl font-light tracking-wider text-white mb-2">Quote Management</h2>
-        <p className="text-sm text-gray-400">Review and process customer quote requests.</p>
+      <div className="flex justify-between items-center">
+        <div>
+          <h2 className="text-2xl font-light tracking-wider text-white mb-2">Quote Management</h2>
+          <p className="text-sm text-gray-400">Review and process customer quote requests.</p>
+        </div>
+        <Link 
+          href="/admin/quotes/new" 
+          className="bg-[#C8A97E] hover:bg-[#b5956a] text-black px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+        >
+          Create Quote
+        </Link>
       </div>
 
       <div className="bg-[#1E1E1E] border border-white/10 rounded-xl overflow-hidden">
